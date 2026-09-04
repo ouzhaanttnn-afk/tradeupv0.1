@@ -1,48 +1,102 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 440" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <style>
-      .football-body { fill: #8b4513; stroke: #654321; stroke-width: 1; }
-      .football-stripe { fill: #ffffff; stroke: #f3f4f6; stroke-width: 0.5; }
-    </style>
+    <radialGradient id="backdrop" cx="50%" cy="34%" r="76%">
+      <stop offset="0%" stop-color="#f7f7f8"/><stop offset="60%" stop-color="#ececed"/><stop offset="100%" stop-color="#d8d9dc"/>
+    </radialGradient>
+    <!-- The panel material itself: near-white, very slightly warm -->
+    <radialGradient id="leather" cx="34%" cy="28%" r="78%">
+      <stop offset="0%" stop-color="#ffffff"/><stop offset="55%" stop-color="#f2f3f5"/>
+      <stop offset="100%" stop-color="#dfe2e6"/>
+    </radialGradient>
+    <!-- Sphere shading: transparent where the light lands, dark toward the far limb -->
+    <radialGradient id="formShade" cx="33%" cy="27%" r="82%">
+      <stop offset="0%"   stop-color="#000000" stop-opacity="0"/>
+      <stop offset="52%"  stop-color="#000000" stop-opacity="0.04"/>
+      <stop offset="78%"  stop-color="#0b1220" stop-opacity="0.22"/>
+      <stop offset="93%"  stop-color="#0b1220" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#0b1220" stop-opacity="0.50"/>
+    </radialGradient>
+    <!-- Bounce light coming back off the surface along the lower-right limb -->
+    <radialGradient id="bounce" cx="74%" cy="82%" r="40%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="specular" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- A unit pentagon, reused and transformed for every dark panel -->
+    <path id="pent" d="M 0 -1 L 0.951 -0.309 L 0.588 0.809 L -0.588 0.809 L -0.951 -0.309 Z"/>
+
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="ambientBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="20"/></filter>
+    <clipPath id="ballClip"><circle cx="206" cy="196" r="146"/></clipPath>
   </defs>
 
-  <!-- Main football body (ellipse) -->
-  <ellipse cx="150" cy="100" rx="90" ry="50" class="football-body" />
+  <rect width="420" height="440" fill="url(#backdrop)"/>
 
-  <!-- Center stripe/lace -->
-  <path d="M 100 100 Q 120 95 150 92 Q 180 95 200 100" stroke="#f3f4f6" stroke-width="2" fill="none" />
-  <path d="M 100 100 Q 120 105 150 108 Q 180 105 200 100" stroke="#f3f4f6" stroke-width="2" fill="none" />
+  <!-- grounding: a wide ambient pool plus a tight ellipse right under the ball -->
+  <ellipse cx="212" cy="366" rx="150" ry="26" fill="#2b2d33" opacity="0.16" filter="url(#ambientBlur)"/>
+  <ellipse cx="208" cy="352" rx="96" ry="14" fill="#1c1e24" opacity="0.34" filter="url(#softShadow)"/>
 
-  <!-- Stitching marks (laces) -->
-  <line x1="120" y1="92" x2="120" y2="108" stroke="#f3f4f6" stroke-width="1.2" opacity="0.9" />
-  <line x1="135" y1="90" x2="135" y2="110" stroke="#f3f4f6" stroke-width="1.2" opacity="0.8" />
-  <line x1="150" y1="88" x2="150" y2="112" stroke="#f3f4f6" stroke-width="1.2" opacity="0.9" />
-  <line x1="165" y1="90" x2="165" y2="110" stroke="#f3f4f6" stroke-width="1.2" opacity="0.8" />
-  <line x1="180" y1="92" x2="180" y2="108" stroke="#f3f4f6" stroke-width="1.2" opacity="0.9" />
+  <!-- ===== Ball ===== -->
+  <circle cx="206" cy="196" r="146" fill="url(#leather)"/>
 
-  <!-- Panel sections (darker areas) -->
-  <ellipse cx="90" cy="85" rx="35" ry="25" fill="#654321" opacity="0.6" />
-  <ellipse cx="210" cy="85" rx="35" ry="25" fill="#654321" opacity="0.6" />
-  <ellipse cx="90" cy="115" rx="35" ry="25" fill="#654321" opacity="0.6" />
-  <ellipse cx="210" cy="115" rx="35" ry="25" fill="#654321" opacity="0.6" />
+  <g clip-path="url(#ballClip)">
+    <!-- Dark panels. Those nearer the limb are scaled down and squashed so the
+         pattern reads as wrapping around a sphere rather than printed flat. -->
+    <g fill="#1b2027">
+      <use href="#pent" transform="translate(188,168) scale(46)"/>
+      <use href="#pent" transform="translate(206,26) rotate(180) scale(34,20)"/>
+      <use href="#pent" transform="translate(66,150) rotate(-70) scale(26,34)"/>
+      <use href="#pent" transform="translate(330,120) rotate(58) scale(30,36)"/>
+      <use href="#pent" transform="translate(292,304) rotate(150) scale(32,26)"/>
+      <use href="#pent" transform="translate(120,310) rotate(-152) scale(30,25)"/>
+      <use href="#pent" transform="translate(352,232) rotate(96) scale(18,28)"/>
+    </g>
 
-  <!-- Grip zones (rubber nubs simulation) -->
-  <circle cx="80" cy="75" r="2" fill="#5c3d2e" opacity="0.7" />
-  <circle cx="100" cy="70" r="1.5" fill="#5c3d2e" opacity="0.7" />
-  <circle cx="220" cy="75" r="2" fill="#5c3d2e" opacity="0.7" />
-  <circle cx="200" cy="70" r="1.5" fill="#5c3d2e" opacity="0.7" />
-  <circle cx="80" cy="125" r="2" fill="#5c3d2e" opacity="0.7" />
-  <circle cx="100" cy="130" r="1.5" fill="#5c3d2e" opacity="0.7" />
-  <circle cx="220" cy="125" r="2" fill="#5c3d2e" opacity="0.7" />
-  <circle cx="200" cy="130" r="1.5" fill="#5c3d2e" opacity="0.7" />
+    <!-- Seams: the stitched lines between the white hexagons -->
+    <g stroke="#aeb3ba" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.9">
+      <!-- radiating from the central pentagon's vertices -->
+      <path d="M 188 122 L 196 46"/>
+      <path d="M 232 154 L 306 132"/>
+      <path d="M 215 205 L 268 280"/>
+      <path d="M 161 205 L 132 282"/>
+      <path d="M 144 154 L 88 158"/>
+      <!-- the ring of seams further out -->
+      <path d="M 196 46 Q 258 60 306 132"/>
+      <path d="M 306 132 Q 330 208 268 280"/>
+      <path d="M 268 280 Q 200 318 132 282"/>
+      <path d="M 132 282 Q 74 228 88 158"/>
+      <path d="M 88 158 Q 128 68 196 46"/>
+      <!-- seams running off toward the limb -->
+      <path d="M 306 132 L 366 104"/>
+      <path d="M 268 280 L 312 344"/>
+      <path d="M 132 282 L 92 348"/>
+      <path d="M 88 158 L 20 140"/>
+      <path d="M 196 46 L 214 -18"/>
+      <path d="M 352 204 L 368 176"/>
+    </g>
 
-  <!-- Shading for 3D effect -->
-  <ellipse cx="150" cy="75" rx="85" ry="20" fill="white" opacity="0.08" />
-  <ellipse cx="150" cy="130" rx="85" ry="15" fill="black" opacity="0.1" />
+    <!-- stitch ticks along the main seams -->
+    <g stroke="#c3c8ce" stroke-width="1.2" opacity="0.7">
+      <path d="M 190 100 l 8 -2 M 191 78 l 8 -2 M 192 60 l 8 -2"/>
+      <path d="M 246 148 l 2 8 M 266 142 l 2 8 M 286 137 l 2 8"/>
+      <path d="M 226 220 l -7 5 M 238 238 l -7 5 M 250 256 l -7 5"/>
+    </g>
 
-  <!-- Logo area -->
-  <text x="150" y="105" font-size="12" font-weight="bold" fill="#654321" text-anchor="middle" opacity="0.5">FOOT</text>
+    <!-- form shading over everything, so panels and seams all sit on the sphere -->
+    <circle cx="206" cy="196" r="146" fill="url(#formShade)"/>
+    <circle cx="206" cy="196" r="146" fill="url(#bounce)"/>
 
-  <!-- Valve stem -->
-  <circle cx="60" cy="100" r="3" fill="#1a202c" stroke="#0f172a" stroke-width="1" />
+    <!-- specular hotspot where the key light strikes -->
+    <ellipse cx="140" cy="118" rx="52" ry="40" fill="url(#specular)" transform="rotate(-28 140 118)"/>
+    <ellipse cx="126" cy="104" rx="17" ry="12" fill="#ffffff" opacity="0.55" transform="rotate(-28 126 104)"/>
+  </g>
+
+  <!-- limb: a faint rim of light on the shadow side keeps the silhouette from going dead -->
+  <path d="M 344 246 A 146 146 0 0 1 250 336" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.35" stroke-linecap="round"/>
+  <circle cx="206" cy="196" r="146" fill="none" stroke="#b9bec5" stroke-width="1" opacity="0.6"/>
 </svg>

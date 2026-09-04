@@ -12,331 +12,246 @@
       "familyId": "phone_smartphone",
       "categoryId": "electronics",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/electronics/phone_generic.png",
-        "variant_flagship": "images/products/electronics/phone_flagship.png",
-        "variant_midrange": "images/products/electronics/phone_midrange.png",
-        "variant_budget": "images/products/electronics/phone_budget.png",
-        "thumbnail": "images/products/electronics/phone_thumb.png"
+        "default": "images/products/electronics/phone_generic.svg",
+        "variant_flagship": "images/products/electronics/phone_flagship.svg",
+        "variant_midrange": "images/products/electronics/phone_midrange.svg",
+        "variant_budget": "images/products/electronics/phone_budget.svg"
       },
       "fallback": "images/fallback/electronics_fallback.svg",
-      "description": "Smartphone product images with 3 variant representations"
+      "description": "Smartphone — studio render, 3 tier variants"
     },
     "tablet_generic": {
       "familyId": "tablet_ipad",
       "categoryId": "electronics",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/electronics/tablet_generic.png",
-        "variant_flagship": "images/products/electronics/tablet_flagship.png",
-        "variant_midrange": "images/products/electronics/tablet_midrange.png",
-        "variant_budget": "images/products/electronics/tablet_budget.png",
-        "thumbnail": "images/products/electronics/tablet_thumb.png"
+        "default": "images/products/electronics/tablet_generic.svg"
       },
       "fallback": "images/fallback/electronics_fallback.svg",
-      "description": "Tablet product images with 3 variant representations"
+      "description": "Tablet — studio render, single master"
     },
     "laptop_generic": {
       "familyId": "laptop_notebook",
       "categoryId": "electronics",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/electronics/laptop_generic.png",
-        "variant_flagship": "images/products/electronics/laptop_flagship.png",
-        "variant_midrange": "images/products/electronics/laptop_midrange.png",
-        "variant_budget": "images/products/electronics/laptop_budget.png",
-        "thumbnail": "images/products/electronics/laptop_thumb.png"
+        "default": "images/products/electronics/laptop_generic.svg"
       },
       "fallback": "images/fallback/electronics_fallback.svg",
-      "description": "Laptop product images with 3 variant representations"
+      "description": "Laptop — studio render, single master"
     },
     "camera_generic": {
       "familyId": "camera_dslr",
       "categoryId": "electronics",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/electronics/camera_generic.png",
-        "variant_flagship": "images/products/electronics/camera_dslr.png",
-        "variant_mirrorless": "images/products/electronics/camera_mirrorless.png",
-        "variant_compact": "images/products/electronics/camera_compact.png",
-        "thumbnail": "images/products/electronics/camera_thumb.png"
+        "default": "images/products/electronics/camera_generic.svg"
       },
       "fallback": "images/fallback/electronics_fallback.svg",
-      "description": "Camera product images with 3 variant representations"
+      "description": "Camera — studio render, single master"
     },
     "headphones_generic": {
       "familyId": "headphones_wireless",
       "categoryId": "electronics",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/electronics/headphones_generic.png",
-        "variant_flagship": "images/products/electronics/headphones_flagship.png",
-        "variant_midrange": "images/products/electronics/headphones_midrange.png",
-        "variant_budget": "images/products/electronics/headphones_budget.png",
-        "thumbnail": "images/products/electronics/headphones_thumb.png"
+        "default": "images/products/electronics/headphones_generic.svg"
       },
       "fallback": "images/fallback/electronics_fallback.svg",
-      "description": "Headphones product images with 3 variant representations"
+      "description": "Headphones — studio render, single master"
     },
     "watch_generic": {
       "familyId": "watch_smart",
       "categoryId": "electronics",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/electronics/watch_generic.png",
-        "variant_flagship": "images/products/electronics/watch_flagship.png",
-        "variant_sport": "images/products/electronics/watch_sport.png",
-        "variant_classic": "images/products/electronics/watch_classic.png",
-        "thumbnail": "images/products/electronics/watch_thumb.png"
+        "default": "images/products/electronics/watch_generic.svg"
       },
       "fallback": "images/fallback/electronics_fallback.svg",
-      "description": "Smartwatch product images with 3 variant representations"
+      "description": "Smartwatch — studio render, single master"
     },
     "console_generic": {
       "familyId": "console_gaming",
       "categoryId": "electronics",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/electronics/console_generic.png",
-        "variant_current": "images/products/electronics/console_current.png",
-        "variant_previous": "images/products/electronics/console_previous.png",
-        "variant_handheld": "images/products/electronics/console_handheld.png",
-        "thumbnail": "images/products/electronics/console_thumb.png"
+        "default": "images/products/electronics/console_generic.svg"
       },
       "fallback": "images/fallback/electronics_fallback.svg",
-      "description": "Gaming console product images with 3 variant representations"
+      "description": "Gaming console — studio render, single master"
     },
     "tshirt_generic": {
       "familyId": "tshirt_basic",
       "categoryId": "fashion",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/fashion/tshirt_generic.png",
-        "variant_premium": "images/products/fashion/tshirt_premium.png",
-        "variant_standard": "images/products/fashion/tshirt_standard.png",
-        "variant_budget": "images/products/fashion/tshirt_budget.png",
-        "thumbnail": "images/products/fashion/tshirt_thumb.png"
+        "default": "images/products/fashion/tshirt_generic.svg"
       },
       "fallback": "images/fallback/fashion_fallback.svg",
-      "description": "T-shirt product images with 3 variant representations"
+      "description": "T-shirt — studio render, single master"
     },
     "jeans_generic": {
       "familyId": "jeans_denim",
       "categoryId": "fashion",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/fashion/jeans_generic.png",
-        "variant_premium": "images/products/fashion/jeans_premium.png",
-        "variant_standard": "images/products/fashion/jeans_standard.png",
-        "variant_budget": "images/products/fashion/jeans_budget.png",
-        "thumbnail": "images/products/fashion/jeans_thumb.png"
+        "default": "images/products/fashion/jeans_generic.svg"
       },
       "fallback": "images/fallback/fashion_fallback.svg",
-      "description": "Jeans product images with 3 variant representations"
+      "description": "Jeans — studio render, single master"
     },
     "jacket_generic": {
       "familyId": "jacket_winter",
       "categoryId": "fashion",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/fashion/jacket_generic.png",
-        "variant_premium": "images/products/fashion/jacket_premium.png",
-        "variant_standard": "images/products/fashion/jacket_standard.png",
-        "variant_budget": "images/products/fashion/jacket_budget.png",
-        "thumbnail": "images/products/fashion/jacket_thumb.png"
+        "default": "images/products/fashion/jacket_generic.svg"
       },
       "fallback": "images/fallback/fashion_fallback.svg",
-      "description": "Jacket product images with 3 variant representations"
+      "description": "Jacket — studio render, single master"
     },
     "shoes_generic": {
       "familyId": "shoes_sneakers",
       "categoryId": "fashion",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/fashion/shoes_generic.png",
-        "variant_premium": "images/products/fashion/shoes_premium.png",
-        "variant_standard": "images/products/fashion/shoes_standard.png",
-        "variant_budget": "images/products/fashion/shoes_budget.png",
-        "thumbnail": "images/products/fashion/shoes_thumb.png"
+        "default": "images/products/fashion/shoes_generic.svg"
       },
       "fallback": "images/fallback/fashion_fallback.svg",
-      "description": "Shoes product images with 3 variant representations"
+      "description": "Shoes — studio render, single master"
     },
     "sofa_generic": {
       "familyId": "sofa_couch",
       "categoryId": "furniture",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/furniture/sofa_generic.png",
-        "variant_large": "images/products/furniture/sofa_large.png",
-        "variant_standard": "images/products/furniture/sofa_standard.png",
-        "variant_compact": "images/products/furniture/sofa_compact.png",
-        "thumbnail": "images/products/furniture/sofa_thumb.png"
+        "default": "images/products/furniture/sofa_generic.svg"
       },
       "fallback": "images/fallback/furniture_fallback.svg",
-      "description": "Sofa product images with 3 variant representations"
+      "description": "Sofa — studio render, single master"
     },
     "bed_generic": {
       "familyId": "bed_frame",
       "categoryId": "furniture",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/furniture/bed_generic.png",
-        "variant_queen": "images/products/furniture/bed_queen.png",
-        "variant_full": "images/products/furniture/bed_full.png",
-        "variant_twin": "images/products/furniture/bed_twin.png",
-        "thumbnail": "images/products/furniture/bed_thumb.png"
+        "default": "images/products/furniture/bed_generic.svg"
       },
       "fallback": "images/fallback/furniture_fallback.svg",
-      "description": "Bed product images with 3 variant representations"
+      "description": "Bed — studio render, single master"
     },
     "desk_generic": {
       "familyId": "desk_work",
       "categoryId": "furniture",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/furniture/desk_generic.png",
-        "variant_large": "images/products/furniture/desk_large.png",
-        "variant_standard": "images/products/furniture/desk_standard.png",
-        "variant_compact": "images/products/furniture/desk_compact.png",
-        "thumbnail": "images/products/furniture/desk_thumb.png"
+        "default": "images/products/furniture/desk_generic.svg"
       },
       "fallback": "images/fallback/furniture_fallback.svg",
-      "description": "Desk product images with 3 variant representations"
+      "description": "Desk — studio render, single master"
     },
     "bookshelf_generic": {
       "familyId": "bookshelf_storage",
       "categoryId": "furniture",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/furniture/bookshelf_generic.png",
-        "variant_tall": "images/products/furniture/bookshelf_tall.png",
-        "variant_standard": "images/products/furniture/bookshelf_standard.png",
-        "variant_compact": "images/products/furniture/bookshelf_compact.png",
-        "thumbnail": "images/products/furniture/bookshelf_thumb.png"
+        "default": "images/products/furniture/bookshelf_generic.svg"
       },
       "fallback": "images/fallback/furniture_fallback.svg",
-      "description": "Bookshelf product images with 3 variant representations"
+      "description": "Bookshelf — studio render, single master"
     },
     "record_generic": {
       "familyId": "record_vinyl",
       "categoryId": "media",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/media/record_generic.png",
-        "variant_classic": "images/products/media/record_classic.png",
-        "variant_limited": "images/products/media/record_limited.png",
-        "variant_reissue": "images/products/media/record_reissue.png",
-        "thumbnail": "images/products/media/record_thumb.png"
+        "default": "images/products/media/record_generic.svg"
       },
       "fallback": "images/fallback/media_fallback.svg",
-      "description": "Vinyl record product images with 3 variant representations"
+      "description": "Vinyl record — studio render, single master"
     },
     "book_generic": {
       "familyId": "book_fiction",
       "categoryId": "media",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/media/book_generic.png",
-        "variant_hardcover": "images/products/media/book_hardcover.png",
-        "variant_paperback": "images/products/media/book_paperback.png",
-        "variant_signed": "images/products/media/book_signed.png",
-        "thumbnail": "images/products/media/book_thumb.png"
+        "default": "images/products/media/book_generic.svg"
       },
       "fallback": "images/fallback/media_fallback.svg",
-      "description": "Book product images with 3 variant representations"
+      "description": "Book — studio render, single master"
     },
     "dvd_generic": {
       "familyId": "dvd_movies",
       "categoryId": "media",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/media/dvd_generic.png",
-        "variant_dvd": "images/products/media/dvd_standard.png",
-        "variant_bluray": "images/products/media/dvd_bluray.png",
-        "variant_limited": "images/products/media/dvd_limited.png",
-        "thumbnail": "images/products/media/dvd_thumb.png"
+        "default": "images/products/media/dvd_generic.svg"
       },
       "fallback": "images/fallback/media_fallback.svg",
-      "description": "DVD/Blu-ray product images with 3 variant representations"
+      "description": "DVD/Blu-ray — studio render, single master"
     },
     "motorcycle_generic": {
       "familyId": "motorcycle_street",
       "categoryId": "vehicles",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/vehicles/motorcycle_generic.png",
-        "variant_sport": "images/products/vehicles/motorcycle_sport.png",
-        "variant_cruiser": "images/products/vehicles/motorcycle_cruiser.png",
-        "variant_touring": "images/products/vehicles/motorcycle_touring.png",
-        "thumbnail": "images/products/vehicles/motorcycle_thumb.png"
+        "default": "images/products/vehicles/motorcycle_generic.svg"
       },
       "fallback": "images/fallback/vehicles_fallback.svg",
-      "description": "Motorcycle product images with 3 variant representations"
+      "description": "Motorcycle — studio render, single master"
     },
     "bicycle_generic": {
       "familyId": "bicycle_road",
       "categoryId": "vehicles",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/vehicles/bicycle_generic.png",
-        "variant_road": "images/products/vehicles/bicycle_road.png",
-        "variant_mountain": "images/products/vehicles/bicycle_mountain.png",
-        "variant_hybrid": "images/products/vehicles/bicycle_hybrid.png",
-        "thumbnail": "images/products/vehicles/bicycle_thumb.png"
+        "default": "images/products/vehicles/bicycle_generic.svg"
       },
       "fallback": "images/fallback/vehicles_fallback.svg",
-      "description": "Bicycle product images with 3 variant representations"
+      "description": "Bicycle — studio render, single master"
     },
     "tennis_generic": {
       "familyId": "tennis_racket",
       "categoryId": "sports",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/sports/tennis_generic.png",
-        "variant_professional": "images/products/sports/tennis_pro.png",
-        "variant_intermediate": "images/products/sports/tennis_intermediate.png",
-        "variant_beginner": "images/products/sports/tennis_beginner.png",
-        "thumbnail": "images/products/sports/tennis_thumb.png"
+        "default": "images/products/sports/tennis_generic.svg"
       },
       "fallback": "images/fallback/sports_fallback.svg",
-      "description": "Tennis racket product images with 3 variant representations"
+      "description": "Tennis racket — studio render, single master"
     },
     "football_generic": {
       "familyId": "football_ball",
       "categoryId": "sports",
       "type": "product_visual",
-      "status": "placeholder_pending",
+      "status": "production_ready",
       "images": {
-        "default": "images/products/sports/football_generic.png",
-        "variant_professional": "images/products/sports/football_pro.png",
-        "variant_training": "images/products/sports/football_training.png",
-        "variant_youth": "images/products/sports/football_youth.png",
-        "thumbnail": "images/products/sports/football_thumb.png"
+        "default": "images/products/sports/football_generic.svg"
       },
       "fallback": "images/fallback/sports_fallback.svg",
-      "description": "Football product images with 3 variant representations"
+      "description": "Football — studio render, single master"
     }
   },
   "overlays": {
@@ -353,7 +268,7 @@
       "path": "images/overlays/crack_overlay.svg",
       "status": "production_ready",
       "theme": "theme_agnostic",
-      "opacity": 0.70,
+      "opacity": 0.7,
       "description": "Red crack pattern overlay for screen damage"
     },
     "water_damage": {
@@ -369,7 +284,7 @@
       "path": "images/overlays/counterfeit_indicator.svg",
       "status": "production_ready",
       "theme": "theme_agnostic",
-      "opacity": 0.80,
+      "opacity": 0.8,
       "description": "Dark red deal-breaker overlay for counterfeit items"
     },
     "rust_warning": {
@@ -385,7 +300,7 @@
       "path": "images/overlays/keyboard_warning.svg",
       "status": "production_ready",
       "theme": "theme_agnostic",
-      "opacity": 0.70,
+      "opacity": 0.7,
       "description": "Orange keyboard damage overlay showing broken key"
     },
     "damage_indicator": {
@@ -409,7 +324,7 @@
       "path": "images/overlays/camera_warning.svg",
       "status": "production_ready",
       "theme": "theme_agnostic",
-      "opacity": 0.80,
+      "opacity": 0.8,
       "description": "Dark pink camera failure overlay"
     },
     "lens_warning": {
@@ -417,7 +332,7 @@
       "path": "images/overlays/lens_warning.svg",
       "status": "production_ready",
       "theme": "theme_agnostic",
-      "opacity": 0.80,
+      "opacity": 0.8,
       "description": "Dark gray lens fungus overlay"
     },
     "vinyl_warning": {
@@ -648,10 +563,9 @@
     }
   },
   "statusSummary": {
-    "production_ready": 23,
-    "in_progress": 0,
-    "placeholder_pending": 34,
-    "total": 57,
+    "production_ready": 53,
+    "placeholder_pending": 5,
+    "total": 58,
     "lastUpdated": "2026-09-04"
   }
 }

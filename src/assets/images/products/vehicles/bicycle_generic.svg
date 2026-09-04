@@ -1,63 +1,108 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <style>
-      .bike-frame { fill: none; stroke: #2563eb; stroke-width: 2; stroke-linecap: round; }
-      .bike-wheel { fill: none; stroke: #1f2937; stroke-width: 2; }
-      .bike-tire { fill: none; stroke: #0f0f0f; stroke-width: 3; }
-      .bike-seat { fill: #2d3748; stroke: #1a202c; stroke-width: 1; }
-    </style>
+    <radialGradient id="backdrop" cx="50%" cy="34%" r="76%">
+      <stop offset="0%" stop-color="#f7f7f8"/><stop offset="60%" stop-color="#ececed"/><stop offset="100%" stop-color="#d8d9dc"/>
+    </radialGradient>
+    <!-- Painted steel tubing: a tube, so a bright line runs along its top -->
+    <linearGradient id="tube" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4fd0c4"/><stop offset="30%" stop-color="#1f9c92"/>
+      <stop offset="100%" stop-color="#0e5f59"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b9bfc7"/><stop offset="45%" stop-color="#8b929b"/><stop offset="100%" stop-color="#5d646d"/>
+    </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="ambientBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="20"/></filter>
   </defs>
 
-  <!-- Rear wheel -->
-  <circle cx="70" cy="160" r="45" class="bike-wheel" />
-  <circle cx="70" cy="160" r="40" class="bike-tire" />
+  <rect width="640" height="420" fill="url(#backdrop)"/>
+  <ellipse cx="320" cy="378" rx="250" ry="20" fill="#2b2d33" opacity="0.13" filter="url(#ambientBlur)"/>
+  <ellipse cx="160" cy="366" rx="34" ry="7" fill="#1c1e24" opacity="0.30" filter="url(#softShadow)"/>
+  <ellipse cx="486" cy="366" rx="34" ry="7" fill="#1c1e24" opacity="0.30" filter="url(#softShadow)"/>
 
-  <!-- Front wheel -->
-  <circle cx="230" cy="160" r="45" class="bike-wheel" />
-  <circle cx="230" cy="160" r="40" class="bike-tire" />
+  <!-- ===== Wheels ===== -->
+  <g>
+    <!-- rear -->
+    <circle cx="160" cy="264" r="98" fill="none" stroke="#22262b" stroke-width="13"/>
+    <circle cx="160" cy="264" r="88" fill="none" stroke="url(#rim)" stroke-width="7"/>
+    <g stroke="#aeb4bc" stroke-width="1.1" opacity="0.85">
+      <line x1="160" y1="176" x2="160" y2="352"/><line x1="98" y1="202" x2="222" y2="326"/>
+      <line x1="72" y1="264" x2="248" y2="264"/><line x1="98" y1="326" x2="222" y2="202"/>
+      <line x1="127" y1="182" x2="193" y2="346"/><line x1="78" y1="231" x2="242" y2="297"/>
+      <line x1="78" y1="297" x2="242" y2="231"/><line x1="127" y1="346" x2="193" y2="182"/>
+    </g>
+    <circle cx="160" cy="264" r="11" fill="#7c838c"/><circle cx="160" cy="264" r="6" fill="#3d434a"/>
+    <!-- tread and the light catching the top of the tyre -->
+    <path d="M 92 196 A 98 98 0 0 1 228 196" fill="none" stroke="#4a5058" stroke-width="13" opacity="0.55"/>
 
-  <!-- Wheel spokes (rear) -->
-  <line x1="70" y1="115" x2="70" y2="205" stroke="#2d3748" stroke-width="0.8" opacity="0.5" />
-  <line x1="25" y1="160" x2="115" y2="160" stroke="#2d3748" stroke-width="0.8" opacity="0.5" />
-  <line x1="45" y1="130" x2="95" y2="190" stroke="#2d3748" stroke-width="0.8" opacity="0.5" />
-  <line x1="95" y1="130" x2="45" y2="190" stroke="#2d3748" stroke-width="0.8" opacity="0.5" />
+    <!-- front -->
+    <circle cx="486" cy="264" r="98" fill="none" stroke="#22262b" stroke-width="13"/>
+    <circle cx="486" cy="264" r="88" fill="none" stroke="url(#rim)" stroke-width="7"/>
+    <g stroke="#aeb4bc" stroke-width="1.1" opacity="0.85">
+      <line x1="486" y1="176" x2="486" y2="352"/><line x1="424" y1="202" x2="548" y2="326"/>
+      <line x1="398" y1="264" x2="574" y2="264"/><line x1="424" y1="326" x2="548" y2="202"/>
+      <line x1="453" y1="182" x2="519" y2="346"/><line x1="404" y1="231" x2="568" y2="297"/>
+      <line x1="404" y1="297" x2="568" y2="231"/><line x1="453" y1="346" x2="519" y2="182"/>
+    </g>
+    <circle cx="486" cy="264" r="11" fill="#7c838c"/><circle cx="486" cy="264" r="6" fill="#3d434a"/>
+    <path d="M 418 196 A 98 98 0 0 1 554 196" fill="none" stroke="#4a5058" stroke-width="13" opacity="0.55"/>
+  </g>
 
-  <!-- Wheel spokes (front) -->
-  <line x1="230" y1="115" x2="230" y2="205" stroke="#2d3748" stroke-width="0.8" opacity="0.5" />
-  <line x1="185" y1="160" x2="275" y2="160" stroke="#2d3748" stroke-width="0.8" opacity="0.5" />
-  <line x1="205" y1="130" x2="255" y2="190" stroke="#2d3748" stroke-width="0.8" opacity="0.5" />
-  <line x1="255" y1="130" x2="205" y2="190" stroke="#2d3748" stroke-width="0.8" opacity="0.5" />
+  <!-- ===== Frame: classic double diamond ===== -->
+  <g stroke-linecap="round">
+    <!-- chainstay and seatstay -->
+    <path d="M 160 264 L 292 264" stroke="url(#tube)" stroke-width="9"/>
+    <path d="M 160 264 L 268 150" stroke="url(#tube)" stroke-width="9"/>
+    <!-- seat tube -->
+    <path d="M 292 264 L 268 150" stroke="url(#tube)" stroke-width="11"/>
+    <!-- down tube -->
+    <path d="M 292 264 L 420 168" stroke="url(#tube)" stroke-width="12"/>
+    <!-- top tube -->
+    <path d="M 268 150 L 424 140" stroke="url(#tube)" stroke-width="10"/>
+    <!-- head tube -->
+    <path d="M 424 140 L 420 168" stroke="url(#tube)" stroke-width="14"/>
+    <!-- fork -->
+    <path d="M 422 164 L 486 264" stroke="#2a2f35" stroke-width="8"/>
+    <path d="M 432 160 L 492 262" stroke="#3a4048" stroke-width="6" opacity="0.8"/>
+  </g>
+  <!-- the highlight line running along the top of each tube -->
+  <g stroke="#8fe8de" stroke-width="2" opacity="0.65" fill="none" stroke-linecap="round">
+    <path d="M 166 260 L 288 260"/>
+    <path d="M 165 259 L 266 146"/>
+    <path d="M 296 262 L 418 165"/>
+    <path d="M 270 145 L 422 135"/>
+  </g>
 
-  <!-- Main frame tubes -->
-  <line x1="70" y1="160" x2="150" y2="60" stroke="#2563eb" stroke-width="2.5" />
-  <line x1="150" y1="60" x2="230" y2="160" stroke="#2563eb" stroke-width="2.5" />
+  <!-- ===== Drivetrain ===== -->
+  <circle cx="292" cy="264" r="30" fill="none" stroke="#8b929b" stroke-width="4"/>
+  <g stroke="#8b929b" stroke-width="2">
+    <line x1="292" y1="234" x2="292" y2="294"/><line x1="262" y1="264" x2="322" y2="264"/>
+    <line x1="271" y1="243" x2="313" y2="285"/><line x1="271" y1="285" x2="313" y2="243"/>
+  </g>
+  <circle cx="292" cy="264" r="8" fill="#5d646d"/>
+  <!-- rear sprocket -->
+  <circle cx="160" cy="264" r="20" fill="none" stroke="#8b929b" stroke-width="3.5"/>
+  <!-- chain -->
+  <path d="M 292 234 L 160 244" stroke="#5d646d" stroke-width="3.5"/>
+  <path d="M 292 294 L 160 284" stroke="#5d646d" stroke-width="3.5"/>
+  <!-- crank arm and pedal -->
+  <path d="M 292 264 L 306 296" stroke="#4a5058" stroke-width="6" stroke-linecap="round"/>
+  <rect x="298" y="296" width="26" height="8" rx="2" fill="#2f353c"/>
 
-  <!-- Seat tube -->
-  <line x1="150" y1="60" x2="70" y2="160" stroke="#2563eb" stroke-width="2.5" />
+  <!-- ===== Saddle ===== -->
+  <path d="M 240 138 Q 268 128 296 136 Q 300 148 272 150 Q 246 150 240 138 Z" fill="#2b3138"/>
+  <path d="M 244 137 Q 268 130 292 136" fill="none" stroke="#697280" stroke-width="2" opacity="0.7"/>
+  <path d="M 268 150 L 268 158" stroke="#8b929b" stroke-width="6"/>
 
-  <!-- Chain stays -->
-  <line x1="150" y1="60" x2="70" y2="160" stroke="#2563eb" stroke-width="1.5" opacity="0.6" />
-  <line x1="150" y1="60" x2="230" y2="160" stroke="#2563eb" stroke-width="1.5" opacity="0.6" />
+  <!-- ===== Bars and stem ===== -->
+  <path d="M 424 140 L 452 128" stroke="#4a5058" stroke-width="8" stroke-linecap="round"/>
+  <!-- drop bar seen nearly end-on -->
+  <path d="M 452 128 Q 478 122 486 142 Q 492 164 474 172" fill="none" stroke="#3a4048" stroke-width="7" stroke-linecap="round"/>
+  <path d="M 452 128 Q 470 124 476 138" fill="none" stroke="#8f979f" stroke-width="2" opacity="0.6"/>
+  <!-- brake hood -->
+  <path d="M 484 146 Q 496 150 494 164 L 482 166 Q 480 152 484 146 Z" fill="#2b3138"/>
 
-  <!-- Fork (front) -->
-  <line x1="230" y1="160" x2="240" y2="60" stroke="#2563eb" stroke-width="1.8" />
-  <line x1="230" y1="160" x2="220" y2="60" stroke="#2563eb" stroke-width="1.8" />
-
-  <!-- Handlebars -->
-  <path d="M 230 60 L 210 45 L 250 45 Z" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linejoin="round" />
-  <line x1="230" y1="60" x2="230" y2="40" stroke="#2563eb" stroke-width="1.5" />
-
-  <!-- Seat -->
-  <ellipse cx="150" cy="55" rx="15" ry="8" class="bike-seat" />
-
-  <!-- Pedals and crank -->
-  <circle cx="150" cy="140" r="6" fill="#2d3748" stroke="#1a202c" stroke-width="1" />
-  <line x1="150" y1="134" x2="150" y2="146" stroke="#2d3748" stroke-width="2" />
-  <line x1="144" y1="140" x2="156" y2="140" stroke="#2d3748" stroke-width="2" />
-
-  <!-- Chain (simplified) -->
-  <path d="M 156 145 Q 170 155 220 160" fill="none" stroke="#1a202c" stroke-width="1.5" />
-
-  <!-- Brake cables -->
-  <path d="M 230 70 Q 215 100 230 160" stroke="#6b7280" stroke-width="0.8" opacity="0.6" fill="none" />
+  <!-- bottle cage -->
+  <path d="M 330 216 Q 344 212 350 224 L 344 250 Q 332 254 328 244 Z" fill="#c7ccd3" opacity="0.5"/>
+  <path d="M 332 214 L 348 238" stroke="#9aa1aa" stroke-width="2" opacity="0.8"/>
 </svg>

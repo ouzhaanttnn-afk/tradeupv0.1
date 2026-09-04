@@ -1,45 +1,92 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 400" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <style>
-      .sofa-fabric { fill: #4b5563; stroke: #2d3748; stroke-width: 1; }
-      .sofa-wood { fill: #78716c; stroke: #57534e; stroke-width: 1; }
-      .sofa-leg { fill: #2d3748; }
-      .sofa-cushion { fill: #6b7280; stroke: #4b5563; stroke-width: 1; }
-    </style>
+    <radialGradient id="backdrop" cx="50%" cy="34%" r="76%">
+      <stop offset="0%" stop-color="#f7f7f8"/><stop offset="60%" stop-color="#ececed"/><stop offset="100%" stop-color="#d8d9dc"/>
+    </radialGradient>
+    <!-- Boucle upholstery: matte, warm, no specular -->
+    <linearGradient id="fabric" x1="0%" y1="0%" x2="100%" y2="60%">
+      <stop offset="0%" stop-color="#9b8f7f"/><stop offset="45%" stop-color="#8a7e6e"/>
+      <stop offset="100%" stop-color="#6f6558"/>
+    </linearGradient>
+    <linearGradient id="cushion" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a89c8b"/><stop offset="55%" stop-color="#8f8373"/><stop offset="100%" stop-color="#736858"/>
+    </linearGradient>
+    <linearGradient id="seat" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b0a493"/><stop offset="60%" stop-color="#948875"/><stop offset="100%" stop-color="#6b6153"/>
+    </linearGradient>
+    <linearGradient id="oak" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a9814f"/><stop offset="55%" stop-color="#8a6739"/><stop offset="100%" stop-color="#6a4e2a"/>
+    </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="ambientBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="22"/></filter>
   </defs>
 
-  <!-- Main sofa frame -->
-  <path d="M 30 80 L 50 60 L 350 60 L 370 80 L 370 140 Q 370 160 360 170 L 40 170 Q 30 160 30 140 Z" class="sofa-fabric" />
+  <rect width="620" height="400" fill="url(#backdrop)"/>
+  <ellipse cx="310" cy="358" rx="248" ry="26" fill="#2b2d33" opacity="0.15" filter="url(#ambientBlur)"/>
 
-  <!-- Backrest cushions (3 sections) -->
-  <ellipse cx="120" cy="70" rx="50" ry="35" class="sofa-cushion" />
-  <ellipse cx="200" cy="55" rx="50" ry="45" class="sofa-cushion" />
-  <ellipse cx="280" cy="70" rx="50" ry="35" class="sofa-cushion" />
+  <!-- ===== Backrest ===== -->
+  <path d="M 96 106 Q 100 84 124 82 L 496 82 Q 520 84 524 106 L 524 208 L 96 208 Z" fill="url(#fabric)"/>
+  <!-- three back cushions, each a soft pillow: light on top, shadow at the base -->
+  <g>
+    <path d="M 112 100 Q 176 86 240 100 L 240 206 L 112 206 Z" fill="url(#cushion)"/>
+    <path d="M 246 96 Q 310 80 374 96 L 374 206 L 246 206 Z" fill="url(#cushion)"/>
+    <path d="M 380 100 Q 444 86 508 100 L 508 206 L 380 206 Z" fill="url(#cushion)"/>
+    <!-- seams between them -->
+    <line x1="243" y1="96" x2="243" y2="206" stroke="#5e5548" stroke-width="2.4" opacity="0.8"/>
+    <line x1="377" y1="96" x2="377" y2="206" stroke="#5e5548" stroke-width="2.4" opacity="0.8"/>
+    <!-- crown highlights -->
+    <path d="M 122 100 Q 176 90 232 100" fill="none" stroke="#c2b6a3" stroke-width="2.6" opacity="0.55"/>
+    <path d="M 256 96 Q 310 85 366 96" fill="none" stroke="#c2b6a3" stroke-width="2.6" opacity="0.5"/>
+    <path d="M 390 100 Q 444 90 500 100" fill="none" stroke="#b3a795" stroke-width="2.6" opacity="0.35"/>
+    <!-- where each cushion meets the seat -->
+    <rect x="112" y="192" width="396" height="16" fill="#000000" opacity="0.16" filter="url(#softShadow)"/>
+  </g>
 
-  <!-- Seat cushions (3 sections) -->
-  <ellipse cx="120" cy="130" rx="45" ry="25" fill="#5a6470" />
-  <ellipse cx="200" cy="135" rx="45" ry="28" fill="#5a6470" />
-  <ellipse cx="280" cy="130" rx="45" ry="25" fill="#5a6470" />
+  <!-- ===== Arms ===== -->
+  <path d="M 60 132 Q 58 108 82 106 Q 104 106 106 130 L 106 268 L 60 268 Z" fill="url(#fabric)"/>
+  <path d="M 514 130 Q 516 106 540 106 Q 562 108 560 132 L 560 268 L 514 268 Z" fill="#7d7263"/>
+  <!-- arm crown highlights -->
+  <path d="M 62 128 Q 62 110 82 109" fill="none" stroke="#c7bba8" stroke-width="2.6" opacity="0.6"/>
+  <path d="M 558 128 Q 558 110 540 109" fill="none" stroke="#9d9282" stroke-width="2.2" opacity="0.35"/>
 
-  <!-- Armrests -->
-  <path d="M 35 100 L 50 80 L 55 150 Q 50 160 45 165 Z" class="sofa-fabric" />
-  <path d="M 365 100 L 350 80 L 345 150 Q 350 160 355 165 Z" class="sofa-fabric" />
+  <!-- ===== Seat cushions ===== -->
+  <path d="M 96 206 L 524 206 L 540 260 Q 310 278 80 260 Z" fill="url(#seat)"/>
+  <g>
+    <path d="M 104 208 L 238 208 L 246 258 Q 172 266 96 258 Z" fill="#a1957f" opacity="0.9"/>
+    <path d="M 246 208 L 380 208 L 386 260 Q 312 268 240 260 Z" fill="#a89c86" opacity="0.9"/>
+    <path d="M 388 208 L 520 208 L 534 258 Q 458 266 382 258 Z" fill="#978b76" opacity="0.9"/>
+    <line x1="243" y1="208" x2="240" y2="260" stroke="#5e5548" stroke-width="2.4" opacity="0.75"/>
+    <line x1="384" y1="208" x2="386" y2="260" stroke="#5e5548" stroke-width="2.4" opacity="0.75"/>
+    <!-- front lip highlight where the seat rolls over -->
+    <path d="M 96 256 Q 310 274 540 256" fill="none" stroke="#c9bda9" stroke-width="3" opacity="0.6"/>
+  </g>
 
-  <!-- Wood trim/base -->
-  <rect x="30" y="165" width="340" height="8" rx="2" class="sofa-wood" />
+  <!-- ===== Skirt / frame rail ===== -->
+  <path d="M 80 260 Q 310 278 540 260 L 538 288 Q 310 306 82 288 Z" fill="#6b6153"/>
+  <path d="M 82 286 Q 310 304 538 286" fill="none" stroke="#4f473c" stroke-width="2" opacity="0.7"/>
 
-  <!-- Legs (4) -->
-  <rect x="55" y="173" width="6" height="30" rx="2" class="sofa-leg" />
-  <rect x="155" y="173" width="6" height="30" rx="2" class="sofa-leg" />
-  <rect x="245" y="173" width="6" height="30" rx="2" class="sofa-leg" />
-  <rect x="345" y="173" width="6" height="30" rx="2" class="sofa-leg" />
+  <!-- ===== Legs: tapered oak, splayed ===== -->
+  <g>
+    <path d="M 108 288 L 118 288 L 124 340 L 114 340 Z" fill="url(#oak)"/>
+    <path d="M 502 288 L 512 288 L 508 340 L 498 340 Z" fill="url(#oak)"/>
+    <path d="M 250 296 L 258 296 L 260 344 L 252 344 Z" fill="#7a5932"/>
+    <path d="M 362 296 L 370 296 L 368 344 L 360 344 Z" fill="#7a5932"/>
+    <!-- lit edge on each leg -->
+    <path d="M 108 288 L 114 340" stroke="#c79a60" stroke-width="1.4" opacity="0.6"/>
+    <path d="M 502 288 L 498 340" stroke="#b08a55" stroke-width="1.2" opacity="0.4"/>
+  </g>
+  <!-- leg contact shadows -->
+  <ellipse cx="119" cy="342" rx="14" ry="4" fill="#1c1e24" opacity="0.3" filter="url(#softShadow)"/>
+  <ellipse cx="256" cy="346" rx="12" ry="4" fill="#1c1e24" opacity="0.26" filter="url(#softShadow)"/>
+  <ellipse cx="364" cy="346" rx="12" ry="4" fill="#1c1e24" opacity="0.26" filter="url(#softShadow)"/>
+  <ellipse cx="503" cy="342" rx="14" ry="4" fill="#1c1e24" opacity="0.3" filter="url(#softShadow)"/>
 
-  <!-- Pillow details -->
-  <circle cx="100" cy="115" r="8" fill="#3b82f6" opacity="0.4" />
-  <circle cx="200" cy="110" r="10" fill="#3b82f6" opacity="0.4" />
-  <circle cx="300" cy="115" r="8" fill="#3b82f6" opacity="0.4" />
+  <!-- ===== Throw cushion, for scale and colour ===== -->
+  <path d="M 140 140 Q 186 128 214 160 Q 220 196 178 204 Q 138 200 132 168 Z" fill="#4a6b7c"/>
+  <path d="M 146 146 Q 184 136 208 162" fill="none" stroke="#7ea3b6" stroke-width="2.4" opacity="0.6"/>
+  <path d="M 140 140 Q 186 128 214 160 Q 220 196 178 204 Q 138 200 132 168 Z" fill="none" stroke="#35505e" stroke-width="1.6" opacity="0.7"/>
 
-  <!-- Shading for depth -->
-  <path d="M 35 80 Q 35 100 30 140" stroke="#2d3748" stroke-width="2" fill="none" opacity="0.3" />
-  <path d="M 365 80 Q 365 100 370 140" stroke="#2d3748" stroke-width="2" fill="none" opacity="0.3" />
+  <!-- overall key light from upper-left / falloff to lower-right -->
+  <ellipse cx="150" cy="140" rx="150" ry="110" fill="#ffffff" opacity="0.06" filter="url(#ambientBlur)"/>
+  <ellipse cx="500" cy="250" rx="150" ry="110" fill="#000000" opacity="0.07" filter="url(#ambientBlur)"/>
 </svg>

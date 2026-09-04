@@ -1,58 +1,135 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 420" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <style>
-      .motorcycle-body { fill: #1f2937; stroke: #111827; stroke-width: 1; }
-      .motorcycle-wheel { fill: none; stroke: #2d3748; stroke-width: 2; }
-      .motorcycle-tire { fill: #0f0f0f; stroke: #000; stroke-width: 1; }
-    </style>
+    <radialGradient id="backdrop" cx="50%" cy="34%" r="76%">
+      <stop offset="0%" stop-color="#f7f7f8"/><stop offset="60%" stop-color="#ececed"/><stop offset="100%" stop-color="#d8d9dc"/>
+    </radialGradient>
+    <!-- Deep candy paint on the tank: a hard specular band, then a fast falloff -->
+    <linearGradient id="paint" x1="0%" y1="0%" x2="20%" y2="100%">
+      <stop offset="0%" stop-color="#c8402f"/><stop offset="24%" stop-color="#9d2418"/>
+      <stop offset="62%" stop-color="#6d150d"/><stop offset="100%" stop-color="#4a0d07"/>
+    </linearGradient>
+    <linearGradient id="engine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9aa1aa"/><stop offset="40%" stop-color="#6d747d"/><stop offset="100%" stop-color="#41474e"/>
+    </linearGradient>
+    <linearGradient id="rimM" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b0b6be"/><stop offset="50%" stop-color="#7a818a"/><stop offset="100%" stop-color="#4d545c"/>
+    </linearGradient>
+    <linearGradient id="fork" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5a6169"/><stop offset="35%" stop-color="#c3c9d1"/>
+      <stop offset="70%" stop-color="#828a93"/><stop offset="100%" stop-color="#4c525a"/>
+    </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="ambientBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="20"/></filter>
   </defs>
 
-  <!-- Rear wheel -->
-  <circle cx="80" cy="140" r="35" class="motorcycle-wheel" />
-  <circle cx="80" cy="140" r="30" class="motorcycle-tire" />
+  <rect width="660" height="420" fill="url(#backdrop)"/>
+  <ellipse cx="330" cy="374" rx="256" ry="20" fill="#2b2d33" opacity="0.14" filter="url(#ambientBlur)"/>
+  <ellipse cx="164" cy="362" rx="40" ry="8" fill="#1c1e24" opacity="0.32" filter="url(#softShadow)"/>
+  <ellipse cx="506" cy="362" rx="38" ry="8" fill="#1c1e24" opacity="0.32" filter="url(#softShadow)"/>
 
-  <!-- Front wheel -->
-  <circle cx="260" cy="140" r="35" class="motorcycle-wheel" />
-  <circle cx="260" cy="140" r="30" class="motorcycle-tire" />
+  <!-- ===== Wheels: fat tyres, five-spoke cast rims ===== -->
+  <g>
+    <circle cx="164" cy="272" r="88" fill="#1b1e22"/>
+    <circle cx="164" cy="272" r="88" fill="none" stroke="#2e333a" stroke-width="3"/>
+    <circle cx="164" cy="272" r="58" fill="none" stroke="url(#rimM)" stroke-width="9"/>
+    <g stroke="#8b929b" stroke-width="7" stroke-linecap="round">
+      <line x1="164" y1="272" x2="164" y2="218"/><line x1="164" y1="272" x2="215" y2="288"/>
+      <line x1="164" y1="272" x2="196" y2="315"/><line x1="164" y1="272" x2="132" y2="315"/>
+      <line x1="164" y1="272" x2="113" y2="288"/>
+    </g>
+    <circle cx="164" cy="272" r="15" fill="#6d747d"/><circle cx="164" cy="272" r="8" fill="#3a4046"/>
+    <!-- tyre shoulder catching light -->
+    <path d="M 102 210 A 88 88 0 0 1 226 210" fill="none" stroke="#454b53" stroke-width="7" opacity="0.7"/>
 
-  <!-- Rear axle -->
-  <line x1="50" y1="140" x2="110" y2="140" stroke="#2d3748" stroke-width="2" />
+    <circle cx="506" cy="272" r="88" fill="#1b1e22"/>
+    <circle cx="506" cy="272" r="88" fill="none" stroke="#2e333a" stroke-width="3"/>
+    <circle cx="506" cy="272" r="58" fill="none" stroke="url(#rimM)" stroke-width="9"/>
+    <g stroke="#8b929b" stroke-width="7" stroke-linecap="round">
+      <line x1="506" y1="272" x2="506" y2="218"/><line x1="506" y1="272" x2="557" y2="288"/>
+      <line x1="506" y1="272" x2="538" y2="315"/><line x1="506" y1="272" x2="474" y2="315"/>
+      <line x1="506" y1="272" x2="455" y2="288"/>
+    </g>
+    <circle cx="506" cy="272" r="15" fill="#6d747d"/><circle cx="506" cy="272" r="8" fill="#3a4046"/>
+    <path d="M 444 210 A 88 88 0 0 1 568 210" fill="none" stroke="#454b53" stroke-width="7" opacity="0.7"/>
+    <!-- front brake disc -->
+    <circle cx="506" cy="272" r="44" fill="none" stroke="#9aa1aa" stroke-width="3" opacity="0.85"/>
+    <circle cx="506" cy="272" r="36" fill="none" stroke="#7a818a" stroke-width="1.6" opacity="0.7"/>
+  </g>
 
-  <!-- Swingarm -->
-  <path d="M 110 140 L 200 120" stroke="#1f2937" stroke-width="3" />
+  <!-- ===== Swingarm and rear suspension ===== -->
+  <path d="M 164 272 L 300 258" stroke="#5a6169" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 168 266 L 296 253" stroke="#a8aeb6" stroke-width="3" opacity="0.55"/>
+  <path d="M 268 262 L 288 196" stroke="#3f454c" stroke-width="9" stroke-linecap="round"/>
+  <path d="M 272 246 L 286 210" stroke="#c8402f" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
 
-  <!-- Rear shock -->
-  <line x1="120" y1="140" x2="210" y2="70" stroke="#374151" stroke-width="2" />
+  <!-- ===== Engine block ===== -->
+  <path d="M 262 232 L 356 226 L 372 288 Q 330 300 268 292 Z" fill="url(#engine)"/>
+  <!-- cooling fins -->
+  <g stroke="#3f454c" stroke-width="2.4" opacity="0.75">
+    <line x1="272" y1="244" x2="356" y2="239"/><line x1="273" y1="254" x2="358" y2="249"/>
+    <line x1="274" y1="264" x2="360" y2="259"/><line x1="275" y1="274" x2="362" y2="269"/>
+  </g>
+  <g stroke="#c2c8d0" stroke-width="1" opacity="0.5">
+    <line x1="272" y1="241" x2="356" y2="236"/><line x1="274" y1="261" x2="360" y2="256"/>
+  </g>
+  <!-- exhaust header sweeping down and back -->
+  <path d="M 358 244 Q 396 268 386 304 Q 372 330 320 330" fill="none" stroke="#b6bcc4" stroke-width="9" stroke-linecap="round"/>
+  <path d="M 358 242 Q 392 264 384 298" fill="none" stroke="#e6eaee" stroke-width="3" opacity="0.7"/>
+  <!-- silencer -->
+  <path d="M 200 320 L 322 328 Q 332 334 322 340 L 200 334 Q 190 328 200 320 Z" fill="#8b929b"/>
+  <path d="M 202 322 L 320 330" stroke="#dfe3e8" stroke-width="2.4" opacity="0.75"/>
 
-  <!-- Main frame -->
-  <path d="M 110 140 L 140 100 L 160 80 L 200 70" stroke="#1f2937" stroke-width="3" fill="none" />
+  <!-- ===== Frame spine ===== -->
+  <path d="M 288 196 L 400 190" stroke="#3f454c" stroke-width="10" stroke-linecap="round"/>
+  <path d="M 400 190 L 430 216" stroke="#3f454c" stroke-width="9" stroke-linecap="round"/>
 
-  <!-- Front forks -->
-  <line x1="220" y1="90" x2="250" y2="140" stroke="#2d3748" stroke-width="2" />
-  <line x1="240" y1="90" x2="270" y2="140" stroke="#2d3748" stroke-width="2" />
+  <!-- ===== Fuel tank ===== -->
+  <path d="M 300 186 Q 340 158 404 160 Q 438 164 442 190 Q 430 214 386 220 Q 330 224 300 210 Z" fill="url(#paint)"/>
+  <!-- the hard specular band along the tank shoulder -->
+  <path d="M 318 180 Q 356 164 404 166 Q 424 168 430 180" fill="none" stroke="#ff9a86" stroke-width="5" opacity="0.55" stroke-linecap="round"/>
+  <path d="M 322 177 Q 358 163 400 165" fill="none" stroke="#ffe3dc" stroke-width="2.2" opacity="0.75" stroke-linecap="round"/>
+  <!-- knee cutout shadow -->
+  <path d="M 306 202 Q 350 214 400 208" fill="none" stroke="#3d0a05" stroke-width="4" opacity="0.5"/>
+  <!-- filler cap -->
+  <circle cx="392" cy="172" r="9" fill="#9aa1aa"/><circle cx="392" cy="171" r="6" fill="#6d747d"/>
 
-  <!-- Handlebar -->
-  <line x1="220" y1="85" x2="200" y2="75" stroke="#1f2937" stroke-width="2" />
-  <line x1="220" y1="85" x2="240" y2="75" stroke="#1f2937" stroke-width="2" />
+  <!-- ===== Seat ===== -->
+  <path d="M 236 188 Q 268 176 302 182 L 300 204 Q 262 208 234 200 Z" fill="#26292e"/>
+  <path d="M 240 187 Q 268 179 298 184" fill="none" stroke="#6b7480" stroke-width="2" opacity="0.65"/>
+  <!-- tail unit -->
+  <path d="M 200 178 Q 224 172 240 182 L 236 200 Q 212 200 198 192 Z" fill="#8d2016"/>
+  <path d="M 202 177 Q 222 173 236 181" fill="none" stroke="#e07a6a" stroke-width="1.8" opacity="0.6"/>
+  <!-- tail light -->
+  <path d="M 196 184 L 204 182 L 204 194 L 196 192 Z" fill="#c1272d"/>
 
-  <!-- Tank -->
-  <path d="M 140 100 L 160 80 L 190 85 L 175 110 Z" class="motorcycle-body" />
+  <!-- ===== Front end ===== -->
+  <!-- upside-down forks -->
+  <path d="M 430 216 L 494 272" stroke="url(#fork)" stroke-width="13" stroke-linecap="round"/>
+  <path d="M 444 210 L 508 268" stroke="url(#fork)" stroke-width="11" stroke-linecap="round" opacity="0.9"/>
+  <!-- triple clamp -->
+  <path d="M 424 200 L 456 194 L 460 212 L 428 218 Z" fill="#5a6169"/>
+  <!-- clip-on bars -->
+  <path d="M 436 194 L 470 180" stroke="#3f454c" stroke-width="7" stroke-linecap="round"/>
+  <path d="M 470 180 L 492 176" stroke="#26292e" stroke-width="9" stroke-linecap="round"/>
+  <!-- mirror -->
+  <path d="M 470 180 L 486 156" stroke="#3f454c" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="490" cy="150" rx="14" ry="9" fill="#2b3138" transform="rotate(-18 490 150)"/>
+  <ellipse cx="489" cy="149" rx="10" ry="6" fill="#8fa4bd" transform="rotate(-18 489 149)" opacity="0.8"/>
 
-  <!-- Seat -->
-  <ellipse cx="180" cy="95" rx="25" ry="12" class="motorcycle-body" />
+  <!-- fairing and headlight -->
+  <path d="M 452 196 Q 492 190 512 212 Q 522 234 508 250 Q 486 240 466 216 Z" fill="url(#paint)"/>
+  <path d="M 460 200 Q 492 195 508 214" fill="none" stroke="#ff9a86" stroke-width="3" opacity="0.5" stroke-linecap="round"/>
+  <path d="M 486 208 Q 512 214 516 236 Q 500 244 484 228 Z" fill="#1b1e22"/>
+  <path d="M 490 213 Q 508 218 511 233" fill="none" stroke="#cfe4ff" stroke-width="3.5" opacity="0.85" stroke-linecap="round"/>
+  <ellipse cx="500" cy="224" rx="7" ry="5" fill="#ffffff" opacity="0.5" transform="rotate(-24 500 224)"/>
 
-  <!-- Engine block -->
-  <rect x="150" y="110" width="40" height="30" rx="2" class="motorcycle-body" />
+  <!-- windscreen -->
+  <path d="M 470 190 Q 496 182 512 194 Q 498 196 476 200 Z" fill="#9fb6cf" opacity="0.55"/>
 
-  <!-- Headlight -->
-  <circle cx="255" cy="105" r="8" fill="#f59e0b" opacity="0.7" stroke="#1f2937" stroke-width="1" />
+  <!-- front mudguard -->
+  <path d="M 456 246 Q 500 232 546 250 Q 542 262 534 264 Q 496 248 464 258 Z" fill="#8d2016"/>
+  <path d="M 460 248 Q 500 236 542 252" fill="none" stroke="#e07a6a" stroke-width="2" opacity="0.55"/>
 
-  <!-- Taillight -->
-  <circle cx="70" cy="115" r="6" fill="#ef4444" opacity="0.6" stroke="#1f2937" stroke-width="1" />
-
-  <!-- Exhaust pipe -->
-  <path d="M 180 130 Q 190 140 185 155" stroke="#374151" stroke-width="2.5" />
-
-  <!-- Kickstand -->
-  <line x1="160" y1="140" x2="150" y2="160" stroke="#2d3748" stroke-width="1.5" />
+  <!-- footpeg -->
+  <path d="M 300 296 L 322 302" stroke="#5a6169" stroke-width="6" stroke-linecap="round"/>
 </svg>

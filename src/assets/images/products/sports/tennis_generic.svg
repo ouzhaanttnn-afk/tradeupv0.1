@@ -1,55 +1,99 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 320" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 620" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <style>
-      .racket-frame { fill: none; stroke: #1f2937; stroke-width: 2.5; stroke-linecap: round; }
-      .racket-strings { fill: none; stroke: #f3f4f6; stroke-width: 0.8; }
-      .racket-handle { fill: #2d3748; stroke: #1a202c; stroke-width: 1; }
-      .racket-grip { fill: #3b82f6; }
-    </style>
+    <radialGradient id="backdrop" cx="50%" cy="34%" r="76%">
+      <stop offset="0%" stop-color="#f7f7f8"/><stop offset="60%" stop-color="#ececed"/><stop offset="100%" stop-color="#d8d9dc"/>
+    </radialGradient>
+    <!-- Graphite hoop: a tube, bright on its upper-left face -->
+    <linearGradient id="hoop" x1="0%" y1="0%" x2="100%" y2="60%">
+      <stop offset="0%" stop-color="#e8f14a"/><stop offset="35%" stop-color="#b8c81f"/>
+      <stop offset="72%" stop-color="#6e7a12"/><stop offset="100%" stop-color="#41490b"/>
+    </linearGradient>
+    <linearGradient id="shaft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2a2f36"/><stop offset="30%" stop-color="#555c65"/>
+      <stop offset="70%" stop-color="#343a42"/><stop offset="100%" stop-color="#1d2127"/>
+    </linearGradient>
+    <linearGradient id="grip" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a1d22"/><stop offset="32%" stop-color="#3b424b"/>
+      <stop offset="68%" stop-color="#252a31"/><stop offset="100%" stop-color="#14171b"/>
+    </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="ambientBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="20"/></filter>
+    <clipPath id="bedClip"><ellipse cx="190" cy="196" rx="106" ry="136"/></clipPath>
   </defs>
 
-  <!-- Racket head (oval) -->
-  <ellipse cx="90" cy="80" rx="55" ry="65" class="racket-frame" />
+  <rect width="380" height="620" fill="url(#backdrop)"/>
+  <ellipse cx="196" cy="576" rx="120" ry="22" fill="#2b2d33" opacity="0.13" filter="url(#ambientBlur)"/>
+  <ellipse cx="192" cy="566" rx="46" ry="9" fill="#1c1e24" opacity="0.26" filter="url(#softShadow)"/>
 
-  <!-- String pattern (vertical) -->
-  <line x1="50" y1="25" x2="50" y2="135" class="racket-strings" />
-  <line x1="60" y1="15" x2="60" y2="145" class="racket-strings" />
-  <line x1="70" y1="10" x2="70" y2="150" class="racket-strings" />
-  <line x1="80" y1="8" x2="80" y2="152" class="racket-strings" />
-  <line x1="90" y1="7" x2="90" y2="153" class="racket-strings" />
-  <line x1="100" y1="8" x2="100" y2="152" class="racket-strings" />
-  <line x1="110" y1="10" x2="110" y2="150" class="racket-strings" />
-  <line x1="120" y1="15" x2="120" y2="145" class="racket-strings" />
-  <line x1="130" y1="25" x2="130" y2="135" class="racket-strings" />
+  <!-- ===== Handle: butt cap, grip, then the shaft ===== -->
+  <path d="M 172 556 L 208 556 L 210 566 Q 190 572 170 566 Z" fill="#14171b"/>
+  <rect x="170" y="424" width="40" height="134" rx="7" fill="url(#grip)"/>
+  <!-- overgrip spiralling up the handle -->
+  <g stroke="#0e1115" stroke-width="2" opacity="0.8">
+    <path d="M 170 440 L 210 432"/><path d="M 170 456 L 210 448"/><path d="M 170 472 L 210 464"/>
+    <path d="M 170 488 L 210 480"/><path d="M 170 504 L 210 496"/><path d="M 170 520 L 210 512"/>
+    <path d="M 170 536 L 210 528"/><path d="M 170 552 L 210 544"/>
+  </g>
+  <g stroke="#5c646e" stroke-width="1" opacity="0.5">
+    <path d="M 172 437 L 208 429"/><path d="M 172 469 L 208 461"/><path d="M 172 501 L 208 493"/>
+    <path d="M 172 533 L 208 525"/>
+  </g>
+  <!-- the lit edge down the left of the handle -->
+  <rect x="171" y="426" width="3" height="130" rx="1.5" fill="#7d858f" opacity="0.45"/>
 
-  <!-- String pattern (horizontal) -->
-  <line x1="40" y1="35" x2="140" y2="35" class="racket-strings" />
-  <line x1="35" y1="50" x2="145" y2="50" class="racket-strings" />
-  <line x1="32" y1="70" x2="148" y2="70" class="racket-strings" />
-  <line x1="31" y1="90" x2="149" y2="90" class="racket-strings" />
-  <line x1="32" y1="110" x2="148" y2="110" class="racket-strings" />
-  <line x1="35" y1="130" x2="145" y2="130" class="racket-strings" />
+  <!-- ===== Throat: two struts opening into the hoop ===== -->
+  <path d="M 174 426 Q 158 396 150 348" stroke="url(#shaft)" stroke-width="17" fill="none" stroke-linecap="round"/>
+  <path d="M 206 426 Q 222 396 230 348" stroke="url(#shaft)" stroke-width="17" fill="none" stroke-linecap="round"/>
+  <!-- bridge between them -->
+  <path d="M 152 342 Q 190 330 228 342" fill="none" stroke="url(#shaft)" stroke-width="13" stroke-linecap="round"/>
+  <!-- strut highlights -->
+  <path d="M 176 422 Q 162 394 155 352" fill="none" stroke="#8b939d" stroke-width="2.6" opacity="0.5" stroke-linecap="round"/>
 
-  <!-- Throat (between head and handle) -->
-  <path d="M 75 145 L 80 160 L 100 160 L 105 145" class="racket-frame" />
+  <!-- ===== String bed ===== -->
+  <ellipse cx="190" cy="196" rx="106" ry="136" fill="#fbfbfc" opacity="0.55"/>
+  <g clip-path="url(#bedClip)">
+    <!-- mains -->
+    <g stroke="#c9ced6" stroke-width="2.1">
+      <line x1="118" y1="40" x2="118" y2="352"/><line x1="134" y1="40" x2="134" y2="352"/>
+      <line x1="150" y1="40" x2="150" y2="352"/><line x1="166" y1="40" x2="166" y2="352"/>
+      <line x1="182" y1="40" x2="182" y2="352"/><line x1="198" y1="40" x2="198" y2="352"/>
+      <line x1="214" y1="40" x2="214" y2="352"/><line x1="230" y1="40" x2="230" y2="352"/>
+      <line x1="246" y1="40" x2="246" y2="352"/><line x1="262" y1="40" x2="262" y2="352"/>
+    </g>
+    <!-- crosses, drawn over the mains so the weave reads -->
+    <g stroke="#dfe3e9" stroke-width="2.1">
+      <line x1="70" y1="86" x2="310" y2="86"/><line x1="70" y1="104" x2="310" y2="104"/>
+      <line x1="70" y1="122" x2="310" y2="122"/><line x1="70" y1="140" x2="310" y2="140"/>
+      <line x1="70" y1="158" x2="310" y2="158"/><line x1="70" y1="176" x2="310" y2="176"/>
+      <line x1="70" y1="194" x2="310" y2="194"/><line x1="70" y1="212" x2="310" y2="212"/>
+      <line x1="70" y1="230" x2="310" y2="230"/><line x1="70" y1="248" x2="310" y2="248"/>
+      <line x1="70" y1="266" x2="310" y2="266"/><line x1="70" y1="284" x2="310" y2="284"/>
+    </g>
+    <!-- the sweet spot reads slightly brighter where the light lands -->
+    <ellipse cx="160" cy="160" rx="70" ry="80" fill="#ffffff" opacity="0.20" filter="url(#softShadow)"/>
+    <!-- string dampener -->
+    <rect x="182" y="286" width="18" height="10" rx="4" fill="#c1272d"/>
+  </g>
 
-  <!-- Handle/shaft -->
-  <rect x="70" y="160" width="40" height="120" rx="8" class="racket-handle" />
+  <!-- ===== Hoop ===== -->
+  <ellipse cx="190" cy="196" rx="106" ry="136" fill="none" stroke="url(#hoop)" stroke-width="16"/>
+  <!-- grommet strip -->
+  <ellipse cx="190" cy="196" rx="106" ry="136" fill="none" stroke="#2b3009" stroke-width="4" opacity="0.35"/>
+  <!-- the specular running along the upper-left of the hoop tube -->
+  <path d="M 104 108 A 106 136 0 0 1 190 60" fill="none" stroke="#f6ff9c" stroke-width="4" opacity="0.8" stroke-linecap="round"/>
+  <path d="M 88 176 A 106 136 0 0 1 104 108" fill="none" stroke="#eaf56b" stroke-width="3" opacity="0.55" stroke-linecap="round"/>
+  <!-- shadow side of the hoop -->
+  <path d="M 276 240 A 106 136 0 0 1 214 328" fill="none" stroke="#2f3607" stroke-width="4" opacity="0.5" stroke-linecap="round"/>
 
-  <!-- Grip wrapping -->
-  <line x1="70" y1="175" x2="110" y2="175" stroke="#0f172a" stroke-width="0.5" opacity="0.4" />
-  <line x1="70" y1="190" x2="110" y2="190" stroke="#0f172a" stroke-width="0.5" opacity="0.4" />
-  <line x1="70" y1="205" x2="110" y2="205" stroke="#0f172a" stroke-width="0.5" opacity="0.4" />
-  <line x1="70" y1="220" x2="110" y2="220" stroke="#0f172a" stroke-width="0.5" opacity="0.4" />
-  <line x1="70" y1="235" x2="110" y2="235" stroke="#0f172a" stroke-width="0.5" opacity="0.4" />
-  <line x1="70" y1="250" x2="110" y2="250" stroke="#0f172a" stroke-width="0.5" opacity="0.4" />
+  <!-- grommets -->
+  <g fill="#2b3009" opacity="0.75">
+    <circle cx="118" cy="66" r="2.6"/><circle cx="150" cy="50" r="2.6"/><circle cx="190" cy="45" r="2.6"/>
+    <circle cx="230" cy="50" r="2.6"/><circle cx="262" cy="66" r="2.6"/>
+    <circle cx="86" cy="150" r="2.6"/><circle cx="84" cy="196" r="2.6"/><circle cx="86" cy="242" r="2.6"/>
+    <circle cx="294" cy="150" r="2.6"/><circle cx="296" cy="196" r="2.6"/><circle cx="294" cy="242" r="2.6"/>
+  </g>
 
-  <!-- Overgrip accent -->
-  <rect x="72" y="195" width="36" height="35" fill="#3b82f6" opacity="0.5" rx="4" />
-
-  <!-- Butt cap -->
-  <circle cx="90" cy="280" r="6" fill="#1a202c" stroke="#000" stroke-width="1" />
-
-  <!-- String tension indicator -->
-  <text x="90" y="85" font-size="8" fill="#f3f4f6" text-anchor="middle" opacity="0.6">STRING</text>
+  <!-- brand mark on the throat bridge -->
+  <text x="190" y="346" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif"
+        font-size="9" font-weight="800" letter-spacing="2" fill="#d7dde5" opacity="0.85">PRO</text>
 </svg>

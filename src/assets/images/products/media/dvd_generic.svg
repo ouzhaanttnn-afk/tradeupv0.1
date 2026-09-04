@@ -1,46 +1,106 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 520" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <style>
-      .dvd-case { fill: #1a1a1a; stroke: #0a0a0a; stroke-width: 1; }
-      .dvd-disc { fill: #c7d2e0; stroke: #a1a1aa; stroke-width: 1; }
-      .dvd-label { fill: #2563eb; stroke: #1e40af; stroke-width: 1; }
-    </style>
+    <radialGradient id="backdrop" cx="50%" cy="34%" r="76%">
+      <stop offset="0%" stop-color="#f7f7f8"/><stop offset="60%" stop-color="#ececed"/><stop offset="100%" stop-color="#d8d9dc"/>
+    </radialGradient>
+    <!-- Blu-ray case: translucent blue polypropylene -->
+    <linearGradient id="case" x1="0%" y1="0%" x2="100%" y2="30%">
+      <stop offset="0%" stop-color="#2a5cc4"/><stop offset="45%" stop-color="#1f47a0"/><stop offset="100%" stop-color="#163576"/>
+    </linearGradient>
+    <linearGradient id="caseSpine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14306b"/><stop offset="60%" stop-color="#1d4292"/><stop offset="100%" stop-color="#2a5cc4"/>
+    </linearGradient>
+    <!-- Disc: aluminium under polycarbonate, so it throws a spectrum -->
+    <linearGradient id="discBase" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#e9edf3"/><stop offset="50%" stop-color="#c9d2de"/><stop offset="100%" stop-color="#aab5c6"/>
+    </linearGradient>
+    <linearGradient id="spectrum" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#ff5f8d" stop-opacity="0.55"/>
+      <stop offset="22%"  stop-color="#ffd166" stop-opacity="0.45"/>
+      <stop offset="45%"  stop-color="#5ce6b0" stop-opacity="0.45"/>
+      <stop offset="68%"  stop-color="#4aa8ff" stop-opacity="0.5"/>
+      <stop offset="88%"  stop-color="#b06bff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ff5f8d" stop-opacity="0.4"/>
+    </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="ambientBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="22"/></filter>
+    <clipPath id="discClip"><circle cx="316" cy="300" r="112"/></clipPath>
   </defs>
 
-  <!-- DVD case (3D perspective) -->
-  <rect x="20" y="40" width="100" height="130" rx="2" class="dvd-case" />
+  <rect width="480" height="520" fill="url(#backdrop)"/>
+  <ellipse cx="240" cy="462" rx="184" ry="26" fill="#2b2d33" opacity="0.14" filter="url(#ambientBlur)"/>
 
-  <!-- Spine -->
-  <polygon points="120,40 130,35 130,165 120,170" fill="#0a0a0a" stroke="#000" stroke-width="0.5" />
+  <!-- ===== Disc, lying behind and to the right ===== -->
+  <g>
+    <ellipse cx="316" cy="414" rx="104" ry="12" fill="#1c1e24" opacity="0.22" filter="url(#softShadow)"/>
+    <circle cx="316" cy="300" r="112" fill="url(#discBase)"/>
+    <g clip-path="url(#discClip)">
+      <!-- the data layer throwing its spectrum, brightest where the light strikes -->
+      <circle cx="316" cy="300" r="112" fill="url(#spectrum)"/>
+      <!-- concentric interference banding -->
+      <g fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.22">
+        <circle cx="316" cy="300" r="100"/><circle cx="316" cy="300" r="88"/>
+        <circle cx="316" cy="300" r="76"/><circle cx="316" cy="300" r="64"/>
+        <circle cx="316" cy="300" r="52"/>
+      </g>
+      <!-- a broad specular sweep -->
+      <path d="M 204 240 L 428 200 L 428 250 L 204 300 Z" fill="#ffffff" opacity="0.22"/>
+    </g>
+    <!-- clear inner ring and hub -->
+    <circle cx="316" cy="300" r="40" fill="#dfe5ee"/>
+    <circle cx="316" cy="300" r="40" fill="none" stroke="#a9b4c4" stroke-width="1"/>
+    <circle cx="316" cy="300" r="28" fill="#c3ccda" opacity="0.7"/>
+    <circle cx="316" cy="300" r="17" fill="#f1f4f8"/>
+    <circle cx="316" cy="300" r="17" fill="none" stroke="#9aa5b6" stroke-width="1.2"/>
+    <!-- outer rim -->
+    <circle cx="316" cy="300" r="112" fill="none" stroke="#93a0b3" stroke-width="1.4" opacity="0.8"/>
+    <path d="M 236 220 A 112 112 0 0 1 300 190" fill="none" stroke="#ffffff" stroke-width="2.6" opacity="0.7" stroke-linecap="round"/>
+  </g>
 
-  <!-- Case edge -->
-  <line x1="120" y1="40" x2="130" y2="35" stroke="#1a1a1a" stroke-width="0.5" />
-  <line x1="120" y1="170" x2="130" y2="165" stroke="#1a1a1a" stroke-width="0.5" />
+  <!-- ===== Case, standing in front-left ===== -->
+  <g>
+    <ellipse cx="176" cy="440" rx="88" ry="12" fill="#1c1e24" opacity="0.30" filter="url(#softShadow)"/>
+    <!-- spine -->
+    <path d="M 78 78 L 96 68 L 96 434 L 78 444 Z" fill="url(#caseSpine)"/>
+    <!-- front face -->
+    <rect x="96" y="68" width="184" height="366" rx="3" fill="url(#case)"/>
 
-  <!-- Disc visible inside -->
-  <circle cx="70" cy="110" r="30" class="dvd-disc" />
+    <!-- printed inlay, inset from the case edge -->
+    <rect x="104" y="76" width="168" height="350" fill="#0d1424"/>
+    <!-- poster art: a horizon with a low sun -->
+    <rect x="104" y="76" width="168" height="210" fill="#16233f"/>
+    <circle cx="188" cy="212" r="46" fill="#f0904a" opacity="0.9"/>
+    <rect x="104" y="212" width="168" height="74" fill="#16233f" opacity="0.55"/>
+    <path d="M 104 246 L 150 206 L 186 246 L 226 196 L 272 250 L 272 286 L 104 286 Z" fill="#0b1220"/>
+    <!-- title -->
+    <text x="188" y="330" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif"
+          font-size="26" font-weight="800" letter-spacing="1" fill="#ffffff">HORIZON</text>
+    <text x="188" y="352" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif"
+          font-size="10" font-weight="500" letter-spacing="3" fill="#9fb4d6">A FILM IN FOUR PARTS</text>
+    <!-- billing block -->
+    <g fill="#7f93b4" opacity="0.75">
+      <rect x="124" y="372" width="128" height="3" rx="1.5"/>
+      <rect x="136" y="380" width="104" height="3" rx="1.5"/>
+      <rect x="146" y="388" width="84" height="3" rx="1.5"/>
+    </g>
+    <!-- format badge -->
+    <rect x="112" y="404" width="58" height="14" rx="2" fill="#0a1830"/>
+    <text x="141" y="414" text-anchor="middle" font-family="system-ui,sans-serif"
+          font-size="8" font-weight="800" letter-spacing="1" fill="#5ca8ff">BLU-RAY</text>
+    <!-- age rating -->
+    <rect x="238" y="402" width="20" height="20" rx="2" fill="#ffffff" opacity="0.9"/>
+    <text x="248" y="417" text-anchor="middle" font-family="system-ui,sans-serif"
+          font-size="12" font-weight="800" fill="#16233f">15</text>
 
-  <!-- Disc center hole -->
-  <circle cx="70" cy="110" r="6" fill="#1a1a1a" />
+    <!-- spine text -->
+    <text transform="translate(88,270) rotate(-90)" text-anchor="middle"
+          font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700"
+          letter-spacing="2" fill="#bcd2f2">HORIZON</text>
 
-  <!-- Disc hole pin -->
-  <circle cx="70" cy="110" r="2" fill="#0a0a0a" />
-
-  <!-- DVD label area on case -->
-  <rect x="25" y="50" width="90" height="50" rx="2" class="dvd-label" />
-
-  <!-- Title text -->
-  <text x="70" y="70" font-size="11" font-weight="bold" fill="white" text-anchor="middle">MOVIE</text>
-  <text x="70" y="85" font-size="8" fill="#dbeafe" text-anchor="middle">TITLE</text>
-
-  <!-- Format indicator -->
-  <text x="25" y="120" font-size="6" fill="#9ca3af">BLURAY</text>
-
-  <!-- Additional disc specs -->
-  <rect x="25" y="130" width="90" height="35" fill="none" stroke="#374151" stroke-width="0.5" rx="2" opacity="0.5" />
-  <text x="30" y="145" font-size="6" fill="#9ca3af">Runtime: 120 min</text>
-  <text x="30" y="155" font-size="6" fill="#9ca3af">Format: 16:9 Widescreen</text>
-
-  <!-- Shine effect on disc -->
-  <ellipse cx="55" cy="95" rx="12" ry="8" fill="white" opacity="0.15" />
+    <!-- case gloss: a hard vertical highlight near the hinge, plus a broad sweep -->
+    <rect x="99" y="68" width="6" height="366" fill="#ffffff" opacity="0.20"/>
+    <path d="M 96 68 L 150 68 L 110 434 L 96 434 Z" fill="#ffffff" opacity="0.07"/>
+    <!-- top edge -->
+    <path d="M 78 78 L 96 68 L 280 68" fill="none" stroke="#7fa6f0" stroke-width="1.6" opacity="0.6"/>
+  </g>
 </svg>

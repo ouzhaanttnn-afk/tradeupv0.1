@@ -1,40 +1,95 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 460" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <style>
-      .vinyl-main { fill: #0f172a; stroke: #111827; stroke-width: 1; }
-      .vinyl-label { fill: #3b82f6; stroke: #2563eb; stroke-width: 1; }
-    </style>
+    <radialGradient id="backdrop" cx="50%" cy="34%" r="76%">
+      <stop offset="0%" stop-color="#f7f7f8"/><stop offset="60%" stop-color="#ececed"/><stop offset="100%" stop-color="#d8d9dc"/>
+    </radialGradient>
+    <!-- Vinyl: near-black, but a sheen sweeps across it because it is glossy -->
+    <linearGradient id="vinyl" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#2a2d33"/><stop offset="26%" stop-color="#131519"/>
+      <stop offset="52%" stop-color="#080a0c"/><stop offset="76%" stop-color="#1a1d22"/><stop offset="100%" stop-color="#0b0d10"/>
+    </linearGradient>
+    <!-- the broad softbox reflection lying across the disc -->
+    <linearGradient id="discSheen" x1="0%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="26%" stop-color="#ffffff" stop-opacity="0.13"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="62%" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="78%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sleeve" x1="0%" y1="0%" x2="100%" y2="60%">
+      <stop offset="0%" stop-color="#dfd6c4"/><stop offset="45%" stop-color="#cabfa9"/><stop offset="100%" stop-color="#a89b83"/>
+    </linearGradient>
+    <radialGradient id="label" cx="36%" cy="30%" r="78%">
+      <stop offset="0%" stop-color="#e8623c"/><stop offset="60%" stop-color="#c9452a"/><stop offset="100%" stop-color="#9c3020"/>
+    </radialGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="ambientBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="22"/></filter>
+    <clipPath id="discClip"><circle cx="290" cy="228" r="150"/></clipPath>
   </defs>
 
-  <!-- Vinyl record -->
-  <circle cx="100" cy="100" r="80" class="vinyl-main" />
+  <rect width="520" height="460" fill="url(#backdrop)"/>
+  <ellipse cx="270" cy="416" rx="212" ry="24" fill="#2b2d33" opacity="0.14" filter="url(#ambientBlur)"/>
 
-  <!-- Grooves (concentric circles) -->
-  <circle cx="100" cy="100" r="70" fill="none" stroke="#1a202c" stroke-width="0.5" opacity="0.6" />
-  <circle cx="100" cy="100" r="60" fill="none" stroke="#1a202c" stroke-width="0.5" opacity="0.5" />
-  <circle cx="100" cy="100" r="50" fill="none" stroke="#1a202c" stroke-width="0.5" opacity="0.4" />
-  <circle cx="100" cy="100" r="40" fill="none" stroke="#1a202c" stroke-width="0.5" opacity="0.3" />
+  <!-- ===== Sleeve, behind and to the left ===== -->
+  <g>
+    <rect x="62" y="74" width="286" height="300" rx="3" fill="url(#sleeve)"/>
+    <!-- opening edge on the right, where the record slides out -->
+    <rect x="340" y="74" width="8" height="300" fill="#8f8370"/>
+    <!-- printed art: a simple graphic band -->
+    <rect x="84" y="96" width="242" height="150" fill="#2f4756"/>
+    <circle cx="205" cy="171" r="52" fill="#e8623c" opacity="0.9"/>
+    <circle cx="205" cy="171" r="34" fill="#2f4756"/>
+    <rect x="84" y="266" width="150" height="12" rx="2" fill="#4a4034" opacity="0.8"/>
+    <rect x="84" y="288" width="104" height="8" rx="2" fill="#4a4034" opacity="0.55"/>
+    <rect x="84" y="330" width="60" height="7" rx="2" fill="#4a4034" opacity="0.4"/>
+    <!-- sleeve wear: softened corners and a ring-wear ghost -->
+    <circle cx="205" cy="224" r="128" fill="none" stroke="#8f8370" stroke-width="2" opacity="0.28"/>
+    <!-- lit top edge -->
+    <rect x="62" y="74" width="286" height="3" fill="#f2ece0" opacity="0.7"/>
+  </g>
 
-  <!-- Center label -->
-  <circle cx="100" cy="100" r="28" class="vinyl-label" />
+  <!-- ===== The record, pulled halfway out ===== -->
+  <g>
+    <ellipse cx="300" cy="390" rx="130" ry="12" fill="#1c1e24" opacity="0.26" filter="url(#softShadow)"/>
+    <circle cx="290" cy="228" r="150" fill="url(#vinyl)"/>
 
-  <!-- Label decorations -->
-  <circle cx="100" cy="100" r="22" fill="none" stroke="#2563eb" stroke-width="1" opacity="0.7" />
-  <circle cx="100" cy="100" r="16" fill="none" stroke="#2563eb" stroke-width="0.8" opacity="0.5" />
+    <g clip-path="url(#discClip)">
+      <!-- groove bands: land, then a lead-out, then land again -->
+      <g fill="none" stroke="#22262c" stroke-width="1" opacity="0.55">
+        <circle cx="290" cy="228" r="146"/><circle cx="290" cy="228" r="141"/><circle cx="290" cy="228" r="136"/>
+        <circle cx="290" cy="228" r="131"/><circle cx="290" cy="228" r="126"/><circle cx="290" cy="228" r="121"/>
+        <circle cx="290" cy="228" r="116"/><circle cx="290" cy="228" r="111"/><circle cx="290" cy="228" r="106"/>
+        <circle cx="290" cy="228" r="101"/><circle cx="290" cy="228" r="96"/><circle cx="290" cy="228" r="91"/>
+        <circle cx="290" cy="228" r="86"/><circle cx="290" cy="228" r="81"/><circle cx="290" cy="228" r="76"/>
+        <circle cx="290" cy="228" r="71"/><circle cx="290" cy="228" r="66"/>
+      </g>
+      <!-- the silent bands between tracks read slightly brighter -->
+      <g fill="none" stroke="#3a3f47" stroke-width="1.6" opacity="0.5">
+        <circle cx="290" cy="228" r="133"/><circle cx="290" cy="228" r="108"/><circle cx="290" cy="228" r="83"/>
+      </g>
+      <!-- glossy sheen across the whole disc -->
+      <rect x="140" y="78" width="300" height="300" fill="url(#discSheen)"/>
+    </g>
 
-  <!-- Center hole -->
-  <circle cx="100" cy="100" r="8" fill="#111827" stroke="#000" stroke-width="1" />
-  <circle cx="100" cy="100" r="6" fill="#000" />
+    <!-- centre label -->
+    <circle cx="290" cy="228" r="52" fill="url(#label)"/>
+    <circle cx="290" cy="228" r="52" fill="none" stroke="#7d2417" stroke-width="1" opacity="0.6"/>
+    <text x="290" y="212" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif"
+          font-size="11" font-weight="800" letter-spacing="1.6" fill="#ffe9d9">LONG</text>
+    <text x="290" y="226" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif"
+          font-size="11" font-weight="800" letter-spacing="1.6" fill="#ffe9d9">PLAY</text>
+    <text x="290" y="252" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif"
+          font-size="7.5" font-weight="600" letter-spacing="1" fill="#ffcdb4" opacity="0.9">33⅓ RPM</text>
+    <!-- label print ring -->
+    <circle cx="290" cy="228" r="44" fill="none" stroke="#ffcdb4" stroke-width="0.8" opacity="0.45"/>
 
-  <!-- Label text simulation -->
-  <text x="100" y="104" font-size="8" fill="#1e293b" text-anchor="middle" font-weight="bold">VINYL</text>
+    <!-- spindle hole -->
+    <circle cx="290" cy="228" r="6" fill="#cabfa9"/>
+    <circle cx="290" cy="228" r="6" fill="#8f8370" opacity="0.5"/>
 
-  <!-- Reflection for glossy effect -->
-  <ellipse cx="100" cy="85" rx="50" ry="15" fill="white" opacity="0.08" />
-  <ellipse cx="120" cy="95" rx="20" ry="35" fill="white" opacity="0.06" />
-
-  <!-- Spot marks (wear) -->
-  <circle cx="75" cy="70" r="1.5" fill="#374151" opacity="0.6" />
-  <circle cx="130" cy="60" r="1" fill="#374151" opacity="0.5" />
-  <circle cx="110" cy="130" r="1.2" fill="#374151" opacity="0.5" />
+    <!-- rim: the raised outer edge catches a hard line of light -->
+    <circle cx="290" cy="228" r="150" fill="none" stroke="#4a5058" stroke-width="1.6" opacity="0.5"/>
+    <path d="M 168 142 A 150 150 0 0 1 258 82" fill="none" stroke="#ffffff" stroke-width="2.4" opacity="0.35" stroke-linecap="round"/>
+  </g>
 </svg>
