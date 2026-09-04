@@ -1,0 +1,194 @@
+{
+  "version": "2.1",
+  "description": "Evidence and inspection actions | Kanıt ve inceleme aksiyonları",
+  "evidenceTypes": {
+    "photo_evidence": {
+      "id": "photo_evidence",
+      "claimType": "visual_condition",
+      "reliability": "medium",
+      "label": { "en": "Photo Inspection", "tr": "Fotoğraf İncelemesi" },
+      "cost": 0,
+      "timeCost": 0,
+      "confidence_increase": 0.15,
+      "description": { "en": "Analyze seller photos for visual clues", "tr": "Satıcı fotoğraflarından görsel ipuçları çıkart" }
+    },
+    "quick_test": {
+      "id": "quick_test",
+      "claimType": "functionality",
+      "reliability": "medium",
+      "label": { "en": "Quick Test", "tr": "Hızlı Test" },
+      "cost": 250,
+      "timeCost": 120,
+      "confidence_increase": 0.35,
+      "description": { "en": "Quick functional test (1-2 critical attributes)", "tr": "Hızlı işlevsellik testi (1-2 kritik özellik)" },
+      "applicableToCategories": ["electronics", "vehicles"]
+    },
+    "detailed_inspection": {
+      "id": "detailed_inspection",
+      "claimType": "condition_detailed",
+      "reliability": "high",
+      "label": { "en": "Detailed Inspection", "tr": "Ayrıntılı İnceleme" },
+      "cost": 750,
+      "timeCost": 300,
+      "confidence_increase": 0.55,
+      "description": { "en": "Professional condition assessment", "tr": "Profesyonel durum değerlendirmesi" },
+      "applicableToCategories": ["electronics", "vehicles", "home_furniture"]
+    },
+    "authenticity_check": {
+      "id": "authenticity_check",
+      "claimType": "authenticity",
+      "reliability": "very_high",
+      "label": { "en": "Authenticity Verification", "tr": "Orijinallik Doğrulaması" },
+      "cost": 1500,
+      "timeCost": 180,
+      "confidence_increase": 0.80,
+      "description": { "en": "Verify authenticity with serial/warranty check", "tr": "Seri ve garanti numarasıyla orijinalliği doğrula" },
+      "applicableToCategories": ["electronics", "fashion_accessories", "entertainment"]
+    },
+    "professional_appraisal": {
+      "id": "professional_appraisal",
+      "claimType": "full_assessment",
+      "reliability": "very_high",
+      "label": { "en": "Professional Appraisal", "tr": "Profesyonel Değerlendirme" },
+      "cost": 2500,
+      "timeCost": 600,
+      "confidence_increase": 0.90,
+      "description": { "en": "Expert appraisal with detailed report", "tr": "Uzman değerlendirmesi ve ayrıntılı rapor" },
+      "applicableToCategories": ["fashion_accessories", "entertainment", "vehicles"]
+    },
+    "seller_claim": {
+      "id": "seller_claim",
+      "claimType": "seller_statement",
+      "reliability": "low",
+      "label": { "en": "Seller Statement", "tr": "Satıcı İfadesi" },
+      "cost": 0,
+      "timeCost": 60,
+      "confidence_increase": 0.05,
+      "description": { "en": "Unverified seller claim", "tr": "Doğrulanmamış satıcı iddiası" }
+    },
+    "service_history": {
+      "id": "service_history",
+      "claimType": "maintenance_record",
+      "reliability": "high",
+      "label": { "en": "Service Records", "tr": "Bakım Kayıtları" },
+      "cost": 300,
+      "timeCost": 120,
+      "confidence_increase": 0.40,
+      "description": { "en": "Review maintenance and repair history", "tr": "Bakım ve onarım geçmişini kontrol et" },
+      "applicableToCategories": ["electronics", "vehicles"]
+    },
+    "warranty_check": {
+      "id": "warranty_check",
+      "claimType": "validity",
+      "reliability": "high",
+      "label": { "en": "Warranty Verification", "tr": "Garanti Doğrulaması" },
+      "cost": 200,
+      "timeCost": 60,
+      "confidence_increase": 0.30,
+      "description": { "en": "Verify warranty status and remaining coverage", "tr": "Garanti durumunu ve kalan kapsamını doğrula" },
+      "applicableToCategories": ["electronics"]
+    },
+    "batch_test": {
+      "id": "batch_test",
+      "claimType": "condition_group",
+      "reliability": "medium",
+      "label": { "en": "Batch Test", "tr": "Toplu Test" },
+      "cost": 500,
+      "timeCost": 240,
+      "confidence_increase": 0.40,
+      "description": { "en": "Test multiple items together (for collections)", "tr": "Birden fazla ürünü birlikte test et" },
+      "applicableToCategories": ["entertainment", "sports_outdoor"]
+    }
+  },
+  "inspectionActions": {
+    "photo_analysis": {
+      "id": "photo_analysis",
+      "name": { "en": "Photo Analysis", "tr": "Fotoğraf Analizi" },
+      "revealAttributes": ["screen_condition", "upholstery_condition", "surface_condition"],
+      "costLow": 0,
+      "costHigh": 0,
+      "timeLow": 0,
+      "timeHigh": 0,
+      "conflictDetection": true
+    },
+    "functional_test": {
+      "id": "functional_test",
+      "name": { "en": "Functional Test", "tr": "İşlev Testi" },
+      "revealAttributes": ["battery_health", "keyboard_condition", "water_damage"],
+      "costLow": 200,
+      "costHigh": 400,
+      "timeLow": 60,
+      "timeHigh": 240,
+      "failureRisk": 0.05
+    },
+    "cosmetic_detail": {
+      "id": "cosmetic_detail",
+      "name": { "en": "Cosmetic Detail", "tr": "Kozmetik Detay" },
+      "revealAttributes": ["condition_grade", "upholstery_condition", "sleeve_condition"],
+      "costLow": 0,
+      "costHigh": 200,
+      "timeLow": 30,
+      "timeHigh": 120
+    },
+    "authenticity_verification": {
+      "id": "authenticity_verification",
+      "name": { "en": "Authenticity Check", "tr": "Orijinallik Kontrolü" },
+      "revealAttributes": ["authenticity"],
+      "costLow": 500,
+      "costHigh": 2000,
+      "timeLow": 60,
+      "timeHigh": 300,
+      "dealBreaker": true
+    },
+    "expert_assessment": {
+      "id": "expert_assessment",
+      "name": { "en": "Expert Assessment", "tr": "Uzman Değerlendirmesi" },
+      "revealAttributes": ["condition_grade", "sensor_condition", "pressing_rarity"],
+      "costLow": 1000,
+      "costHigh": 3000,
+      "timeLow": 300,
+      "timeHigh": 600,
+      "highConfidence": true
+    }
+  },
+  "riskSignals": [
+    {
+      "signal": "photo_inconsistency",
+      "severity": "medium",
+      "label": { "en": "Photo Inconsistency", "tr": "Fotoğraf Tutarsızlığı" },
+      "description": { "en": "Photos don't match description", "tr": "Fotoğraflar açıklama ile tutmuyor" },
+      "recommendedAction": "photo_analysis"
+    },
+    {
+      "signal": "age_concern",
+      "severity": "low",
+      "label": { "en": "Age Concern", "tr": "Yaş Kaygısı" },
+      "description": { "en": "Product older than typical", "tr": "Ürün tipikten daha eski" },
+      "recommendedAction": "functional_test"
+    },
+    {
+      "signal": "seller_new_to_platform",
+      "severity": "low",
+      "label": { "en": "New Seller", "tr": "Yeni Satıcı" },
+      "description": { "en": "Seller has few completed trades", "tr": "Satıcının çok az tamamlanmış işlemi var" },
+      "recommendedAction": "authenticity_verification"
+    },
+    {
+      "signal": "price_outlier",
+      "severity": "high",
+      "label": { "en": "Unusual Price", "tr": "Anormal Fiyat" },
+      "description": { "en": "Price significantly below/above fair value", "tr": "Fiyat adil değerin çok altında/üstünde" },
+      "recommendedAction": "expert_assessment"
+    },
+    {
+      "signal": "missing_accessories",
+      "severity": "medium",
+      "label": { "en": "Missing Accessories", "tr": "Eksik Aksesuarlar" },
+      "description": { "en": "Typical accessories not included", "tr": "Tipik aksesuarlar dahil değil" },
+      "recommendedAction": "cosmetic_detail"
+    }
+  ],
+  "totalEvidenceTypes": 8,
+  "totalInspectionActions": 5,
+  "note": "Evidence is config-based; no hardcoded category-specific inspection logic"
+}

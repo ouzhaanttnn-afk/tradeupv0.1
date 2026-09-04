@@ -1,0 +1,444 @@
+{
+  "version": "2.1",
+  "description": "24 ProductFamily definitions for vertical slice | Dikey slice için 24 ürün ailesi tanımı",
+  "categories": {
+    "electronics": {
+      "id": "electronics",
+      "displayName": {
+        "en": "Electronics",
+        "tr": "Elektronik"
+      },
+      "expertiseCurve": {
+        "lv0_min": 0,
+        "lv0_max": 15,
+        "lv10_min": 80
+      },
+      "families": [
+        {
+          "id": "phone_smartphone",
+          "displayName": { "en": "Smartphones", "tr": "Akıllı Telefonlar" },
+          "baseValue": 8500,
+          "demand": 0.85,
+          "liquidity": "fast",
+          "rarity": "common",
+          "assetKey": "phone_generic",
+          "variants": [
+            { "id": "flagship", "name": { "en": "Flagship", "tr": "Amiral" }, "valueFactor": 1.15, "depreciation": 0.08 },
+            { "id": "midrange", "name": { "en": "Mid-range", "tr": "Orta Seviye" }, "valueFactor": 0.80, "depreciation": 0.06 },
+            { "id": "budget", "name": { "en": "Budget", "tr": "Ekonomik" }, "valueFactor": 0.50, "depreciation": 0.05 }
+          ],
+          "criticalAttributes": ["screen_condition", "battery_health", "water_damage"],
+          "defectPool": ["battery_degraded", "crack", "water_damage", "dead_pixels"]
+        },
+        {
+          "id": "tablet_ipad",
+          "displayName": { "en": "Tablets & iPads", "tr": "Tabletler" },
+          "baseValue": 12000,
+          "demand": 0.65,
+          "liquidity": "medium",
+          "rarity": "common",
+          "assetKey": "tablet_generic",
+          "variants": [
+            { "id": "ipad_pro", "name": { "en": "iPad Pro", "tr": "iPad Pro" }, "valueFactor": 1.25, "depreciation": 0.07 },
+            { "id": "ipad_air", "name": { "en": "iPad Air", "tr": "iPad Air" }, "valueFactor": 0.95, "depreciation": 0.06 },
+            { "id": "ipad_standard", "name": { "en": "iPad Standard", "tr": "iPad Standart" }, "valueFactor": 0.75, "depreciation": 0.06 }
+          ],
+          "criticalAttributes": ["screen_condition", "battery_health", "storage"],
+          "defectPool": ["battery_degraded", "crack", "screen_scratch"]
+        },
+        {
+          "id": "laptop_notebook",
+          "displayName": { "en": "Laptops", "tr": "Dizüstü Bilgisayarlar" },
+          "baseValue": 18000,
+          "demand": 0.75,
+          "liquidity": "medium",
+          "rarity": "common",
+          "assetKey": "laptop_generic",
+          "variants": [
+            { "id": "gaming", "name": { "en": "Gaming", "tr": "Oyun" }, "valueFactor": 1.30, "depreciation": 0.09 },
+            { "id": "ultrabook", "name": { "en": "Ultrabook", "tr": "Ultrabook" }, "valueFactor": 1.10, "depreciation": 0.08 },
+            { "id": "standard", "name": { "en": "Standard", "tr": "Standart" }, "valueFactor": 0.85, "depreciation": 0.07 }
+          ],
+          "criticalAttributes": ["keyboard_condition", "battery_health", "screen_condition"],
+          "defectPool": ["battery_degraded", "keyboard_broken", "screen_dead_pixel", "hdd_noise"]
+        },
+        {
+          "id": "camera_digital",
+          "displayName": { "en": "Digital Cameras", "tr": "Dijital Kameralar" },
+          "baseValue": 15000,
+          "demand": 0.55,
+          "liquidity": "slow",
+          "rarity": "uncommon",
+          "assetKey": "camera_generic",
+          "variants": [
+            { "id": "dslr", "name": { "en": "DSLR", "tr": "DSLR" }, "valueFactor": 1.20, "depreciation": 0.06 },
+            { "id": "mirrorless", "name": { "en": "Mirrorless", "tr": "Mirrorless" }, "valueFactor": 1.25, "depreciation": 0.07 },
+            { "id": "compact", "name": { "en": "Compact", "tr": "Kompakt" }, "valueFactor": 0.70, "depreciation": 0.05 }
+          ],
+          "criticalAttributes": ["sensor_condition", "shutter_count", "lens_condition"],
+          "defectPool": ["sensor_dust", "shutter_malfunction", "lens_fungus"]
+        },
+        {
+          "id": "headphones_audio",
+          "displayName": { "en": "Headphones & Audio", "tr": "Kulaklık ve Ses Sistemleri" },
+          "baseValue": 3500,
+          "demand": 0.90,
+          "liquidity": "fast",
+          "rarity": "common",
+          "assetKey": "headphones_generic",
+          "variants": [
+            { "id": "wireless", "name": { "en": "Wireless", "tr": "Kablosuz" }, "valueFactor": 1.15, "depreciation": 0.07 },
+            { "id": "wired", "name": { "en": "Wired", "tr": "Kablolu" }, "valueFactor": 0.85, "depreciation": 0.05 },
+            { "id": "sports", "name": { "en": "Sports", "tr": "Sporcu" }, "valueFactor": 0.90, "depreciation": 0.06 }
+          ],
+          "criticalAttributes": ["battery_health", "sound_quality", "cable_condition"],
+          "defectPool": ["battery_dead", "speaker_distortion", "cable_broken"]
+        },
+        {
+          "id": "smartwatch_wearable",
+          "displayName": { "en": "Smartwatches", "tr": "Akıllı Saatler" },
+          "baseValue": 5500,
+          "demand": 0.70,
+          "liquidity": "medium",
+          "rarity": "common",
+          "assetKey": "watch_generic",
+          "variants": [
+            { "id": "premium", "name": { "en": "Premium", "tr": "Premium" }, "valueFactor": 1.25, "depreciation": 0.08 },
+            { "id": "sport", "name": { "en": "Sport", "tr": "Spor" }, "valueFactor": 0.95, "depreciation": 0.07 },
+            { "id": "basic", "name": { "en": "Basic", "tr": "Temel" }, "valueFactor": 0.65, "depreciation": 0.06 }
+          ],
+          "criticalAttributes": ["battery_health", "screen_condition", "band_condition"],
+          "defectPool": ["battery_degraded", "screen_scratch", "band_broken"]
+        },
+        {
+          "id": "gaming_console",
+          "displayName": { "en": "Gaming Consoles", "tr": "Oyun Konsolları" },
+          "baseValue": 22000,
+          "demand": 0.80,
+          "liquidity": "fast",
+          "rarity": "common",
+          "assetKey": "console_generic",
+          "variants": [
+            { "id": "current_gen", "name": { "en": "Current Gen", "tr": "Mevcut Kuşak" }, "valueFactor": 1.20, "depreciation": 0.08 },
+            { "id": "last_gen", "name": { "en": "Last Gen", "tr": "Önceki Kuşak" }, "valueFactor": 0.75, "depreciation": 0.06 },
+            { "id": "handheld", "name": { "en": "Handheld", "tr": "El Konsolu" }, "valueFactor": 0.85, "depreciation": 0.07 }
+          ],
+          "criticalAttributes": ["controller_condition", "fan_noise", "storage_status"],
+          "defectPool": ["controller_drift", "fan_malfunction", "storage_full"]
+        }
+      ]
+    },
+    "fashion_accessories": {
+      "id": "fashion_accessories",
+      "displayName": {
+        "en": "Fashion & Accessories",
+        "tr": "Moda ve Aksesuarlar"
+      },
+      "expertiseCurve": {
+        "lv0_min": 0,
+        "lv0_max": 20,
+        "lv10_min": 75
+      },
+      "families": [
+        {
+          "id": "luxury_watch",
+          "displayName": { "en": "Luxury Watches", "tr": "Lüks Saatler" },
+          "baseValue": 45000,
+          "demand": 0.65,
+          "liquidity": "slow",
+          "rarity": "rare",
+          "assetKey": "watch_luxury",
+          "variants": [
+            { "id": "swiss_automatic", "name": { "en": "Swiss Automatic", "tr": "İsviçre Otomatik" }, "valueFactor": 1.30, "depreciation": 0.02 },
+            { "id": "dress_watch", "name": { "en": "Dress Watch", "tr": "Gala Saati" }, "valueFactor": 1.15, "depreciation": 0.03 },
+            { "id": "sports_watch", "name": { "en": "Sports Watch", "tr": "Spor Saati" }, "valueFactor": 1.10, "depreciation": 0.04 }
+          ],
+          "criticalAttributes": ["authenticity", "movement_condition", "bracelet_wear"],
+          "defectPool": ["scratched_case", "movement_issue", "bracelet_broken"]
+        },
+        {
+          "id": "designer_handbag",
+          "displayName": { "en": "Designer Handbags", "tr": "Tasarımcı Çantaları" },
+          "baseValue": 28000,
+          "demand": 0.70,
+          "liquidity": "medium",
+          "rarity": "uncommon",
+          "assetKey": "bag_designer",
+          "variants": [
+            { "id": "tote", "name": { "en": "Tote", "tr": "Tote" }, "valueFactor": 1.10, "depreciation": 0.04 },
+            { "id": "crossbody", "name": { "en": "Crossbody", "tr": "Çapraz" }, "valueFactor": 0.95, "depreciation": 0.04 },
+            { "id": "clutch", "name": { "en": "Clutch", "tr": "Akşam Çantası" }, "valueFactor": 1.05, "depreciation": 0.03 }
+          ],
+          "criticalAttributes": ["authenticity", "leather_condition", "hardware_quality"],
+          "defectPool": ["fake_detected", "leather_worn", "hardware_broken"]
+        },
+        {
+          "id": "sneakers_limited",
+          "displayName": { "en": "Limited Sneakers", "tr": "Sınırlı Üretim Ayakkabılar" },
+          "baseValue": 4500,
+          "demand": 0.95,
+          "liquidity": "fast",
+          "rarity": "uncommon",
+          "assetKey": "shoes_sneaker",
+          "variants": [
+            { "id": "collaboration", "name": { "en": "Collaboration", "tr": "İşbirliği" }, "valueFactor": 1.50, "depreciation": 0.08 },
+            { "id": "retro", "name": { "en": "Retro", "tr": "Retro" }, "valueFactor": 1.20, "depreciation": 0.06 },
+            { "id": "general_release", "name": { "en": "General Release", "tr": "Genel Yayın" }, "valueFactor": 0.85, "depreciation": 0.05 }
+          ],
+          "criticalAttributes": ["authenticity", "sole_condition", "box_included"],
+          "defectPool": ["fake_detected", "sole_worn", "missing_box"]
+        },
+        {
+          "id": "sunglasses_designer",
+          "displayName": { "en": "Designer Sunglasses", "tr": "Tasarımcı Güneş Gözlükleri" },
+          "baseValue": 8500,
+          "demand": 0.75,
+          "liquidity": "medium",
+          "rarity": "common",
+          "assetKey": "glasses_sun",
+          "variants": [
+            { "id": "aviator", "name": { "en": "Aviator", "tr": "Havacı" }, "valueFactor": 1.05, "depreciation": 0.03 },
+            { "id": "wayfarer", "name": { "en": "Wayfarer", "tr": "Gezgin" }, "valueFactor": 1.10, "depreciation": 0.03 },
+            { "id": "oversized", "name": { "en": "Oversized", "tr": "Büyük Boy" }, "valueFactor": 0.95, "depreciation": 0.04 }
+          ],
+          "criticalAttributes": ["authenticity", "lens_condition", "frame_alignment"],
+          "defectPool": ["fake_detected", "lens_scratch", "nose_piece_broken"]
+        }
+      ]
+    },
+    "home_furniture": {
+      "id": "home_furniture",
+      "displayName": {
+        "en": "Home & Furniture",
+        "tr": "Ev ve Mobilya"
+      },
+      "expertiseCurve": {
+        "lv0_min": 0,
+        "lv0_max": 18,
+        "lv10_min": 78
+      },
+      "families": [
+        {
+          "id": "modern_sofa",
+          "displayName": { "en": "Modern Sofas", "tr": "Modern Koltuk Takımları" },
+          "baseValue": 12000,
+          "demand": 0.60,
+          "liquidity": "slow",
+          "rarity": "common",
+          "assetKey": "furniture_sofa",
+          "variants": [
+            { "id": "sectional", "name": { "en": "Sectional", "tr": "Köşe" }, "valueFactor": 1.20, "depreciation": 0.06 },
+            { "id": "loveseat", "name": { "en": "Loveseat", "tr": "İki Kişilik" }, "valueFactor": 0.80, "depreciation": 0.05 },
+            { "id": "chaise", "name": { "en": "Chaise", "tr": "Uzanabilir" }, "valueFactor": 1.00, "depreciation": 0.06 }
+          ],
+          "criticalAttributes": ["upholstery_condition", "frame_integrity", "cushion_firmness"],
+          "defectPool": ["stain", "tear", "frame_crack"]
+        },
+        {
+          "id": "desk_office",
+          "displayName": { "en": "Office Desks", "tr": "Ofis Masaları" },
+          "baseValue": 4500,
+          "demand": 0.70,
+          "liquidity": "medium",
+          "rarity": "common",
+          "assetKey": "furniture_desk",
+          "variants": [
+            { "id": "standing", "name": { "en": "Standing", "tr": "Ayaklı" }, "valueFactor": 1.15, "depreciation": 0.05 },
+            { "id": "executive", "name": { "en": "Executive", "tr": "Yönetim" }, "valueFactor": 1.05, "depreciation": 0.05 },
+            { "id": "compact", "name": { "en": "Compact", "tr": "Kompakt" }, "valueFactor": 0.80, "depreciation": 0.04 }
+          ],
+          "criticalAttributes": ["surface_condition", "leg_stability", "drawer_functionality"],
+          "defectPool": ["scratched_surface", "wobbly_legs", "broken_drawer"]
+        },
+        {
+          "id": "bed_frame",
+          "displayName": { "en": "Bed Frames", "tr": "Yatak Çerçeveleri" },
+          "baseValue": 6500,
+          "demand": 0.75,
+          "liquidity": "medium",
+          "rarity": "common",
+          "assetKey": "furniture_bed",
+          "variants": [
+            { "id": "upholstered", "name": { "en": "Upholstered", "tr": "Döşemeli" }, "valueFactor": 1.20, "depreciation": 0.06 },
+            { "id": "platform", "name": { "en": "Platform", "tr": "Platform" }, "valueFactor": 1.00, "depreciation": 0.05 },
+            { "id": "storage", "name": { "en": "Storage", "tr": "Saklama" }, "valueFactor": 1.15, "depreciation": 0.06 }
+          ],
+          "criticalAttributes": ["frame_integrity", "upholstery_condition", "storage_functionality"],
+          "defectPool": ["wobbly_frame", "upholstery_tear", "storage_broken"]
+        },
+        {
+          "id": "bookshelf_cabinet",
+          "displayName": { "en": "Bookshelves & Cabinets", "tr": "Kitaplık ve Dolaplar" },
+          "baseValue": 3500,
+          "demand": 0.65,
+          "liquidity": "medium",
+          "rarity": "common",
+          "assetKey": "furniture_shelf",
+          "variants": [
+            { "id": "wall_mount", "name": { "en": "Wall Mount", "tr": "Duvara Monte" }, "valueFactor": 0.95, "depreciation": 0.04 },
+            { "id": "freestanding", "name": { "en": "Freestanding", "tr": "Bağımsız" }, "valueFactor": 1.05, "depreciation": 0.05 },
+            { "id": "industrial", "name": { "en": "Industrial", "tr": "Endüstriyel" }, "valueFactor": 1.10, "depreciation": 0.05 }
+          ],
+          "criticalAttributes": ["shelf_stability", "finish_condition", "door_alignment"],
+          "defectPool": ["wobbly_shelf", "finish_worn", "door_stuck"]
+        }
+      ]
+    },
+    "entertainment": {
+      "id": "entertainment",
+      "displayName": {
+        "en": "Entertainment & Media",
+        "tr": "Eğlence ve Medya"
+      },
+      "expertiseCurve": {
+        "lv0_min": 0,
+        "lv0_max": 25,
+        "lv10_min": 70
+      },
+      "families": [
+        {
+          "id": "vinyl_records",
+          "displayName": { "en": "Vinyl Records", "tr": "Plak Kayıtları" },
+          "baseValue": 1200,
+          "demand": 0.85,
+          "liquidity": "fast",
+          "rarity": "rare",
+          "assetKey": "media_vinyl",
+          "variants": [
+            { "id": "colored", "name": { "en": "Colored Vinyl", "tr": "Renkli Plak" }, "valueFactor": 1.40, "depreciation": 0.02 },
+            { "id": "reissue", "name": { "en": "Reissue", "tr": "Yeniden Basım" }, "valueFactor": 1.10, "depreciation": 0.02 },
+            { "id": "original_press", "name": { "en": "Original Press", "tr": "Orijinal Baskı" }, "valueFactor": 1.80, "depreciation": 0.01 }
+          ],
+          "criticalAttributes": ["pressing_rarity", "record_condition", "sleeve_condition"],
+          "defectPool": ["scratched_record", "warped_vinyl", "damaged_sleeve"]
+        },
+        {
+          "id": "game_collection",
+          "displayName": { "en": "Game Collections", "tr": "Oyun Koleksiyonu" },
+          "baseValue": 2500,
+          "demand": 0.80,
+          "liquidity": "fast",
+          "rarity": "uncommon",
+          "assetKey": "media_game",
+          "variants": [
+            { "id": "retro_cartridge", "name": { "en": "Retro Cartridge", "tr": "Retro Kaset" }, "valueFactor": 1.50, "depreciation": 0.01 },
+            { "id": "sealed_box", "name": { "en": "Sealed Box", "tr": "Kapalı Kutu" }, "valueFactor": 2.00, "depreciation": 0.01 },
+            { "id": "cib_complete", "name": { "en": "CIB", "tr": "Tam" }, "valueFactor": 1.30, "depreciation": 0.02 }
+          ],
+          "criticalAttributes": ["condition_grade", "box_condition", "manual_present"],
+          "defectPool": ["cartridge_corrosion", "box_damage", "missing_manual"]
+        },
+        {
+          "id": "musical_instruments",
+          "displayName": { "en": "Musical Instruments", "tr": "Müzik Enstrümanları" },
+          "baseValue": 8000,
+          "demand": 0.70,
+          "liquidity": "medium",
+          "rarity": "uncommon",
+          "assetKey": "instrument_generic",
+          "variants": [
+            { "id": "acoustic_guitar", "name": { "en": "Acoustic Guitar", "tr": "Akustik Gitar" }, "valueFactor": 1.10, "depreciation": 0.04 },
+            { "id": "electric_guitar", "name": { "en": "Electric Guitar", "tr": "Elektrik Gitar" }, "valueFactor": 1.15, "depreciation": 0.05 },
+            { "id": "keyboard", "name": { "en": "Keyboard", "tr": "Tuşlar" }, "valueFactor": 0.95, "depreciation": 0.06 }
+          ],
+          "criticalAttributes": ["sound_quality", "action_condition", "electronics_function"],
+          "defectPool": ["fret_wear", "tuning_peg_damage", "electronics_fail"]
+        }
+      ]
+    },
+    "vehicles": {
+      "id": "vehicles",
+      "displayName": {
+        "en": "Vehicles & Transport",
+        "tr": "Araçlar ve Taşıt"
+      },
+      "expertiseCurve": {
+        "lv0_min": 0,
+        "lv0_max": 22,
+        "lv10_min": 72
+      },
+      "families": [
+        {
+          "id": "bicycle_road",
+          "displayName": { "en": "Road Bikes", "tr": "Yol Bisikletleri" },
+          "baseValue": 5500,
+          "demand": 0.75,
+          "liquidity": "medium",
+          "rarity": "common",
+          "assetKey": "bike_road",
+          "variants": [
+            { "id": "carbon", "name": { "en": "Carbon", "tr": "Karbon" }, "valueFactor": 1.35, "depreciation": 0.05 },
+            { "id": "aluminum", "name": { "en": "Aluminum", "tr": "Alüminyum" }, "valueFactor": 1.00, "depreciation": 0.06 },
+            { "id": "steel", "name": { "en": "Steel", "tr": "Çelik" }, "valueFactor": 0.80, "depreciation": 0.04 }
+          ],
+          "criticalAttributes": ["frame_integrity", "drivetrain_wear", "brake_condition"],
+          "defectPool": ["frame_dent", "rusty_chain", "brake_squeal"]
+        },
+        {
+          "id": "scooter_electric",
+          "displayName": { "en": "Electric Scooters", "tr": "Elektrik Scooter'ları" },
+          "baseValue": 3500,
+          "demand": 0.80,
+          "liquidity": "fast",
+          "rarity": "common",
+          "assetKey": "scooter_electric",
+          "variants": [
+            { "id": "premium", "name": { "en": "Premium", "tr": "Premium" }, "valueFactor": 1.20, "depreciation": 0.07 },
+            { "id": "standard", "name": { "en": "Standard", "tr": "Standart" }, "valueFactor": 1.00, "depreciation": 0.07 },
+            { "id": "budget", "name": { "en": "Budget", "tr": "Ekonomik" }, "valueFactor": 0.70, "depreciation": 0.06 }
+          ],
+          "criticalAttributes": ["battery_health", "motor_function", "wheel_condition"],
+          "defectPool": ["battery_degraded", "motor_noise", "wheel_flat"]
+        }
+      ]
+    },
+    "sports_outdoor": {
+      "id": "sports_outdoor",
+      "displayName": {
+        "en": "Sports & Outdoor",
+        "tr": "Spor ve Dış Mekan"
+      },
+      "expertiseCurve": {
+        "lv0_min": 0,
+        "lv0_max": 20,
+        "lv10_min": 75
+      },
+      "families": [
+        {
+          "id": "camping_gear",
+          "displayName": { "en": "Camping Equipment", "tr": "Kamp Ekipmanı" },
+          "baseValue": 2500,
+          "demand": 0.65,
+          "liquidity": "medium",
+          "rarity": "common",
+          "assetKey": "camping_tent",
+          "variants": [
+            { "id": "premium_tent", "name": { "en": "Premium Tent", "tr": "Premium Çadır" }, "valueFactor": 1.25, "depreciation": 0.04 },
+            { "id": "standard_tent", "name": { "en": "Standard Tent", "tr": "Standart Çadır" }, "valueFactor": 1.00, "depreciation": 0.05 },
+            { "id": "backpack", "name": { "en": "Backpack", "tr": "Sırt Çantası" }, "valueFactor": 0.80, "depreciation": 0.04 }
+          ],
+          "criticalAttributes": ["fabric_condition", "zipper_functionality", "waterproofing"],
+          "defectPool": ["torn_fabric", "broken_zipper", "mold_growth"]
+        },
+        {
+          "id": "fitness_equipment",
+          "displayName": { "en": "Fitness Equipment", "tr": "Fitness Ekipmanı" },
+          "baseValue": 1800,
+          "demand": 0.70,
+          "liquidity": "medium",
+          "rarity": "common",
+          "assetKey": "fitness_weights",
+          "variants": [
+            { "id": "dumbbell_set", "name": { "en": "Dumbbell Set", "tr": "Halter Seti" }, "valueFactor": 1.00, "depreciation": 0.02 },
+            { "id": "yoga_mat", "name": { "en": "Yoga Mat", "tr": "Yoga Paspası" }, "valueFactor": 0.70, "depreciation": 0.04 },
+            { "id": "kettlebell", "name": { "en": "Kettlebell", "tr": "Kettlebell" }, "valueFactor": 0.95, "depreciation": 0.03 }
+          ],
+          "criticalAttributes": ["material_quality", "weight_accuracy", "wear_condition"],
+          "defectPool": ["rust_spots", "material_tear", "weight_drift"]
+        }
+      ]
+    }
+  },
+  "totalFamilies": 24,
+  "note": "Data-driven content system | Each family is config-based; no hardcoded product type branching"
+}

@@ -1,0 +1,146 @@
+{
+  "version": "2.1",
+  "description": "Value-adding preparation actions for owned assets | Sahip olunan varlıklar için değer ekleyen hazırlık aksiyonları",
+  "actions": {
+    "clean": {
+      "id": "clean",
+      "label": { "en": "Clean", "tr": "Temizle" },
+      "description": { "en": "Cosmetic cleaning for improved appeal", "tr": "Görünüm için kozmetik temizlik" },
+      "baseCost": 150,
+      "baseTime": 180,
+      "affectedMetrics": ["cosmetic_condition", "appeal"],
+      "maxValue": 1.08,
+      "diminishingReturns": true,
+      "maxApplications": 3,
+      "successRate": 0.95,
+      "outputMetrics": {
+        "condition_improvement": { "min": 2, "max": 5 },
+        "appeal_improvement": { "min": 3, "max": 8 }
+      },
+      "applicableToFamilies": [
+        "phone_smartphone",
+        "laptop_notebook",
+        "luxury_watch",
+        "modern_sofa",
+        "vinyl_records"
+      ]
+    },
+    "test": {
+      "id": "test",
+      "label": { "en": "Test", "tr": "Test Et" },
+      "description": { "en": "Functional test to confirm and document working state", "tr": "İşlevselliği onaylamak ve belgelemek için test" },
+      "baseCost": 250,
+      "baseTime": 240,
+      "affectedMetrics": ["evidence_confidence", "buyer_trust"],
+      "maxValue": 1.12,
+      "diminishingReturns": false,
+      "maxApplications": 2,
+      "successRate": 0.90,
+      "failureRate": 0.10,
+      "outputMetrics": {
+        "evidence_boost": { "min": 15, "max": 30 },
+        "confidence_increase": { "min": 20, "max": 35 }
+      },
+      "applicableToFamilies": [
+        "phone_smartphone",
+        "laptop_notebook",
+        "smartwatch_wearable",
+        "gaming_console",
+        "musical_instruments"
+      ],
+      "failureDefects": ["battery_degraded", "hdd_noise"]
+    },
+    "complete": {
+      "id": "complete",
+      "label": { "en": "Complete", "tr": "Tamamla" },
+      "description": { "en": "Source and attach missing accessories to restore full package", "tr": "Eksik aksesuarları temin ederek tam paket oluştur" },
+      "baseCost": 400,
+      "baseTime": 300,
+      "affectedMetrics": ["accessory_factor", "liquidity", "buyer_pool"],
+      "maxValue": 1.15,
+      "diminishingReturns": true,
+      "maxApplications": 2,
+      "successRate": 0.85,
+      "outputMetrics": {
+        "accessory_improvement": { "min": 8, "max": 15 },
+        "liquidity_boost": { "min": 10, "max": 20 },
+        "buyer_pool_increase": { "min": 5, "max": 15 }
+      },
+      "applicableToFamilies": [
+        "phone_smartphone",
+        "tablet_ipad",
+        "gaming_console",
+        "headphones_audio",
+        "designer_handbag"
+      ]
+    },
+    "light_service": {
+      "id": "light_service",
+      "label": { "en": "Light Service", "tr": "Hafif Hizmet" },
+      "description": { "en": "Minor maintenance (battery, strap, adjustment)", "tr": "Hafif bakım (pil, kayış, ayar)" },
+      "baseCost": 500,
+      "baseTime": 360,
+      "affectedMetrics": ["functional_confidence", "defect_risk"],
+      "maxValue": 1.10,
+      "diminishingReturns": true,
+      "maxApplications": 1,
+      "successRate": 0.88,
+      "failureRate": 0.12,
+      "outputMetrics": {
+        "risk_reduction": { "min": 10, "max": 20 },
+        "function_improvement": { "min": 5, "max": 15 }
+      },
+      "applicableToFamilies": [
+        "smartwatch_wearable",
+        "luxury_watch",
+        "bicycle_road",
+        "musical_instruments"
+      ],
+      "softLaunchOnly": true
+    },
+    "bundle": {
+      "id": "bundle",
+      "label": { "en": "Bundle", "tr": "Paket" },
+      "description": { "en": "Combine multiple items for lot sale (deferred)", "tr": "Birden fazla ürünü paket satış için birleştir (ertelenmiş)" },
+      "baseCost": 0,
+      "baseTime": 120,
+      "affectedMetrics": ["ticket_size", "buyer_pool"],
+      "maxValue": 1.20,
+      "diminishingReturns": true,
+      "maxApplications": 1,
+      "successRate": 0.80,
+      "outputMetrics": {
+        "price_improvement": { "min": 5, "max": 25 },
+        "liquidity_boost": { "min": 15, "max": 30 }
+      },
+      "applicableToFamilies": [
+        "vinyl_records",
+        "game_collection",
+        "headphones_audio",
+        "camping_gear"
+      ],
+      "postAlphaOnly": true
+    }
+  },
+  "preparationCosts": {
+    "material_cost_min": 50,
+    "material_cost_max": 200,
+    "labor_cost_min": 100,
+    "labor_cost_max": 500,
+    "time_unit": "seconds"
+  },
+  "diminishingReturnsTable": {
+    "application_1": 1.0,
+    "application_2": 0.65,
+    "application_3": 0.40,
+    "application_4": 0.20
+  },
+  "constraints": {
+    "maxConditionIncrease": 0.15,
+    "maxValueMultiplier": 1.20,
+    "noNegativeValueIncrease": true,
+    "failureDoesNotForceNegative": true
+  },
+  "totalActions": 5,
+  "note": "Preparation is optional but rewards decision-making and player investment in assets | No magic quality creation; diminishing returns prevent spam"
+}

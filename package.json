@@ -1,0 +1,16 @@
+{
+  "name": "tradeup-zero-to-home",
+  "version": "0.1.0",
+  "description": "Second-hand market trading simulation game",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "echo 'Development setup needed'",
+    "build": "echo 'Build setup needed'",
+    "test": "echo 'Tests setup needed'"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

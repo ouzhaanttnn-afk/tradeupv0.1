@@ -1,0 +1,438 @@
+{
+  "version": "2.1",
+  "description": "Asset manifest for ProductFamily visual representations and UI elements",
+  "assetRegistry": {
+    "phone_generic": {
+      "familyId": "phone_smartphone",
+      "type": "product_visual",
+      "variants": ["flagship", "midrange", "budget"],
+      "images": {
+        "default": "images/products/phone/phone_generic.png",
+        "variant_flagship": "images/products/phone/phone_flagship.png",
+        "variant_midrange": "images/products/phone/phone_midrange.png",
+        "variant_budget": "images/products/phone/phone_budget.png",
+        "thumbnail": "images/products/phone/phone_thumb.png"
+      },
+      "overlays": {
+        "battery_warning": "images/overlays/battery_warning.svg",
+        "water_damage_indicator": "images/overlays/water_damage.svg",
+        "crack_overlay": "images/overlays/crack.svg"
+      },
+      "status": "production_ready"
+    },
+    "tablet_generic": {
+      "familyId": "tablet_ipad",
+      "type": "product_visual",
+      "variants": ["ipad_pro", "ipad_air", "ipad_standard"],
+      "images": {
+        "default": "images/products/tablet/tablet_generic.png",
+        "variant_ipad_pro": "images/products/tablet/tablet_pro.png",
+        "variant_ipad_air": "images/products/tablet/tablet_air.png",
+        "variant_ipad_standard": "images/products/tablet/tablet_standard.png",
+        "thumbnail": "images/products/tablet/tablet_thumb.png"
+      },
+      "overlays": {
+        "battery_warning": "images/overlays/battery_warning.svg",
+        "crack_overlay": "images/overlays/crack.svg"
+      },
+      "status": "production_ready"
+    },
+    "laptop_generic": {
+      "familyId": "laptop_notebook",
+      "type": "product_visual",
+      "variants": ["gaming", "ultrabook", "standard"],
+      "images": {
+        "default": "images/products/laptop/laptop_generic.png",
+        "variant_gaming": "images/products/laptop/laptop_gaming.png",
+        "variant_ultrabook": "images/products/laptop/laptop_ultrabook.png",
+        "variant_standard": "images/products/laptop/laptop_standard.png",
+        "thumbnail": "images/products/laptop/laptop_thumb.png"
+      },
+      "overlays": {
+        "keyboard_warning": "images/overlays/keyboard_warning.svg",
+        "battery_warning": "images/overlays/battery_warning.svg"
+      },
+      "status": "placeholder_pending"
+    },
+    "camera_generic": {
+      "familyId": "camera_digital",
+      "type": "product_visual",
+      "variants": ["dslr", "mirrorless", "compact"],
+      "images": {
+        "default": "images/products/camera/camera_generic.png",
+        "variant_dslr": "images/products/camera/camera_dslr.png",
+        "variant_mirrorless": "images/products/camera/camera_mirrorless.png",
+        "variant_compact": "images/products/camera/camera_compact.png",
+        "thumbnail": "images/products/camera/camera_thumb.png"
+      },
+      "overlays": {
+        "sensor_warning": "images/overlays/sensor_warning.svg",
+        "camera_warning": "images/overlays/camera_warning.svg"
+      },
+      "status": "placeholder_pending"
+    },
+    "headphones_generic": {
+      "familyId": "headphones_audio",
+      "type": "product_visual",
+      "variants": ["wireless", "wired", "sports"],
+      "images": {
+        "default": "images/products/audio/headphones_generic.png",
+        "variant_wireless": "images/products/audio/headphones_wireless.png",
+        "variant_wired": "images/products/audio/headphones_wired.png",
+        "variant_sports": "images/products/audio/headphones_sports.png",
+        "thumbnail": "images/products/audio/headphones_thumb.png"
+      },
+      "overlays": {
+        "battery_warning": "images/overlays/battery_warning.svg"
+      },
+      "status": "placeholder_pending"
+    },
+    "watch_generic": {
+      "familyId": "smartwatch_wearable",
+      "type": "product_visual",
+      "variants": ["premium", "sport", "basic"],
+      "images": {
+        "default": "images/products/watch/watch_generic.png",
+        "variant_premium": "images/products/watch/watch_premium.png",
+        "variant_sport": "images/products/watch/watch_sport.png",
+        "variant_basic": "images/products/watch/watch_basic.png",
+        "thumbnail": "images/products/watch/watch_thumb.png"
+      },
+      "overlays": {
+        "battery_warning": "images/overlays/battery_warning.svg"
+      },
+      "status": "placeholder_pending"
+    },
+    "console_generic": {
+      "familyId": "gaming_console",
+      "type": "product_visual",
+      "variants": ["current_gen", "last_gen", "handheld"],
+      "images": {
+        "default": "images/products/gaming/console_generic.png",
+        "variant_current_gen": "images/products/gaming/console_current.png",
+        "variant_last_gen": "images/products/gaming/console_last_gen.png",
+        "variant_handheld": "images/products/gaming/console_handheld.png",
+        "thumbnail": "images/products/gaming/console_thumb.png"
+      },
+      "overlays": {},
+      "status": "placeholder_pending"
+    },
+    "watch_luxury": {
+      "familyId": "luxury_watch",
+      "type": "product_visual",
+      "variants": ["swiss_automatic", "dress_watch", "sports_watch"],
+      "images": {
+        "default": "images/products/luxury/watch_luxury.png",
+        "variant_swiss_automatic": "images/products/luxury/watch_swiss.png",
+        "variant_dress_watch": "images/products/luxury/watch_dress.png",
+        "variant_sports_watch": "images/products/luxury/watch_sports.png",
+        "thumbnail": "images/products/luxury/watch_luxury_thumb.png"
+      },
+      "overlays": {},
+      "status": "placeholder_pending"
+    },
+    "bag_designer": {
+      "familyId": "designer_handbag",
+      "type": "product_visual",
+      "variants": ["tote", "crossbody", "clutch"],
+      "images": {
+        "default": "images/products/fashion/bag_designer.png",
+        "variant_tote": "images/products/fashion/bag_tote.png",
+        "variant_crossbody": "images/products/fashion/bag_crossbody.png",
+        "variant_clutch": "images/products/fashion/bag_clutch.png",
+        "thumbnail": "images/products/fashion/bag_designer_thumb.png"
+      },
+      "overlays": {
+        "counterfeit_indicator": "images/overlays/counterfeit.svg"
+      },
+      "status": "placeholder_pending"
+    },
+    "shoes_sneaker": {
+      "familyId": "sneakers_limited",
+      "type": "product_visual",
+      "variants": ["collaboration", "retro", "general_release"],
+      "images": {
+        "default": "images/products/fashion/shoes_sneaker.png",
+        "variant_collaboration": "images/products/fashion/shoes_collab.png",
+        "variant_retro": "images/products/fashion/shoes_retro.png",
+        "variant_general_release": "images/products/fashion/shoes_general.png",
+        "thumbnail": "images/products/fashion/shoes_sneaker_thumb.png"
+      },
+      "overlays": {},
+      "status": "placeholder_pending"
+    },
+    "glasses_sun": {
+      "familyId": "sunglasses_designer",
+      "type": "product_visual",
+      "variants": ["aviator", "wayfarer", "oversized"],
+      "images": {
+        "default": "images/products/fashion/glasses_sun.png",
+        "variant_aviator": "images/products/fashion/glasses_aviator.png",
+        "variant_wayfarer": "images/products/fashion/glasses_wayfarer.png",
+        "variant_oversized": "images/products/fashion/glasses_oversized.png",
+        "thumbnail": "images/products/fashion/glasses_sun_thumb.png"
+      },
+      "overlays": {
+        "counterfeit_indicator": "images/overlays/counterfeit.svg"
+      },
+      "status": "placeholder_pending"
+    },
+    "furniture_sofa": {
+      "familyId": "modern_sofa",
+      "type": "product_visual",
+      "variants": ["sectional", "loveseat", "chaise"],
+      "images": {
+        "default": "images/products/furniture/sofa_modern.png",
+        "variant_sectional": "images/products/furniture/sofa_sectional.png",
+        "variant_loveseat": "images/products/furniture/sofa_loveseat.png",
+        "variant_chaise": "images/products/furniture/sofa_chaise.png",
+        "thumbnail": "images/products/furniture/sofa_thumb.png"
+      },
+      "overlays": {
+        "damage_indicator": "images/overlays/damage.svg"
+      },
+      "status": "placeholder_pending"
+    },
+    "furniture_desk": {
+      "familyId": "desk_office",
+      "type": "product_visual",
+      "variants": ["standing", "executive", "compact"],
+      "images": {
+        "default": "images/products/furniture/desk_office.png",
+        "variant_standing": "images/products/furniture/desk_standing.png",
+        "variant_executive": "images/products/furniture/desk_executive.png",
+        "variant_compact": "images/products/furniture/desk_compact.png",
+        "thumbnail": "images/products/furniture/desk_thumb.png"
+      },
+      "overlays": {},
+      "status": "placeholder_pending"
+    },
+    "furniture_bed": {
+      "familyId": "bed_frame",
+      "type": "product_visual",
+      "variants": ["upholstered", "platform", "storage"],
+      "images": {
+        "default": "images/products/furniture/bed_frame.png",
+        "variant_upholstered": "images/products/furniture/bed_upholstered.png",
+        "variant_platform": "images/products/furniture/bed_platform.png",
+        "variant_storage": "images/products/furniture/bed_storage.png",
+        "thumbnail": "images/products/furniture/bed_thumb.png"
+      },
+      "overlays": {},
+      "status": "placeholder_pending"
+    },
+    "furniture_shelf": {
+      "familyId": "bookshelf_cabinet",
+      "type": "product_visual",
+      "variants": ["wall_mount", "freestanding", "industrial"],
+      "images": {
+        "default": "images/products/furniture/shelf_cabinet.png",
+        "variant_wall_mount": "images/products/furniture/shelf_wall.png",
+        "variant_freestanding": "images/products/furniture/shelf_freestanding.png",
+        "variant_industrial": "images/products/furniture/shelf_industrial.png",
+        "thumbnail": "images/products/furniture/shelf_thumb.png"
+      },
+      "overlays": {},
+      "status": "placeholder_pending"
+    },
+    "media_vinyl": {
+      "familyId": "vinyl_records",
+      "type": "product_visual",
+      "variants": ["colored", "reissue", "original_press"],
+      "images": {
+        "default": "images/products/media/vinyl_generic.png",
+        "variant_colored": "images/products/media/vinyl_colored.png",
+        "variant_reissue": "images/products/media/vinyl_reissue.png",
+        "variant_original_press": "images/products/media/vinyl_original.png",
+        "thumbnail": "images/products/media/vinyl_thumb.png"
+      },
+      "overlays": {
+        "vinyl_warning": "images/overlays/vinyl_warning.svg"
+      },
+      "status": "placeholder_pending"
+    },
+    "media_game": {
+      "familyId": "game_collection",
+      "type": "product_visual",
+      "variants": ["retro_cartridge", "sealed_box", "cib_complete"],
+      "images": {
+        "default": "images/products/media/game_generic.png",
+        "variant_retro_cartridge": "images/products/media/game_retro.png",
+        "variant_sealed_box": "images/products/media/game_sealed.png",
+        "variant_cib_complete": "images/products/media/game_cib.png",
+        "thumbnail": "images/products/media/game_thumb.png"
+      },
+      "overlays": {
+        "corrosion_warning": "images/overlays/corrosion_warning.svg"
+      },
+      "status": "placeholder_pending"
+    },
+    "instrument_generic": {
+      "familyId": "musical_instruments",
+      "type": "product_visual",
+      "variants": ["acoustic_guitar", "electric_guitar", "keyboard"],
+      "images": {
+        "default": "images/products/music/instrument_generic.png",
+        "variant_acoustic_guitar": "images/products/music/guitar_acoustic.png",
+        "variant_electric_guitar": "images/products/music/guitar_electric.png",
+        "variant_keyboard": "images/products/music/keyboard.png",
+        "thumbnail": "images/products/music/instrument_thumb.png"
+      },
+      "overlays": {},
+      "status": "placeholder_pending"
+    },
+    "bike_road": {
+      "familyId": "bicycle_road",
+      "type": "product_visual",
+      "variants": ["carbon", "aluminum", "steel"],
+      "images": {
+        "default": "images/products/vehicles/bike_road.png",
+        "variant_carbon": "images/products/vehicles/bike_carbon.png",
+        "variant_aluminum": "images/products/vehicles/bike_aluminum.png",
+        "variant_steel": "images/products/vehicles/bike_steel.png",
+        "thumbnail": "images/products/vehicles/bike_thumb.png"
+      },
+      "overlays": {
+        "rust_warning": "images/overlays/rust_warning.svg"
+      },
+      "status": "placeholder_pending"
+    },
+    "scooter_electric": {
+      "familyId": "scooter_electric",
+      "type": "product_visual",
+      "variants": ["premium", "standard", "budget"],
+      "images": {
+        "default": "images/products/vehicles/scooter_electric.png",
+        "variant_premium": "images/products/vehicles/scooter_premium.png",
+        "variant_standard": "images/products/vehicles/scooter_standard.png",
+        "variant_budget": "images/products/vehicles/scooter_budget.png",
+        "thumbnail": "images/products/vehicles/scooter_thumb.png"
+      },
+      "overlays": {
+        "battery_warning": "images/overlays/battery_warning.svg"
+      },
+      "status": "placeholder_pending"
+    },
+    "camping_tent": {
+      "familyId": "camping_gear",
+      "type": "product_visual",
+      "variants": ["premium_tent", "standard_tent", "backpack"],
+      "images": {
+        "default": "images/products/sports/camping_gear.png",
+        "variant_premium_tent": "images/products/sports/tent_premium.png",
+        "variant_standard_tent": "images/products/sports/tent_standard.png",
+        "variant_backpack": "images/products/sports/backpack.png",
+        "thumbnail": "images/products/sports/camping_thumb.png"
+      },
+      "overlays": {},
+      "status": "placeholder_pending"
+    },
+    "fitness_weights": {
+      "familyId": "fitness_equipment",
+      "type": "product_visual",
+      "variants": ["dumbbell_set", "yoga_mat", "kettlebell"],
+      "images": {
+        "default": "images/products/sports/fitness_equipment.png",
+        "variant_dumbbell_set": "images/products/sports/dumbbell_set.png",
+        "variant_yoga_mat": "images/products/sports/yoga_mat.png",
+        "variant_kettlebell": "images/products/sports/kettlebell.png",
+        "thumbnail": "images/products/sports/fitness_thumb.png"
+      },
+      "overlays": {
+        "rust_warning": "images/overlays/rust_warning.svg"
+      },
+      "status": "placeholder_pending"
+    }
+  },
+  "uiAssets": {
+    "themes": {
+      "default_standard": {
+        "name": "Standard",
+        "description": "Clean, professional market interface",
+        "colors": {
+          "primary": "#2563eb",
+          "secondary": "#64748b",
+          "success": "#16a34a",
+          "warning": "#ea580c",
+          "danger": "#dc2626"
+        },
+        "assets": {
+          "background": "images/ui/theme_standard_bg.png",
+          "portfolio_bg": "images/ui/portfolio_standard_bg.png"
+        }
+      },
+      "night_market": {
+        "name": "Night Market",
+        "description": "Dark, atmospheric trading environment",
+        "isPaid": true,
+        "sku": "tradeup_theme_night_market",
+        "colors": {
+          "primary": "#fbbf24",
+          "secondary": "#1e293b",
+          "success": "#34d399",
+          "warning": "#fb923c",
+          "danger": "#f87171"
+        },
+        "assets": {
+          "background": "images/ui/theme_night_bg.png",
+          "portfolio_bg": "images/ui/portfolio_night_bg.png"
+        }
+      },
+      "workshop": {
+        "name": "Workshop",
+        "description": "Industrial, hands-on trading feel",
+        "isPaid": true,
+        "sku": "tradeup_theme_workshop",
+        "colors": {
+          "primary": "#f97316",
+          "secondary": "#57534e",
+          "success": "#22c55e",
+          "warning": "#eab308",
+          "danger": "#ef4444"
+        },
+        "assets": {
+          "background": "images/ui/theme_workshop_bg.png",
+          "portfolio_bg": "images/ui/portfolio_workshop_bg.png"
+        }
+      }
+    },
+    "icons": {
+      "market": "images/ui/icons/icon_market.svg",
+      "portfolio": "images/ui/icons/icon_portfolio.svg",
+      "watchlist": "images/ui/icons/icon_watchlist.svg",
+      "journey": "images/ui/icons/icon_journey.svg",
+      "compare": "images/ui/icons/icon_compare.svg",
+      "inspect": "images/ui/icons/icon_inspect.svg",
+      "negotiate": "images/ui/icons/icon_negotiate.svg",
+      "prepare": "images/ui/icons/icon_prepare.svg",
+      "list": "images/ui/icons/icon_list.svg",
+      "cash": "images/ui/icons/icon_cash.svg",
+      "home": "images/ui/icons/icon_home.svg"
+    }
+  },
+  "homeStyles": {
+    "modern_minimalist": {
+      "name": { "en": "Modern Minimalist", "tr": "Modern Minimalist" },
+      "thumbnail": "images/home/style_modern_thumb.png",
+      "fullImage": "images/home/style_modern_full.png",
+      "isPaid": false
+    },
+    "cozy_traditional": {
+      "name": { "en": "Cozy Traditional", "tr": "Samimi Geleneksel" },
+      "thumbnail": "images/home/style_traditional_thumb.png",
+      "fullImage": "images/home/style_traditional_full.png",
+      "isPaid": true,
+      "sku": "tradeup_home_styles_01"
+    },
+    "industrial_urban": {
+      "name": { "en": "Industrial Urban", "tr": "Endüstriyel Urban" },
+      "thumbnail": "images/home/style_industrial_thumb.png",
+      "fullImage": "images/home/style_industrial_full.png",
+      "isPaid": true,
+      "sku": "tradeup_home_styles_01"
+    }
+  },
+  "status": "production_ready",
+  "lastUpdated": "2026-09-04",
+  "note": "Asset manifest is config-based; supports fallbacks and placeholder assets | New families are added by extending this manifest without code changes"
+}
