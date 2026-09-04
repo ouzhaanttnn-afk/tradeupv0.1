@@ -1,0 +1,325 @@
+{
+  "version": "1.0",
+  "description": "Localization strings for all UI elements, product families, attributes, defects, and evidence types | Tüm UI öğeleri, ürün aileleri, nitelikler, kusurlar ve kanıt türleri için yerelleştirme dizeleri",
+  "languages": ["en", "tr"],
+  "lastUpdated": "2026-09-04",
+  "ui": {
+    "navigation": {
+      "market": { "en": "Market", "tr": "Pazar" },
+      "portfolio": { "en": "Portfolio", "tr": "Portföy" },
+      "journey": { "en": "Journey", "tr": "Yolculuk" },
+      "watchlist": { "en": "Watchlist", "tr": "İzleme Listesi" },
+      "home": { "en": "Home", "tr": "Anasayfa" }
+    },
+    "actions": {
+      "compare": { "en": "Compare", "tr": "Karşılaştır" },
+      "inspect": { "en": "Inspect", "tr": "İnceleme" },
+      "negotiate": { "en": "Negotiate", "tr": "Müzakere Et" },
+      "prepare": { "en": "Prepare", "tr": "Hazırla" },
+      "list": { "en": "List for Sale", "tr": "Satışa Çıkar" },
+      "cash": { "en": "My Cash", "tr": "Param" }
+    },
+    "buttons": {
+      "continue": { "en": "Continue", "tr": "Devam Et" },
+      "cancel": { "en": "Cancel", "tr": "İptal" },
+      "save": { "en": "Save", "tr": "Kaydet" },
+      "delete": { "en": "Delete", "tr": "Sil" },
+      "confirm": { "en": "Confirm", "tr": "Onayla" },
+      "back": { "en": "Back", "tr": "Geri" },
+      "skip": { "en": "Skip", "tr": "Atla" },
+      "next": { "en": "Next", "tr": "İleri" }
+    },
+    "common": {
+      "loading": { "en": "Loading...", "tr": "Yükleniyor..." },
+      "error": { "en": "Error", "tr": "Hata" },
+      "success": { "en": "Success", "tr": "Başarılı" },
+      "warning": { "en": "Warning", "tr": "Uyarı" },
+      "info": { "en": "Information", "tr": "Bilgi" },
+      "search": { "en": "Search", "tr": "Ara" },
+      "filter": { "en": "Filter", "tr": "Filtre" },
+      "sort": { "en": "Sort", "tr": "Sırala" }
+    }
+  },
+  "categories": {
+    "electronics": { "en": "Electronics", "tr": "Elektronik" },
+    "fashion": { "en": "Fashion", "tr": "Moda" },
+    "furniture": { "en": "Furniture", "tr": "Mobilya" },
+    "media": { "en": "Media & Entertainment", "tr": "Medya ve Eğlence" },
+    "vehicles": { "en": "Vehicles", "tr": "Araçlar" },
+    "sports": { "en": "Sports", "tr": "Spor" }
+  },
+  "productFamilies": {
+    "phone_smartphone": {
+      "displayName": { "en": "Smartphones", "tr": "Akıllı Telefonlar" },
+      "description": { "en": "Mobile phones and smart devices", "tr": "Mobil telefonlar ve akıllı cihazlar" }
+    },
+    "tablet_ipad": {
+      "displayName": { "en": "Tablets", "tr": "Tabletler" },
+      "description": { "en": "Tablet computers and iPads", "tr": "Tablet bilgisayarlar ve iPad'ler" }
+    },
+    "laptop_notebook": {
+      "displayName": { "en": "Laptops", "tr": "Laptoplar" },
+      "description": { "en": "Notebook computers and ultrabooks", "tr": "Not defteri bilgisayarları ve ultrabook'lar" }
+    },
+    "camera_dslr": {
+      "displayName": { "en": "Cameras", "tr": "Kameralar" },
+      "description": { "en": "DSLR and mirrorless cameras", "tr": "DSLR ve aynasız kameralar" }
+    },
+    "headphones_wireless": {
+      "displayName": { "en": "Headphones", "tr": "Kulaklıklar" },
+      "description": { "en": "Wireless and wired headphones", "tr": "Kablosuz ve kablolu kulaklıklar" }
+    },
+    "watch_smart": {
+      "displayName": { "en": "Smartwatches", "tr": "Akıllı Saatler" },
+      "description": { "en": "Wearable smart watches", "tr": "Taşınabilir akıllı saatler" }
+    },
+    "console_gaming": {
+      "displayName": { "en": "Gaming Consoles", "tr": "Oyun Konsolları" },
+      "description": { "en": "Video game consoles and handhelds", "tr": "Video oyunu konsolları ve taşınabilir cihazlar" }
+    },
+    "tshirt_basic": {
+      "displayName": { "en": "T-Shirts", "tr": "Tişörtler" },
+      "description": { "en": "Casual t-shirts and tops", "tr": "Günlük tişörtler ve gömlekler" }
+    },
+    "jeans_denim": {
+      "displayName": { "en": "Jeans", "tr": "Jeans" },
+      "description": { "en": "Denim jeans and pants", "tr": "Kot pantolon ve pantolon" }
+    },
+    "jacket_winter": {
+      "displayName": { "en": "Jackets", "tr": "Ceketler" },
+      "description": { "en": "Winter and casual jackets", "tr": "Kış ve günlük ceketler" }
+    },
+    "shoes_sneakers": {
+      "displayName": { "en": "Shoes", "tr": "Ayakkabılar" },
+      "description": { "en": "Sneakers and casual shoes", "tr": "Spor ayakkabıları ve günlük ayakkabılar" }
+    },
+    "sofa_couch": {
+      "displayName": { "en": "Sofas", "tr": "Koltuklar" },
+      "description": { "en": "Couches and sofas", "tr": "Koltuklar ve oturma meubyeleri" }
+    },
+    "bed_frame": {
+      "displayName": { "en": "Beds", "tr": "Yataklar" },
+      "description": { "en": "Bed frames and mattresses", "tr": "Yatak çerçeveleri ve matraslar" }
+    },
+    "desk_work": {
+      "displayName": { "en": "Desks", "tr": "Masalar" },
+      "description": { "en": "Work desks and tables", "tr": "Çalışma masaları ve tezgahlar" }
+    },
+    "bookshelf_storage": {
+      "displayName": { "en": "Shelving", "tr": "Raf Sistemleri" },
+      "description": { "en": "Bookshelves and storage units", "tr": "Kütüphaneler ve depolama üniteleri" }
+    },
+    "record_vinyl": {
+      "displayName": { "en": "Vinyl Records", "tr": "Vinil Plaklar" },
+      "description": { "en": "Vinyl records and albums", "tr": "Vinil plaklar ve albümler" }
+    },
+    "book_fiction": {
+      "displayName": { "en": "Books", "tr": "Kitaplar" },
+      "description": { "en": "Books and literature", "tr": "Kitaplar ve edebiyat" }
+    },
+    "dvd_movies": {
+      "displayName": { "en": "DVDs & Blu-rays", "tr": "DVD'ler ve Blu-raylar" },
+      "description": { "en": "Movies and TV series", "tr": "Filmler ve TV dizileri" }
+    },
+    "motorcycle_street": {
+      "displayName": { "en": "Motorcycles", "tr": "Motosikletler" },
+      "description": { "en": "Street bikes and cruisers", "tr": "Sokak bisikletleri ve kruvazörler" }
+    },
+    "bicycle_road": {
+      "displayName": { "en": "Bicycles", "tr": "Bisikletler" },
+      "description": { "en": "Road, mountain, and hybrid bikes", "tr": "Yol, dağ ve hibrit bisikletler" }
+    },
+    "tennis_racket": {
+      "displayName": { "en": "Tennis Rackets", "tr": "Tenis Raketleri" },
+      "description": { "en": "Tennis equipment", "tr": "Tenis ekipmanı" }
+    },
+    "football_ball": {
+      "displayName": { "en": "Sports Balls", "tr": "Spor Topları" },
+      "description": { "en": "Footballs, basketballs, and sports equipment", "tr": "Futbol topları, basketbollar ve spor ekipmanı" }
+    }
+  },
+  "attributes": {
+    "screen_condition": {
+      "label": { "en": "Screen Condition", "tr": "Ekran Durumu" },
+      "unit": { "en": "%", "tr": "%" },
+      "description": { "en": "Display quality and damage assessment", "tr": "Görüntü kalitesi ve hasar değerlendirmesi" }
+    },
+    "battery_health": {
+      "label": { "en": "Battery Health", "tr": "Pil Sağlığı" },
+      "unit": { "en": "%", "tr": "%" },
+      "description": { "en": "Battery capacity and charge retention", "tr": "Pil kapasitesi ve şarj tutma" }
+    },
+    "storage": {
+      "label": { "en": "Storage", "tr": "Depolama" },
+      "unit": { "en": "GB", "tr": "GB" },
+      "description": { "en": "Device storage capacity", "tr": "Cihaz depolama kapasitesi" }
+    },
+    "water_damage": {
+      "label": { "en": "Water Damage", "tr": "Su Hasarı" },
+      "unit": { "en": "Status", "tr": "Durum" },
+      "description": { "en": "Exposure to water or moisture", "tr": "Su veya neme maruziyeti" }
+    },
+    "authenticity": {
+      "label": { "en": "Authenticity", "tr": "Gerçeklik" },
+      "unit": { "en": "Status", "tr": "Durum" },
+      "description": { "en": "Verification of genuine product", "tr": "Gerçek ürünün doğrulanması" }
+    },
+    "condition_grade": {
+      "label": { "en": "Condition Grade", "tr": "Durum Notu" },
+      "unit": { "en": "Grade", "tr": "Not" },
+      "description": { "en": "Overall condition rating from Mint to Poor", "tr": "Mint'ten Kötü'ye genel durum notu" }
+    },
+    "pressing_rarity": {
+      "label": { "en": "Pressing Rarity", "tr": "Basım Nadirliği" },
+      "unit": { "en": "Rarity", "tr": "Nadir" },
+      "description": { "en": "Rarity of vinyl pressing edition", "tr": "Vinil basım baskısının nadirliği" }
+    },
+    "wear_level": {
+      "label": { "en": "Wear Level", "tr": "Aşınma Seviyesi" },
+      "unit": { "en": "%", "tr": "%" },
+      "description": { "en": "Physical wear and aging", "tr": "Fiziksel aşınma ve yaşlanma" }
+    }
+  },
+  "defects": {
+    "battery_degraded": {
+      "label": { "en": "Battery Degraded", "tr": "Pil Bozulmuş" },
+      "description": { "en": "Battery health below 70%", "tr": "Pil sağlığı %70'in altında" }
+    },
+    "crack": {
+      "label": { "en": "Screen Crack", "tr": "Ekran Çatlağı" },
+      "description": { "en": "Visible cracks or damage on display", "tr": "Ekranda görünür çatlaklar veya hasar" }
+    },
+    "water_damage": {
+      "label": { "en": "Water Damage", "tr": "Su Hasarı" },
+      "description": { "en": "Evidence of water or moisture exposure", "tr": "Su veya neme maruziyetin kanıtı" }
+    },
+    "fake_detected": {
+      "label": { "en": "Counterfeit Item", "tr": "Sahte Ürün" },
+      "description": { "en": "Item fails authenticity verification", "tr": "Ürün orijinallik doğrulamasında başarısız" },
+      "severity": "critical"
+    },
+    "rust_corrosion": {
+      "label": { "en": "Rust or Corrosion", "tr": "Pas veya Korozyon" },
+      "description": { "en": "Surface rust or metal corrosion", "tr": "Yüzey pası veya metal korozyonu" }
+    },
+    "keyboard_malfunction": {
+      "label": { "en": "Keyboard Issue", "tr": "Klavye Sorunu" },
+      "description": { "en": "Non-responsive or damaged keys", "tr": "Yanıt vermeyen veya hasar görmüş tuşlar" }
+    },
+    "physical_damage": {
+      "label": { "en": "Physical Damage", "tr": "Fiziksel Hasar" },
+      "description": { "en": "Dents, scratches, or structural damage", "tr": "Çentikler, çizikler veya yapısal hasar" }
+    },
+    "sensor_failure": {
+      "label": { "en": "Sensor Issue", "tr": "Sensör Sorunu" },
+      "description": { "en": "Camera or motion sensor malfunction", "tr": "Kamera veya hareket sensörü arızası" }
+    },
+    "camera_malfunction": {
+      "label": { "en": "Camera Failed", "tr": "Kamera Arızası" },
+      "description": { "en": "Camera not functioning or blank photos", "tr": "Kamera çalışmıyor veya boş fotoğraflar" }
+    },
+    "fungus_found": {
+      "label": { "en": "Fungus Found", "tr": "Mantar Bulundu" },
+      "description": { "en": "Lens fungus or internal mold", "tr": "Lens mantarı veya iç küf" }
+    },
+    "surface_damage": {
+      "label": { "en": "Surface Scratches", "tr": "Yüzey Çizikleri" },
+      "description": { "en": "Vinyl scratches or deep grooves", "tr": "Vinil çizikleri veya derin oyuklar" }
+    },
+    "corrosion_buildup": {
+      "label": { "en": "Corrosion", "tr": "Korozyon" },
+      "description": { "en": "Oxidation and corrosion on contacts", "tr": "Kontaklarda oksidlenme ve korozyon" }
+    }
+  },
+  "evidence": {
+    "photo_evidence": {
+      "label": { "en": "Photo Evidence", "tr": "Fotoğraf Kanıtı" },
+      "description": { "en": "High-resolution photos of item condition", "tr": "Ürün durumunun yüksek çözünürlüklü fotoğrafları" }
+    },
+    "quick_test": {
+      "label": { "en": "Quick Test", "tr": "Hızlı Test" },
+      "description": { "en": "Basic functionality test", "tr": "Temel işlevsellik testi" }
+    },
+    "detailed_inspection": {
+      "label": { "en": "Detailed Inspection", "tr": "Ayrıntılı İnceleme" },
+      "description": { "en": "Professional inspection with full diagnostics", "tr": "Tam tanılama ile profesyonel inceleme" }
+    },
+    "authenticity_check": {
+      "label": { "en": "Authenticity Check", "tr": "Orijinallik Kontrolü" },
+      "description": { "en": "Verification of genuine product certification", "tr": "Gerçek ürün sertifikasının doğrulanması" }
+    },
+    "expert_assessment": {
+      "label": { "en": "Expert Assessment", "tr": "Uzman Değerlendirmesi" },
+      "description": { "en": "Professional appraisal by expert", "tr": "Uzman tarafından profesyonel değerlendirme" }
+    }
+  },
+  "preparationActions": {
+    "clean": {
+      "label": { "en": "Clean", "tr": "Temizle" },
+      "description": { "en": "Professional cleaning and detailing", "tr": "Profesyonel temizlik ve detaylandırma" },
+      "maxValue": { "en": "Up to +8% value", "tr": "+%8'e kadar değer" }
+    },
+    "test": {
+      "label": { "en": "Test", "tr": "Test Et" },
+      "description": { "en": "Full functionality testing and certification", "tr": "Tam işlevsellik testi ve sertifikası" },
+      "maxValue": { "en": "Up to +12% value", "tr": "+%12'ye kadar değer" }
+    },
+    "complete": {
+      "label": { "en": "Complete", "tr": "Tamamla" },
+      "description": { "en": "Add missing accessories and packaging", "tr": "Eksik aksesuarları ve ambalajı ekleyin" },
+      "maxValue": { "en": "Up to +15% value", "tr": "+%15'e kadar değer" }
+    },
+    "light_service": {
+      "label": { "en": "Light Service", "tr": "Hafif Bakım" },
+      "description": { "en": "Minor repairs and maintenance", "tr": "Küçük onarımlar ve bakım" },
+      "maxValue": { "en": "Up to +10% value", "tr": "+%10'a kadar değer" }
+    },
+    "bundle": {
+      "label": { "en": "Bundle with Extras", "tr": "Ekstralarla Paket" },
+      "description": { "en": "Include complementary items", "tr": "Tamamlayıcı öğeler içerir" },
+      "maxValue": { "en": "Up to +20% value", "tr": "+%20'ye kadar değer" }
+    }
+  },
+  "themes": {
+    "standard": {
+      "name": { "en": "Standard", "tr": "Standart" },
+      "description": { "en": "Default free theme", "tr": "Varsayılan ücretsiz tema" }
+    },
+    "night_market": {
+      "name": { "en": "Night Market", "tr": "Gece Pazarı" },
+      "description": { "en": "Dark market aesthetic - ₺39.99", "tr": "Koyu pazar estetiği - ₺39.99" }
+    },
+    "workshop": {
+      "name": { "en": "Workshop", "tr": "Atölye" },
+      "description": { "en": "Industrial workshop aesthetic - ₺39.99", "tr": "Endüstriyel atölye estetiği - ₺39.99" }
+    }
+  },
+  "homeStyles": {
+    "modern_minimalist": {
+      "name": { "en": "Modern Minimalist", "tr": "Modern Minimalist" },
+      "description": { "en": "Clean, minimal home display aesthetic", "tr": "Temiz, minimal ev görüntü estettiği" }
+    },
+    "cozy_traditional": {
+      "name": { "en": "Cozy Traditional", "tr": "Rahat Geleneksel" },
+      "description": { "en": "Warm, traditional home display aesthetic", "tr": "Sıcak, geleneksel ev görüntü estettiği" }
+    },
+    "industrial_urban": {
+      "name": { "en": "Industrial Urban", "tr": "Endüstriyel Kentsel" },
+      "description": { "en": "Modern industrial home display aesthetic", "tr": "Modern endüstriyel ev görüntü estettiği" }
+    }
+  },
+  "errors": {
+    "item_not_found": { "en": "Item not found", "tr": "Ürün bulunamadı" },
+    "network_error": { "en": "Network error. Please try again.", "tr": "Ağ hatası. Lütfen yeniden deneyin." },
+    "insufficient_funds": { "en": "Insufficient funds", "tr": "Yetersiz bakiye" },
+    "invalid_input": { "en": "Invalid input. Please check and try again.", "tr": "Geçersiz giriş. Lütfen kontrol edip yeniden deneyin." },
+    "operation_failed": { "en": "Operation failed", "tr": "İşlem başarısız" }
+  },
+  "messages": {
+    "welcome": { "en": "Welcome to TradeUp: Zero to Home", "tr": "TradeUp'a Hoş Geldiniz: Sıfırdan Eve" },
+    "item_added": { "en": "Item added to your portfolio", "tr": "Ürün portföyünüze eklendi" },
+    "item_removed": { "en": "Item removed from your portfolio", "tr": "Ürün portföyünüzden kaldırıldı" },
+    "purchase_success": { "en": "Purchase successful!", "tr": "Satın alma başarılı!" },
+    "sale_posted": { "en": "Item listed for sale", "tr": "Ürün satışa çıkarıldı" }
+  }
+}
