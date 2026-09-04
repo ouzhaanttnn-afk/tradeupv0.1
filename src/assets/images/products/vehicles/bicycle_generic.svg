@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .bike-frame { fill: none; stroke: #2563eb; stroke-width: 2; stroke-linecap: round; }
+      .bike-wheel { fill: none; stroke: #1f2937; stroke-width: 2; }
+      .bike-tire { fill: none; stroke: #0f0f0f; stroke-width: 3; }
+      .bike-seat { fill: #2d3748; stroke: #1a202c; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <!-- Rear wheel -->
+  <circle cx="70" cy="160" r="45" class="bike-wheel" />
+  <circle cx="70" cy="160" r="40" class="bike-tire" />
+
+  <!-- Front wheel -->
+  <circle cx="230" cy="160" r="45" class="bike-wheel" />
+  <circle cx="230" cy="160" r="40" class="bike-tire" />
+
+  <!-- Wheel spokes (rear) -->
+  <line x1="70" y1="115" x2="70" y2="205" stroke="#2d3748" stroke-width="0.8" opacity="0.5" />
+  <line x1="25" y1="160" x2="115" y2="160" stroke="#2d3748" stroke-width="0.8" opacity="0.5" />
+  <line x1="45" y1="130" x2="95" y2="190" stroke="#2d3748" stroke-width="0.8" opacity="0.5" />
+  <line x1="95" y1="130" x2="45" y2="190" stroke="#2d3748" stroke-width="0.8" opacity="0.5" />
+
+  <!-- Wheel spokes (front) -->
+  <line x1="230" y1="115" x2="230" y2="205" stroke="#2d3748" stroke-width="0.8" opacity="0.5" />
+  <line x1="185" y1="160" x2="275" y2="160" stroke="#2d3748" stroke-width="0.8" opacity="0.5" />
+  <line x1="205" y1="130" x2="255" y2="190" stroke="#2d3748" stroke-width="0.8" opacity="0.5" />
+  <line x1="255" y1="130" x2="205" y2="190" stroke="#2d3748" stroke-width="0.8" opacity="0.5" />
+
+  <!-- Main frame tubes -->
+  <line x1="70" y1="160" x2="150" y2="60" stroke="#2563eb" stroke-width="2.5" />
+  <line x1="150" y1="60" x2="230" y2="160" stroke="#2563eb" stroke-width="2.5" />
+
+  <!-- Seat tube -->
+  <line x1="150" y1="60" x2="70" y2="160" stroke="#2563eb" stroke-width="2.5" />
+
+  <!-- Chain stays -->
+  <line x1="150" y1="60" x2="70" y2="160" stroke="#2563eb" stroke-width="1.5" opacity="0.6" />
+  <line x1="150" y1="60" x2="230" y2="160" stroke="#2563eb" stroke-width="1.5" opacity="0.6" />
+
+  <!-- Fork (front) -->
+  <line x1="230" y1="160" x2="240" y2="60" stroke="#2563eb" stroke-width="1.8" />
+  <line x1="230" y1="160" x2="220" y2="60" stroke="#2563eb" stroke-width="1.8" />
+
+  <!-- Handlebars -->
+  <path d="M 230 60 L 210 45 L 250 45 Z" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linejoin="round" />
+  <line x1="230" y1="60" x2="230" y2="40" stroke="#2563eb" stroke-width="1.5" />
+
+  <!-- Seat -->
+  <ellipse cx="150" cy="55" rx="15" ry="8" class="bike-seat" />
+
+  <!-- Pedals and crank -->
+  <circle cx="150" cy="140" r="6" fill="#2d3748" stroke="#1a202c" stroke-width="1" />
+  <line x1="150" y1="134" x2="150" y2="146" stroke="#2d3748" stroke-width="2" />
+  <line x1="144" y1="140" x2="156" y2="140" stroke="#2d3748" stroke-width="2" />
+
+  <!-- Chain (simplified) -->
+  <path d="M 156 145 Q 170 155 220 160" fill="none" stroke="#1a202c" stroke-width="1.5" />
+
+  <!-- Brake cables -->
+  <path d="M 230 70 Q 215 100 230 160" stroke="#6b7280" stroke-width="0.8" opacity="0.6" fill="none" />
+</svg>

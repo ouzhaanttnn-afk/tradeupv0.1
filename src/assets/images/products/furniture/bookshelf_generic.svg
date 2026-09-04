@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .shelf-frame { fill: #78716c; stroke: #57534e; stroke-width: 1; }
+      .shelf-wood { fill: #6b6b6b; stroke: #57534e; stroke-width: 0.5; }
+      .book { stroke: #2d3748; stroke-width: 0.5; }
+    </style>
+  </defs>
+
+  <!-- Main frame -->
+  <rect x="20" y="20" width="160" height="260" rx="3" class="shelf-frame" />
+
+  <!-- Vertical supports (2) -->
+  <line x1="70" y1="20" x2="70" y2="280" stroke="#57534e" stroke-width="1" opacity="0.5" />
+  <line x1="130" y1="20" x2="130" y2="280" stroke="#57534e" stroke-width="1" opacity="0.5" />
+
+  <!-- Horizontal shelves (5) -->
+  <rect x="20" y="65" width="160" height="6" class="shelf-wood" />
+  <rect x="20" y="125" width="160" height="6" class="shelf-wood" />
+  <rect x="20" y="185" width="160" height="6" class="shelf-wood" />
+  <rect x="20" y="245" width="160" height="6" class="shelf-wood" />
+
+  <!-- Books on shelf 1 (top) -->
+  <rect x="30" y="75" width="10" height="40" fill="#1e40af" class="book" />
+  <rect x="45" y="75" width="12" height="35" fill="#7c3aed" class="book" />
+  <rect x="62" y="75" width="10" height="45" fill="#dc2626" class="book" />
+  <rect x="77" y="75" width="11" height="38" fill="#059669" class="book" />
+  <rect x="93" y="75" width="10" height="42" fill="#d97706" class="book" />
+  <rect x="108" y="75" width="12" height="40" fill="#2563eb" class="book" />
+  <rect x="125" y="75" width="10" height="44" fill="#7c3aed" class="book" />
+
+  <!-- Books on shelf 2 -->
+  <rect x="30" y="135" width="11" height="40" fill="#dc2626" class="book" />
+  <rect x="46" y="135" width="10" height="38" fill="#059669" class="book" />
+  <rect x="61" y="135" width="12" height="42" fill="#2563eb" class="book" />
+  <rect x="78" y="135" width="10" height="40" fill="#7c3aed" class="book" />
+  <rect x="93" y="135" width="11" height="44" fill="#d97706" class="book" />
+  <rect x="109" y="135" width="10" height="38" fill="#059669" class="book" />
+  <rect x="124" y="135" width="12" height="41" fill="#1e40af" class="book" />
+
+  <!-- Books on shelf 3 -->
+  <rect x="35" y="195" width="10" height="40" fill="#7c3aed" class="book" />
+  <rect x="50" y="195" width="12" height="38" fill="#d97706" class="book" />
+  <rect x="67" y="195" width="11" height="42" fill="#dc2626" class="book" />
+  <rect x="83" y="195" width="10" height="40" fill="#2563eb" class="book" />
+  <rect x="98" y="195" width="12" height="44" fill="#059669" class="book" />
+  <rect x="115" y="195" width="10" height="39" fill="#7c3aed" class="book" />
+
+  <!-- Books on shelf 4 (bottom) -->
+  <rect x="30" y="255" width="12" height="15" fill="#1e40af" class="book" />
+  <rect x="47" y="255" width="11" height="18" fill="#7c3aed" class="book" />
+  <rect x="63" y="255" width="12" height="16" fill="#d97706" class="book" />
+  <rect x="80" y="255" width="10" height="17" fill="#059669" class="book" />
+  <rect x="95" y="255" width="11" height="15" fill="#dc2626" class="book" />
+  <rect x="111" y="255" width="12" height="16" fill="#2563eb" class="book" />
+
+  <!-- Bookshelf shadow/depth -->
+  <path d="M 180 20 L 185 30 L 185 270 L 180 280" fill="black" opacity="0.1" />
+</svg>

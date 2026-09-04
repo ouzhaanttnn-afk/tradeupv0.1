@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 300" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .jeans-fabric { fill: #1e3a8a; stroke: #1e40af; stroke-width: 0.5; }
+      .jeans-seam { stroke: #0f172a; stroke-width: 1; fill: none; }
+      .jeans-accent { stroke: #fbbf24; stroke-width: 0.8; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Waistband -->
+  <ellipse cx="60" cy="20" rx="35" ry="8" fill="#151515" stroke="#0f0f0f" stroke-width="1" />
+
+  <!-- Left leg -->
+  <path d="M 35 28 L 32 280 Q 30 285 35 285 L 45 285 Q 50 285 48 280 L 45 28 Z" class="jeans-fabric" />
+
+  <!-- Right leg -->
+  <path d="M 85 28 L 88 280 Q 90 285 85 285 L 75 285 Q 70 285 72 280 L 75 28 Z" class="jeans-fabric" />
+
+  <!-- Center seam -->
+  <line x1="60" y1="28" x2="60" y2="280" class="jeans-seam" />
+
+  <!-- Side seams -->
+  <path d="M 35 28 Q 33 150 32 280" class="jeans-seam" opacity="0.5" />
+  <path d="M 85 28 Q 87 150 88 280" class="jeans-seam" opacity="0.5" />
+
+  <!-- Stitching details -->
+  <path d="M 45 30 Q 45 150 45 280" class="jeans-accent" opacity="0.6" stroke-dasharray="3,2" />
+  <path d="M 75 30 Q 75 150 75 280" class="jeans-accent" opacity="0.6" stroke-dasharray="3,2" />
+
+  <!-- Zipper -->
+  <line x1="60" y1="20" x2="60" y2="60" stroke="#c0c0c0" stroke-width="1.5" />
+  <circle cx="60" cy="15" r="3" fill="#fbbf24" />
+
+  <!-- Pocket details -->
+  <path d="M 48 80 Q 50 95 48 110" class="jeans-seam" opacity="0.4" />
+  <path d="M 72 80 Q 70 95 72 110" class="jeans-seam" opacity="0.4" />
+
+  <!-- Fade pattern (subtle) -->
+  <polygon points="55,40 65,40 65,120 55,120" fill="#0f3a66" opacity="0.3" />
+</svg>

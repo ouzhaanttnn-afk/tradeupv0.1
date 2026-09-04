@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .dvd-case { fill: #1a1a1a; stroke: #0a0a0a; stroke-width: 1; }
+      .dvd-disc { fill: #c7d2e0; stroke: #a1a1aa; stroke-width: 1; }
+      .dvd-label { fill: #2563eb; stroke: #1e40af; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <!-- DVD case (3D perspective) -->
+  <rect x="20" y="40" width="100" height="130" rx="2" class="dvd-case" />
+
+  <!-- Spine -->
+  <polygon points="120,40 130,35 130,165 120,170" fill="#0a0a0a" stroke="#000" stroke-width="0.5" />
+
+  <!-- Case edge -->
+  <line x1="120" y1="40" x2="130" y2="35" stroke="#1a1a1a" stroke-width="0.5" />
+  <line x1="120" y1="170" x2="130" y2="165" stroke="#1a1a1a" stroke-width="0.5" />
+
+  <!-- Disc visible inside -->
+  <circle cx="70" cy="110" r="30" class="dvd-disc" />
+
+  <!-- Disc center hole -->
+  <circle cx="70" cy="110" r="6" fill="#1a1a1a" />
+
+  <!-- Disc hole pin -->
+  <circle cx="70" cy="110" r="2" fill="#0a0a0a" />
+
+  <!-- DVD label area on case -->
+  <rect x="25" y="50" width="90" height="50" rx="2" class="dvd-label" />
+
+  <!-- Title text -->
+  <text x="70" y="70" font-size="11" font-weight="bold" fill="white" text-anchor="middle">MOVIE</text>
+  <text x="70" y="85" font-size="8" fill="#dbeafe" text-anchor="middle">TITLE</text>
+
+  <!-- Format indicator -->
+  <text x="25" y="120" font-size="6" fill="#9ca3af">BLURAY</text>
+
+  <!-- Additional disc specs -->
+  <rect x="25" y="130" width="90" height="35" fill="none" stroke="#374151" stroke-width="0.5" rx="2" opacity="0.5" />
+  <text x="30" y="145" font-size="6" fill="#9ca3af">Runtime: 120 min</text>
+  <text x="30" y="155" font-size="6" fill="#9ca3af">Format: 16:9 Widescreen</text>
+
+  <!-- Shine effect on disc -->
+  <ellipse cx="55" cy="95" rx="12" ry="8" fill="white" opacity="0.15" />
+</svg>

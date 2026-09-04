@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 320" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .racket-frame { fill: none; stroke: #1f2937; stroke-width: 2.5; stroke-linecap: round; }
+      .racket-strings { fill: none; stroke: #f3f4f6; stroke-width: 0.8; }
+      .racket-handle { fill: #2d3748; stroke: #1a202c; stroke-width: 1; }
+      .racket-grip { fill: #3b82f6; }
+    </style>
+  </defs>
+
+  <!-- Racket head (oval) -->
+  <ellipse cx="90" cy="80" rx="55" ry="65" class="racket-frame" />
+
+  <!-- String pattern (vertical) -->
+  <line x1="50" y1="25" x2="50" y2="135" class="racket-strings" />
+  <line x1="60" y1="15" x2="60" y2="145" class="racket-strings" />
+  <line x1="70" y1="10" x2="70" y2="150" class="racket-strings" />
+  <line x1="80" y1="8" x2="80" y2="152" class="racket-strings" />
+  <line x1="90" y1="7" x2="90" y2="153" class="racket-strings" />
+  <line x1="100" y1="8" x2="100" y2="152" class="racket-strings" />
+  <line x1="110" y1="10" x2="110" y2="150" class="racket-strings" />
+  <line x1="120" y1="15" x2="120" y2="145" class="racket-strings" />
+  <line x1="130" y1="25" x2="130" y2="135" class="racket-strings" />
+
+  <!-- String pattern (horizontal) -->
+  <line x1="40" y1="35" x2="140" y2="35" class="racket-strings" />
+  <line x1="35" y1="50" x2="145" y2="50" class="racket-strings" />
+  <line x1="32" y1="70" x2="148" y2="70" class="racket-strings" />
+  <line x1="31" y1="90" x2="149" y2="90" class="racket-strings" />
+  <line x1="32" y1="110" x2="148" y2="110" class="racket-strings" />
+  <line x1="35" y1="130" x2="145" y2="130" class="racket-strings" />
+
+  <!-- Throat (between head and handle) -->
+  <path d="M 75 145 L 80 160 L 100 160 L 105 145" class="racket-frame" />
+
+  <!-- Handle/shaft -->
+  <rect x="70" y="160" width="40" height="120" rx="8" class="racket-handle" />
+
+  <!-- Grip wrapping -->
+  <line x1="70" y1="175" x2="110" y2="175" stroke="#0f172a" stroke-width="0.5" opacity="0.4" />
+  <line x1="70" y1="190" x2="110" y2="190" stroke="#0f172a" stroke-width="0.5" opacity="0.4" />
+  <line x1="70" y1="205" x2="110" y2="205" stroke="#0f172a" stroke-width="0.5" opacity="0.4" />
+  <line x1="70" y1="220" x2="110" y2="220" stroke="#0f172a" stroke-width="0.5" opacity="0.4" />
+  <line x1="70" y1="235" x2="110" y2="235" stroke="#0f172a" stroke-width="0.5" opacity="0.4" />
+  <line x1="70" y1="250" x2="110" y2="250" stroke="#0f172a" stroke-width="0.5" opacity="0.4" />
+
+  <!-- Overgrip accent -->
+  <rect x="72" y="195" width="36" height="35" fill="#3b82f6" opacity="0.5" rx="4" />
+
+  <!-- Butt cap -->
+  <circle cx="90" cy="280" r="6" fill="#1a202c" stroke="#000" stroke-width="1" />
+
+  <!-- String tension indicator -->
+  <text x="90" y="85" font-size="8" fill="#f3f4f6" text-anchor="middle" opacity="0.6">STRING</text>
+</svg>

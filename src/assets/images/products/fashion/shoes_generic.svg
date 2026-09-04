@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .shoe-body { fill: #1f2937; stroke: #111827; stroke-width: 1; }
+      .shoe-sole { fill: #0f172a; stroke: #1a202c; stroke-width: 0.5; }
+      .shoe-accent { fill: #3b82f6; }
+    </style>
+  </defs>
+
+  <!-- Left shoe -->
+  <!-- Shoe upper -->
+  <path d="M 30 60 Q 30 40 50 35 L 80 35 Q 90 40 90 60 L 90 75 Q 85 80 75 82 L 40 82 Q 30 80 30 75 Z" class="shoe-body" />
+
+  <!-- Toe box left -->
+  <ellipse cx="75" cy="75" rx="18" ry="22" class="shoe-body" />
+
+  <!-- Sole left -->
+  <ellipse cx="55" cy="85" rx="40" ry="12" class="shoe-sole" />
+
+  <!-- Laces left -->
+  <line x1="55" y1="45" x2="55" y2="70" stroke="#8b5cf6" stroke-width="1.5" opacity="0.7" />
+  <line x1="65" y1="48" x2="65" y2="68" stroke="#8b5cf6" stroke-width="1.5" opacity="0.7" />
+  <line x1="75" y1="45" x2="75" y2="70" stroke="#8b5cf6" stroke-width="1.5" opacity="0.7" />
+
+  <!-- Accent stripe -->
+  <path d="M 45 55 Q 60 50 75 55" stroke="#3b82f6" stroke-width="2" fill="none" opacity="0.6" />
+
+  <!-- Right shoe (offset) -->
+  <!-- Shoe upper -->
+  <path d="M 150 60 Q 150 40 170 35 L 200 35 Q 210 40 210 60 L 210 75 Q 205 80 195 82 L 160 82 Q 150 80 150 75 Z" class="shoe-body" />
+
+  <!-- Toe box right -->
+  <ellipse cx="195" cy="75" rx="18" ry="22" class="shoe-body" />
+
+  <!-- Sole right -->
+  <ellipse cx="175" cy="85" rx="40" ry="12" class="shoe-sole" />
+
+  <!-- Laces right -->
+  <line x1="175" y1="45" x2="175" y2="70" stroke="#8b5cf6" stroke-width="1.5" opacity="0.7" />
+  <line x1="185" y1="48" x2="185" y2="68" stroke="#8b5cf6" stroke-width="1.5" opacity="0.7" />
+  <line x1="195" y1="45" x2="195" y2="70" stroke="#8b5cf6" stroke-width="1.5" opacity="0.7" />
+
+  <!-- Accent stripe right -->
+  <path d="M 165 55 Q 180 50 195 55" stroke="#3b82f6" stroke-width="2" fill="none" opacity="0.6" />
+
+  <!-- Heel detail -->
+  <ellipse cx="50" cy="90" rx="8" ry="6" fill="#2d3748" opacity="0.6" />
+  <ellipse cx="170" cy="90" rx="8" ry="6" fill="#2d3748" opacity="0.6" />
+
+  <!-- Model/Size label -->
+  <text x="120" y="130" font-size="10" fill="#9ca3af" text-anchor="middle" opacity="0.6">SNEAKERS</text>
+</svg>

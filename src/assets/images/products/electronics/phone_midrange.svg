@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .phone-body { fill: #4b5563; stroke: #2d3748; stroke-width: 2; }
+      .phone-screen { fill: #1a202c; stroke: #2d3748; stroke-width: 1; }
+      .phone-accent { fill: #6b7280; }
+      .phone-camera { fill: #4b5563; }
+      .phone-reflection { fill: white; opacity: 0.12; }
+    </style>
+  </defs>
+
+  <!-- Phone body - smaller bezels than budget -->
+  <rect x="25" y="35" width="206" height="442" rx="16" class="phone-body" />
+
+  <!-- Screen display -->
+  <rect x="35" y="55" width="186" height="365" rx="14" class="phone-screen" />
+
+  <!-- Status bar -->
+  <rect x="40" y="60" width="176" height="18" fill="#2d3748" opacity="0.8" />
+  <text x="45" y="72" font-size="7" fill="#9ca3af">9:41</text>
+
+  <!-- Content area -->
+  <rect x="40" y="82" width="176" height="330" fill="#1a202c" />
+
+  <!-- App grid (3x3 instead of 4x2 for midrange) -->
+  <rect x="50" y="95" width="24" height="24" rx="5" fill="#3b82f6" />
+  <rect x="80" y="95" width="24" height="24" rx="5" fill="#ef4444" />
+  <rect x="110" y="95" width="24" height="24" rx="5" fill="#10b981" />
+
+  <rect x="50" y="130" width="24" height="24" rx="5" fill="#f59e0b" />
+  <rect x="80" y="130" width="24" height="24" rx="5" fill="#8b5cf6" />
+  <rect x="110" y="130" width="24" height="24" rx="5" fill="#ec4899" />
+
+  <!-- Camera (single, not dual) -->
+  <circle cx="128" cy="70" r="6" class="phone-camera" />
+  <circle cx="128" cy="70" r="4" fill="#1a202c" />
+  <circle cx="128" cy="70" r="2" class="phone-reflection" />
+
+  <!-- Bottom bezels -->
+  <rect x="85" y="420" width="86" height="2" rx="1" fill="#374151" opacity="0.6" />
+
+  <!-- Side reflection -->
+  <rect x="25" y="60" width="2" height="250" fill="white" opacity="0.08" rx="1" />
+</svg>

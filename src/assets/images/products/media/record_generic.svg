@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .vinyl-main { fill: #0f172a; stroke: #111827; stroke-width: 1; }
+      .vinyl-label { fill: #3b82f6; stroke: #2563eb; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <!-- Vinyl record -->
+  <circle cx="100" cy="100" r="80" class="vinyl-main" />
+
+  <!-- Grooves (concentric circles) -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#1a202c" stroke-width="0.5" opacity="0.6" />
+  <circle cx="100" cy="100" r="60" fill="none" stroke="#1a202c" stroke-width="0.5" opacity="0.5" />
+  <circle cx="100" cy="100" r="50" fill="none" stroke="#1a202c" stroke-width="0.5" opacity="0.4" />
+  <circle cx="100" cy="100" r="40" fill="none" stroke="#1a202c" stroke-width="0.5" opacity="0.3" />
+
+  <!-- Center label -->
+  <circle cx="100" cy="100" r="28" class="vinyl-label" />
+
+  <!-- Label decorations -->
+  <circle cx="100" cy="100" r="22" fill="none" stroke="#2563eb" stroke-width="1" opacity="0.7" />
+  <circle cx="100" cy="100" r="16" fill="none" stroke="#2563eb" stroke-width="0.8" opacity="0.5" />
+
+  <!-- Center hole -->
+  <circle cx="100" cy="100" r="8" fill="#111827" stroke="#000" stroke-width="1" />
+  <circle cx="100" cy="100" r="6" fill="#000" />
+
+  <!-- Label text simulation -->
+  <text x="100" y="104" font-size="8" fill="#1e293b" text-anchor="middle" font-weight="bold">VINYL</text>
+
+  <!-- Reflection for glossy effect -->
+  <ellipse cx="100" cy="85" rx="50" ry="15" fill="white" opacity="0.08" />
+  <ellipse cx="120" cy="95" rx="20" ry="35" fill="white" opacity="0.06" />
+
+  <!-- Spot marks (wear) -->
+  <circle cx="75" cy="70" r="1.5" fill="#374151" opacity="0.6" />
+  <circle cx="130" cy="60" r="1" fill="#374151" opacity="0.5" />
+  <circle cx="110" cy="130" r="1.2" fill="#374151" opacity="0.5" />
+</svg>

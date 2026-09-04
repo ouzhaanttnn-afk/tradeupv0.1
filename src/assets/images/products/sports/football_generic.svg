@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .football-body { fill: #8b4513; stroke: #654321; stroke-width: 1; }
+      .football-stripe { fill: #ffffff; stroke: #f3f4f6; stroke-width: 0.5; }
+    </style>
+  </defs>
+
+  <!-- Main football body (ellipse) -->
+  <ellipse cx="150" cy="100" rx="90" ry="50" class="football-body" />
+
+  <!-- Center stripe/lace -->
+  <path d="M 100 100 Q 120 95 150 92 Q 180 95 200 100" stroke="#f3f4f6" stroke-width="2" fill="none" />
+  <path d="M 100 100 Q 120 105 150 108 Q 180 105 200 100" stroke="#f3f4f6" stroke-width="2" fill="none" />
+
+  <!-- Stitching marks (laces) -->
+  <line x1="120" y1="92" x2="120" y2="108" stroke="#f3f4f6" stroke-width="1.2" opacity="0.9" />
+  <line x1="135" y1="90" x2="135" y2="110" stroke="#f3f4f6" stroke-width="1.2" opacity="0.8" />
+  <line x1="150" y1="88" x2="150" y2="112" stroke="#f3f4f6" stroke-width="1.2" opacity="0.9" />
+  <line x1="165" y1="90" x2="165" y2="110" stroke="#f3f4f6" stroke-width="1.2" opacity="0.8" />
+  <line x1="180" y1="92" x2="180" y2="108" stroke="#f3f4f6" stroke-width="1.2" opacity="0.9" />
+
+  <!-- Panel sections (darker areas) -->
+  <ellipse cx="90" cy="85" rx="35" ry="25" fill="#654321" opacity="0.6" />
+  <ellipse cx="210" cy="85" rx="35" ry="25" fill="#654321" opacity="0.6" />
+  <ellipse cx="90" cy="115" rx="35" ry="25" fill="#654321" opacity="0.6" />
+  <ellipse cx="210" cy="115" rx="35" ry="25" fill="#654321" opacity="0.6" />
+
+  <!-- Grip zones (rubber nubs simulation) -->
+  <circle cx="80" cy="75" r="2" fill="#5c3d2e" opacity="0.7" />
+  <circle cx="100" cy="70" r="1.5" fill="#5c3d2e" opacity="0.7" />
+  <circle cx="220" cy="75" r="2" fill="#5c3d2e" opacity="0.7" />
+  <circle cx="200" cy="70" r="1.5" fill="#5c3d2e" opacity="0.7" />
+  <circle cx="80" cy="125" r="2" fill="#5c3d2e" opacity="0.7" />
+  <circle cx="100" cy="130" r="1.5" fill="#5c3d2e" opacity="0.7" />
+  <circle cx="220" cy="125" r="2" fill="#5c3d2e" opacity="0.7" />
+  <circle cx="200" cy="130" r="1.5" fill="#5c3d2e" opacity="0.7" />
+
+  <!-- Shading for 3D effect -->
+  <ellipse cx="150" cy="75" rx="85" ry="20" fill="white" opacity="0.08" />
+  <ellipse cx="150" cy="130" rx="85" ry="15" fill="black" opacity="0.1" />
+
+  <!-- Logo area -->
+  <text x="150" y="105" font-size="12" font-weight="bold" fill="#654321" text-anchor="middle" opacity="0.5">FOOT</text>
+
+  <!-- Valve stem -->
+  <circle cx="60" cy="100" r="3" fill="#1a202c" stroke="#0f172a" stroke-width="1" />
+</svg>

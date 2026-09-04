@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .phone-body { fill: #2d3748; stroke: #1a202c; stroke-width: 2; }
+      .phone-screen { fill: #1a202c; stroke: #2d3748; stroke-width: 1; }
+      .phone-accent { fill: #4b5563; }
+    </style>
+  </defs>
+
+  <!-- Generic phone (midrange appearance) -->
+  <rect x="25" y="35" width="206" height="442" rx="16" class="phone-body" />
+  <rect x="35" y="55" width="186" height="365" rx="14" class="phone-screen" />
+
+  <!-- Gradient simulation -->
+  <defs>
+    <linearGradient id="generic-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a202c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="35" y="80" width="186" height="330" fill="url(#generic-grad)" />
+
+  <!-- Status bar -->
+  <rect x="40" y="60" width="176" height="18" fill="#1f2937" opacity="0.8" />
+
+  <!-- Camera -->
+  <circle cx="128" cy="70" r="6" class="phone-accent" />
+  <circle cx="128" cy="70" r="4" fill="#1a202c" />
+
+  <!-- Basic content indicators -->
+  <circle cx="60" cy="110" r="4" fill="#3b82f6" opacity="0.7" />
+  <circle cx="100" cy="110" r="4" fill="#3b82f6" opacity="0.7" />
+  <circle cx="140" cy="110" r="4" fill="#3b82f6" opacity="0.7" />
+
+  <!-- Accent bottom button -->
+  <rect x="90" y="420" width="76" height="8" rx="4" fill="#3b82f6" opacity="0.6" />
+</svg>
