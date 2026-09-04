@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Gradients for realistic materials -->
+    <linearGradient id="body-metallic" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2a2a2a;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="screen-glow" cx="50%" cy="30%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </radialGradient>
+
+    <linearGradient id="glass-shine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.1" />
+    </linearGradient>
+
+    <linearGradient id="edge-light" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="8" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .phone-body { fill: url(#body-metallic); }
+      .phone-screen-bg { fill: url(#screen-glow); }
+      .phone-glass { fill: url(#glass-shine); }
+    </style>
+  </defs>
+
+  <!-- Shadow beneath phone -->
+  <ellipse cx="128" cy="490" rx="100" ry="12" fill="#000000" opacity="0.15" />
+
+  <!-- Phone body with metallic gradient -->
+  <rect x="20" y="30" width="216" height="452" rx="24" class="phone-body" filter="url(#shadow)" />
+
+  <!-- Edge highlight (left side) -->
+  <path d="M 20 60 L 20 450 Q 20 464 30 472" stroke="url(#edge-light)" stroke-width="1.5" fill="none" opacity="0.6" />
+
+  <!-- Edge highlight (right side) -->
+  <path d="M 236 60 L 236 450 Q 236 464 226 472" stroke="url(#edge-light)" stroke-width="1.5" fill="none" opacity="0.6" />
+
+  <!-- Screen area with realistic glow -->
+  <rect x="28" y="50" width="200" height="390" rx="20" class="phone-screen-bg" />
+
+  <!-- Screen glass reflection overlay -->
+  <rect x="28" y="50" width="200" height="390" rx="20" class="phone-glass" />
+
+  <!-- Notch area (Dynamic Island style) -->
+  <rect x="100" y="50" width="56" height="28" rx="14" fill="#0a0a0a" />
+  <rect x="102" y="52" width="52" height="24" rx="12" fill="#000000" />
+
+  <!-- Notch glass shine -->
+  <ellipse cx="128" cy="58" rx="20" ry="6" fill="white" opacity="0.15" />
+
+  <!-- Camera cluster in notch -->
+  <circle cx="120" cy="65" r="5" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1" />
+  <circle cx="120" cy="65" r="3.5" fill="#0a0a0a" />
+  <circle cx="120" cy="65" r="2" fill="#1e293b" />
+
+  <circle cx="136" cy="65" r="5" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1" />
+  <circle cx="136" cy="65" r="3.5" fill="#0a0a0a" />
+  <circle cx="136" cy="65" r="2" fill="#1e293b" />
+
+  <!-- Screen display content -->
+  <defs>
+    <linearGradient id="display-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#051419;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect x="32" y="85" width="192" height="350" fill="url(#display-grad)" rx="18" />
+
+  <!-- Status bar -->
+  <rect x="35" y="88" width="186" height="20" fill="#1a202c" opacity="0.9" />
+  <text x="40" y="101" font-size="10" font-weight="600" fill="#e0e7ff" font-family="system-ui, -apple-system, sans-serif">9:41</text>
+
+  <!-- Status icons right -->
+  <circle cx="210" cy="98" r="2" fill="#10b981" />
+  <circle cx="220" cy="98" r="2" fill="#10b981" />
+
+  <!-- Home indicator dots -->
+  <circle cx="122" cy="425" r="1.5" fill="#ffffff" opacity="0.4" />
+  <circle cx="128" cy="425" r="1.5" fill="#ffffff" opacity="0.4" />
+  <circle cx="134" cy="425" r="1.5" fill="#ffffff" opacity="0.4" />
+
+  <!-- App grid simulation on screen -->
+  <defs>
+    <linearGradient id="app-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="app-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b91c1c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="app-3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="app-4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- First row of apps -->
+  <rect x="50" y="115" width="35" height="35" rx="8" fill="url(#app-1)" />
+  <rect x="95" y="115" width="35" height="35" rx="8" fill="url(#app-2)" />
+  <rect x="140" y="115" width="35" height="35" rx="8" fill="url(#app-3)" />
+  <rect x="185" y="115" width="35" height="35" rx="8" fill="url(#app-4)" />
+
+  <!-- Second row with app icons shine -->
+  <rect x="50" y="165" width="35" height="35" rx="8" fill="#8b5cf6" opacity="0.85" />
+  <ellipse cx="67.5" cy="125" rx="12" ry="8" fill="white" opacity="0.2" />
+
+  <rect x="95" y="165" width="35" height="35" rx="8" fill="#ec4899" opacity="0.85" />
+  <ellipse cx="112.5" cy="175" rx="12" ry="8" fill="white" opacity="0.15" />
+
+  <rect x="140" y="165" width="35" height="35" rx="8" fill="#06b6d4" opacity="0.85" />
+  <rect x="185" y="165" width="35" height="35" rx="8" fill="#6366f1" opacity="0.85" />
+
+  <!-- Content area with subtle gradient -->
+  <rect x="35" y="215" width="186" height="200" fill="#051419" opacity="0.5" rx="12" />
+
+  <!-- Wallpaper suggestion (subtle gradient) -->
+  <defs>
+    <linearGradient id="wallpaper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.2" />
+    </linearGradient>
+  </defs>
+  <rect x="35" y="85" width="186" height="350" fill="url(#wallpaper)" rx="18" />
+
+  <!-- Bottom speaker grille -->
+  <rect x="85" y="420" width="86" height="2" rx="1" fill="#2a2a2a" opacity="0.8" />
+  <line x1="90" y1="420" x2="166" y2="420" stroke="#1a1a1a" stroke-width="0.5" opacity="0.6" />
+
+  <!-- Port area -->
+  <rect x="110" y="430" width="36" height="3" rx="1.5" fill="#1a1a1a" opacity="0.7" />
+
+  <!-- Enhanced reflection on frame -->
+  <path d="M 22 100 Q 25 200 22 350" stroke="white" stroke-width="2" fill="none" opacity="0.08" stroke-linecap="round" />
+  <path d="M 234 120 Q 237 250 234 370" stroke="white" stroke-width="1.5" fill="none" opacity="0.06" stroke-linecap="round" />
+
+  <!-- Bottom corner shine -->
+  <ellipse cx="42" cy="460" rx="20" ry="15" fill="white" opacity="0.04" />
+  <ellipse cx="214" cy="455" rx="18" ry="12" fill="white" opacity="0.03" />
+
+  <!-- Subtle vignette effect -->
+  <rect x="20" y="30" width="216" height="452" rx="24" fill="#000000" opacity="0.05" />
+</svg>
