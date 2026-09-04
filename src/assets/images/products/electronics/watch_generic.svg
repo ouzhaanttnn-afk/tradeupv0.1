@@ -1,45 +1,96 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 540" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <style>
-      .watch-body { fill: #1f2937; stroke: #111827; stroke-width: 1.5; }
-      .watch-screen { fill: #0f172a; stroke: #374151; stroke-width: 1; }
-      .watch-band { fill: #2d3748; }
-    </style>
-  </defs>
-
-  <!-- Watch body -->
-  <rect x="35" y="50" width="90" height="110" rx="12" class="watch-body" />
-
-  <!-- Bezels/lugs for band -->
-  <rect x="30" y="60" width="8" height="30" rx="2" class="watch-band" />
-  <rect x="122" y="60" width="8" height="30" rx="2" class="watch-band" />
-  <rect x="30" y="130" width="8" height="30" rx="2" class="watch-band" />
-  <rect x="122" y="130" width="8" height="30" rx="2" class="watch-band" />
-
-  <!-- Screen -->
-  <rect x="45" y="60" width="70" height="90" rx="8" class="watch-screen" />
-
-  <!-- Screen content - watch face simulation -->
-  <defs>
-    <linearGradient id="watch-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    <radialGradient id="backdrop" cx="50%" cy="36%" r="74%">
+      <stop offset="0%" stop-color="#f7f7f8"/><stop offset="60%" stop-color="#ececed"/><stop offset="100%" stop-color="#d8d9dc"/>
+    </radialGradient>
+    <linearGradient id="case" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a4e55"/><stop offset="5%" stop-color="#a8aeb7"/><stop offset="12%" stop-color="#71767e"/>
+      <stop offset="50%" stop-color="#484d54"/><stop offset="89%" stop-color="#616670"/><stop offset="96%" stop-color="#989ea7"/>
+      <stop offset="100%" stop-color="#494e55"/>
     </linearGradient>
+    <!-- Fluoroelastomer strap: matte, soft falloff -->
+    <linearGradient id="strap" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1f242c"/><stop offset="18%" stop-color="#333a44"/>
+      <stop offset="55%" stop-color="#272d35"/><stop offset="100%" stop-color="#171b21"/>
+    </linearGradient>
+    <linearGradient id="face" x1="18%" y1="0%" x2="82%" y2="100%">
+      <stop offset="0%" stop-color="#0d1220"/><stop offset="60%" stop-color="#070a12"/><stop offset="100%" stop-color="#04060b"/>
+    </linearGradient>
+    <linearGradient id="specular" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="34%" stop-color="#ffffff" stop-opacity="0"/><stop offset="46%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="contactBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="ambientBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="22"/></filter>
+    <clipPath id="faceClip"><rect x="130" y="176" width="160" height="188" rx="40"/></clipPath>
   </defs>
-  <rect x="48" y="63" width="64" height="84" fill="url(#watch-grad)" />
 
-  <!-- Digital time display -->
-  <text x="80" y="92" font-size="14" font-weight="bold" fill="#3b82f6" text-anchor="middle">9:41</text>
+  <rect width="420" height="540" fill="url(#backdrop)"/>
+  <ellipse cx="210" cy="494" rx="120" ry="22" fill="#2b2d33" opacity="0.15" filter="url(#ambientBlur)"/>
+  <ellipse cx="210" cy="486" rx="66" ry="10" fill="#1c1e24" opacity="0.32" filter="url(#contactBlur)"/>
 
-  <!-- Status icons -->
-  <circle cx="58" cy="115" r="2" fill="#10b981" opacity="0.8" />
-  <circle cx="67" cy="115" r="2" fill="#10b981" opacity="0.8" />
-  <circle cx="76" cy="115" r="2" fill="#10b981" opacity="0.8" />
+  <!-- ===== Straps ===== -->
+  <!-- upper strap, tapering as it recedes -->
+  <path d="M 168 190 L 252 190 L 246 74 Q 210 62 174 74 Z" fill="url(#strap)"/>
+  <!-- perforations -->
+  <g fill="#0e1116" opacity="0.75">
+    <ellipse cx="210" cy="96" rx="4.5" ry="3.4"/><ellipse cx="210" cy="118" rx="4.5" ry="3.4"/>
+    <ellipse cx="210" cy="140" rx="4.5" ry="3.4"/><ellipse cx="210" cy="162" rx="4.5" ry="3.4"/>
+  </g>
+  <!-- strap top edge highlight -->
+  <path d="M 174 74 Q 210 62 246 74" stroke="#6b7480" stroke-width="2" fill="none" opacity="0.5"/>
 
-  <!-- Side button -->
-  <rect x="135" y="85" width="3" height="18" rx="1.5" fill="#374151" />
+  <!-- lower strap with a keeper loop -->
+  <path d="M 168 350 L 252 350 L 258 470 Q 210 482 162 470 Z" fill="url(#strap)"/>
+  <rect x="160" y="404" width="100" height="16" rx="5" fill="#151a20"/>
+  <rect x="160" y="404" width="100" height="3" rx="1.5" fill="#565e6a" opacity="0.5"/>
 
-  <!-- Watch bands (lower part) -->
-  <path d="M 38 160 Q 30 175 35 190" stroke="#2d3748" stroke-width="4" fill="none" stroke-linecap="round" />
-  <path d="M 122 160 Q 130 175 125 190" stroke="#2d3748" stroke-width="4" fill="none" stroke-linecap="round" />
+  <!-- ===== Case ===== -->
+  <rect x="120" y="166" width="180" height="208" rx="48" fill="url(#case)"/>
+  <!-- glass bevel -->
+  <rect x="128" y="174" width="164" height="192" rx="42" fill="#0a0c11"/>
+
+  <g clip-path="url(#faceClip)">
+    <rect x="130" y="176" width="160" height="188" fill="url(#face)"/>
+
+    <!-- watch face: complications ring + big time -->
+    <text x="210" y="256" text-anchor="middle" font-family="system-ui,-apple-system,'Segoe UI',sans-serif"
+          font-size="52" font-weight="600" fill="#ffffff" letter-spacing="-1.5">9:41</text>
+    <text x="210" y="220" text-anchor="middle" font-family="system-ui,-apple-system,'Segoe UI',sans-serif"
+          font-size="12" font-weight="600" fill="#f8a23b" letter-spacing="1">THU 4 SEP</text>
+
+    <!-- activity rings -->
+    <g transform="translate(210,308)" fill="none" stroke-linecap="round">
+      <circle r="26" stroke="#2a1420" stroke-width="7"/>
+      <circle r="26" stroke="#fa3b5c" stroke-width="7" stroke-dasharray="128 163" transform="rotate(-90)"/>
+      <circle r="17" stroke="#12291c" stroke-width="7"/>
+      <circle r="17" stroke="#3ddc84" stroke-width="7" stroke-dasharray="76 107" transform="rotate(-90)"/>
+      <circle r="8"  stroke="#0d2630" stroke-width="7"/>
+      <circle r="8"  stroke="#3ac7e8" stroke-width="7" stroke-dasharray="30 50" transform="rotate(-90)"/>
+    </g>
+
+    <rect x="130" y="176" width="160" height="188" fill="url(#specular)"/>
+  </g>
+
+  <!-- glass edge catching the key light -->
+  <path d="M 136 214 Q 136 180 168 178 L 210 178" stroke="#ffffff" stroke-opacity="0.30" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <!-- case top / bottom shading -->
+  <rect x="120" y="166" width="180" height="18" rx="48" fill="#ffffff" opacity="0.07"/>
+  <rect x="120" y="352" width="180" height="22" rx="48" fill="#000000" opacity="0.22"/>
+
+  <!-- digital crown -->
+  <rect x="299" y="222" width="14" height="30" rx="6" fill="#5c626b"/>
+  <rect x="299" y="222" width="14" height="30" rx="6" fill="url(#case)" opacity="0.55"/>
+  <g stroke="#2f343b" stroke-width="1" opacity="0.75">
+    <line x1="301" y1="228" x2="311" y2="228"/><line x1="301" y1="234" x2="311" y2="234"/>
+    <line x1="301" y1="240" x2="311" y2="240"/><line x1="301" y1="246" x2="311" y2="246"/>
+  </g>
+  <circle cx="306" cy="237" r="3.4" fill="#b03a3a" opacity="0.85"/>
+
+  <!-- side button -->
+  <rect x="299" y="266" width="11" height="34" rx="5" fill="#4d525a"/>
+  <rect x="299" y="266" width="3" height="34" rx="1.5" fill="#8e949d" opacity="0.6"/>
+
+  <!-- microphone slot on the left flank -->
+  <rect x="110" y="256" width="10" height="4" rx="2" fill="#15181d"/>
 </svg>

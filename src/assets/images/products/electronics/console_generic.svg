@@ -1,50 +1,121 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <style>
-      .console-body { fill: #1f2937; stroke: #111827; stroke-width: 2; }
-      .console-screen { fill: #0f172a; stroke: #374151; stroke-width: 1; }
-      .console-button { fill: #2d3748; stroke: #1a202c; stroke-width: 1; }
-    </style>
-  </defs>
-
-  <!-- Main console body -->
-  <rect x="30" y="40" width="260" height="140" rx="8" class="console-body" />
-
-  <!-- Screen/display area -->
-  <rect x="50" y="55" width="220" height="110" rx="6" class="console-screen" />
-
-  <!-- Screen content simulation -->
-  <defs>
-    <linearGradient id="console-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    <radialGradient id="backdrop" cx="50%" cy="36%" r="74%">
+      <stop offset="0%" stop-color="#f7f7f8"/><stop offset="60%" stop-color="#ececed"/><stop offset="100%" stop-color="#d8d9dc"/>
+    </radialGradient>
+    <!-- Console tower: matte plastic, light upper-left -->
+    <linearGradient id="tower" x1="0%" y1="0%" x2="100%" y2="20%">
+      <stop offset="0%" stop-color="#f2f3f5"/><stop offset="42%" stop-color="#dcdee2"/><stop offset="100%" stop-color="#b8bcc3"/>
     </linearGradient>
+    <linearGradient id="towerCore" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1b1e23"/><stop offset="45%" stop-color="#101317"/><stop offset="100%" stop-color="#23272d"/>
+    </linearGradient>
+    <!-- Pad: soft-touch shell -->
+    <linearGradient id="pad" x1="0%" y1="0%" x2="100%" y2="40%">
+      <stop offset="0%" stop-color="#f4f5f7"/><stop offset="48%" stop-color="#dfe1e6"/><stop offset="100%" stop-color="#b4b9c1"/>
+    </linearGradient>
+    <linearGradient id="padDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2b2f36"/><stop offset="100%" stop-color="#171a1f"/>
+    </linearGradient>
+    <filter id="contactBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="ambientBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="22"/></filter>
   </defs>
-  <rect x="55" y="60" width="210" height="100" fill="url(#console-grad)" />
 
-  <!-- Logo area -->
-  <text x="160" y="95" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle" opacity="0.6">GAME</text>
+  <rect width="600" height="440" fill="url(#backdrop)"/>
+  <ellipse cx="300" cy="396" rx="230" ry="24" fill="#2b2d33" opacity="0.15" filter="url(#ambientBlur)"/>
 
-  <!-- Control buttons (left side) - D-pad -->
-  <circle cx="85" cy="155" r="3" class="console-button" />
-  <circle cx="75" cy="165" r="3" class="console-button" />
-  <circle cx="95" cy="165" r="3" class="console-button" />
-  <circle cx="85" cy="175" r="3" class="console-button" />
+  <!-- ===== Console tower, standing, slightly behind ===== -->
+  <g>
+    <ellipse cx="392" cy="376" rx="66" ry="10" fill="#1c1e24" opacity="0.30" filter="url(#contactBlur)"/>
+    <!-- dark inner core -->
+    <rect x="360" y="86" width="64" height="292" rx="8" fill="url(#towerCore)"/>
+    <!-- vent slots in the core -->
+    <g fill="#000000" opacity="0.5">
+      <rect x="370" y="120" width="44" height="3" rx="1.5"/><rect x="370" y="132" width="44" height="3" rx="1.5"/>
+      <rect x="370" y="144" width="44" height="3" rx="1.5"/><rect x="370" y="156" width="44" height="3" rx="1.5"/>
+      <rect x="370" y="168" width="44" height="3" rx="1.5"/>
+    </g>
+    <!-- outer white side panels, curved, floating off the core -->
+    <path d="M 348 82 Q 330 200 348 382 L 366 382 Q 350 200 366 82 Z" fill="url(#tower)"/>
+    <path d="M 436 82 Q 454 200 436 382 L 418 382 Q 434 200 418 82 Z" fill="url(#tower)" opacity="0.9"/>
+    <!-- panel edge highlights -->
+    <path d="M 348 82 Q 330 200 348 382" stroke="#ffffff" stroke-width="1.6" fill="none" opacity="0.75"/>
+    <path d="M 436 82 Q 454 200 436 382" stroke="#8f949c" stroke-width="1.4" fill="none" opacity="0.5"/>
+    <!-- glow strip between the panels -->
+    <rect x="366" y="96" width="3" height="272" fill="#4aa8ff" opacity="0.45"/>
+    <rect x="415" y="96" width="3" height="272" fill="#4aa8ff" opacity="0.25"/>
+    <!-- power LED -->
+    <circle cx="392" cy="366" r="3" fill="#4aa8ff" opacity="0.9"/>
+    <!-- base -->
+    <ellipse cx="392" cy="380" rx="46" ry="8" fill="#c9cdd3"/>
+    <ellipse cx="392" cy="378" rx="46" ry="8" fill="#e6e8ec"/>
+  </g>
 
-  <!-- Action buttons (right side) -->
-  <circle cx="245" cy="150" r="4" fill="#ef4444" opacity="0.7" />
-  <circle cx="260" cy="160" r="4" fill="#10b981" opacity="0.7" />
-  <circle cx="245" cy="170" r="4" fill="#3b82f6" opacity="0.7" />
-  <circle cx="230" cy="160" r="4" fill="#f59e0b" opacity="0.7" />
+  <!-- ===== Controller, front, catching the key light ===== -->
+  <g transform="translate(-14,0)">
+    <ellipse cx="216" cy="382" rx="112" ry="12" fill="#1c1e24" opacity="0.34" filter="url(#contactBlur)"/>
 
-  <!-- Shoulder buttons -->
-  <rect x="65" y="42" width="15" height="8" rx="2" class="console-button" />
-  <rect x="240" y="42" width="15" height="8" rx="2" class="console-button" />
+    <!-- grips -->
+    <path d="M 132 258 Q 100 300 108 356 Q 116 384 146 378 Q 168 366 176 316 Z" fill="url(#pad)"/>
+    <path d="M 300 258 Q 332 300 324 356 Q 316 384 286 378 Q 264 366 256 316 Z" fill="url(#pad)" opacity="0.92"/>
+    <!-- body -->
+    <path d="M 132 246 Q 216 224 300 246 L 296 300 Q 216 322 136 300 Z" fill="url(#pad)"/>
 
-  <!-- Vent slits -->
-  <line x1="45" y1="175" x2="65" y2="175" stroke="#374151" stroke-width="1" opacity="0.5" />
-  <line x1="75" y1="175" x2="95" y2="175" stroke="#374151" stroke-width="1" opacity="0.5" />
+    <!-- shoulder bumpers peeking over the top -->
+    <path d="M 142 240 Q 168 226 196 228 L 196 238 Q 168 236 144 248 Z" fill="#c3c8d0"/>
+    <path d="M 290 240 Q 264 226 236 228 L 236 238 Q 264 236 288 248 Z" fill="#c3c8d0"/>
 
-  <!-- Power indicator -->
-  <circle cx="160" cy="180" r="3" fill="#10b981" opacity="0.8" />
+    <!-- top edge highlight along the whole shell -->
+    <path d="M 134 248 Q 216 226 298 248" stroke="#ffffff" stroke-width="2.2" fill="none" opacity="0.8"/>
+
+    <!-- touch strip -->
+    <rect x="188" y="252" width="56" height="26" rx="5" fill="#e9ebef"/>
+    <rect x="188" y="252" width="56" height="3" rx="1.5" fill="#ffffff" opacity="0.9"/>
+    <rect x="188" y="274" width="56" height="4" rx="2" fill="#aeb3bb" opacity="0.6"/>
+
+    <!-- d-pad -->
+    <g fill="url(#padDark)">
+      <rect x="150" y="272" width="13" height="34" rx="3"/>
+      <rect x="139" y="283" width="35" height="12" rx="3"/>
+    </g>
+    <rect x="150" y="272" width="13" height="3" rx="1.5" fill="#4e545c" opacity="0.7"/>
+
+    <!-- face buttons -->
+    <circle cx="284" cy="266" r="9" fill="url(#padDark)"/>
+    <circle cx="300" cy="284" r="9" fill="url(#padDark)"/>
+    <circle cx="268" cy="284" r="9" fill="url(#padDark)"/>
+    <circle cx="284" cy="302" r="9" fill="url(#padDark)"/>
+    <circle cx="284" cy="263.5" r="9" fill="#3a3f47"/>
+    <circle cx="300" cy="281.5" r="9" fill="#3a3f47"/>
+    <circle cx="268" cy="281.5" r="9" fill="#3a3f47"/>
+    <circle cx="284" cy="299.5" r="9" fill="#3a3f47"/>
+    <!-- glyph hints -->
+    <circle cx="284" cy="263.5" r="3.2" fill="none" stroke="#9aa0a8" stroke-width="1.2"/>
+    <path d="M 296 278 l 8 7 M 304 278 l -8 7" stroke="#9aa0a8" stroke-width="1.2"/>
+    <rect x="265" y="278.5" width="6" height="6" rx="1" fill="none" stroke="#9aa0a8" stroke-width="1.2"/>
+    <path d="M 284 296 l 4 7 h -8 z" fill="none" stroke="#9aa0a8" stroke-width="1.2"/>
+
+    <!-- analogue sticks -->
+    <g>
+      <ellipse cx="186" cy="322" rx="21" ry="20" fill="#c0c5cc"/>
+      <ellipse cx="186" cy="320" rx="21" ry="20" fill="#d9dce1"/>
+      <ellipse cx="186" cy="319" rx="15" ry="14" fill="url(#padDark)"/>
+      <ellipse cx="186" cy="316.5" rx="11.5" ry="10" fill="#3c4149"/>
+      <ellipse cx="182.5" cy="313" rx="4.5" ry="3" fill="#ffffff" opacity="0.22"/>
+    </g>
+    <g>
+      <ellipse cx="246" cy="322" rx="21" ry="20" fill="#c0c5cc"/>
+      <ellipse cx="246" cy="320" rx="21" ry="20" fill="#d9dce1"/>
+      <ellipse cx="246" cy="319" rx="15" ry="14" fill="url(#padDark)"/>
+      <ellipse cx="246" cy="316.5" rx="11.5" ry="10" fill="#3c4149"/>
+      <ellipse cx="242.5" cy="313" rx="4.5" ry="3" fill="#ffffff" opacity="0.22"/>
+    </g>
+
+    <!-- light bar under the touch strip -->
+    <rect x="196" y="312" width="40" height="4" rx="2" fill="#4aa8ff" opacity="0.55"/>
+
+    <!-- grip contact shading so the pad doesn't read as a flat sticker -->
+    <path d="M 108 356 Q 116 384 146 378" stroke="#8d929a" stroke-width="1.6" fill="none" opacity="0.5"/>
+    <path d="M 324 356 Q 316 384 286 378" stroke="#8d929a" stroke-width="1.6" fill="none" opacity="0.4"/>
+  </g>
 </svg>

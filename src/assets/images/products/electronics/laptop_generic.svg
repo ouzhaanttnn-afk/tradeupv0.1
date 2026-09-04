@@ -1,55 +1,136 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 440" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <style>
-      .laptop-body { fill: #1f2937; stroke: #111827; stroke-width: 2; }
-      .laptop-screen { fill: #0f172a; stroke: #374151; stroke-width: 2; }
-      .laptop-accent { fill: #3b82f6; }
-      .keyboard-key { fill: #2d3748; stroke: #1a202c; stroke-width: 1; }
-    </style>
-  </defs>
-
-  <!-- Laptop screen panel -->
-  <rect x="40" y="20" width="432" height="240" rx="8" class="laptop-screen" />
-
-  <!-- Screen content simulation -->
-  <defs>
-    <linearGradient id="screen-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    <radialGradient id="backdrop" cx="50%" cy="36%" r="74%">
+      <stop offset="0%" stop-color="#f7f7f8"/><stop offset="60%" stop-color="#ececed"/><stop offset="100%" stop-color="#d8d9dc"/>
+    </radialGradient>
+    <!-- Lid: aluminium seen face-on, light from upper-left -->
+    <linearGradient id="lid" x1="0%" y1="0%" x2="100%" y2="10%">
+      <stop offset="0%" stop-color="#9aa0a8"/><stop offset="35%" stop-color="#7c828a"/>
+      <stop offset="100%" stop-color="#5e636b"/>
     </linearGradient>
+    <!-- Deck: same metal but tilted away from the light, so darker overall -->
+    <linearGradient id="deck" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8d939b"/><stop offset="40%" stop-color="#7a8088"/><stop offset="100%" stop-color="#61666e"/>
+    </linearGradient>
+    <linearGradient id="deckFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#565b63"/><stop offset="100%" stop-color="#3f434a"/>
+    </linearGradient>
+    <linearGradient id="wallpaper" x1="12%" y1="0%" x2="88%" y2="100%">
+      <stop offset="0%" stop-color="#0f3b52"/><stop offset="45%" stop-color="#122647"/><stop offset="100%" stop-color="#080d1c"/>
+    </linearGradient>
+    <radialGradient id="bloom" cx="26%" cy="22%" r="66%">
+      <stop offset="0%" stop-color="#39b8f5" stop-opacity="0.40"/><stop offset="100%" stop-color="#39b8f5" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="specular" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="34%" stop-color="#ffffff" stop-opacity="0"/><stop offset="46%" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="58%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="contactBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="ambientBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="22"/></filter>
+    <clipPath id="screenClip"><rect x="126" y="52" width="368" height="228" rx="6"/></clipPath>
   </defs>
-  <rect x="50" y="30" width="412" height="220" fill="url(#screen-grad)" />
 
-  <!-- Menu bar simulation -->
-  <rect x="55" y="35" width="402" height="15" fill="#1a202c" opacity="0.8" />
-  <text x="60" y="45" font-size="8" fill="#64748b">TradeUp Market</text>
+  <rect width="620" height="440" fill="url(#backdrop)"/>
+  <ellipse cx="310" cy="396" rx="252" ry="24" fill="#2b2d33" opacity="0.15" filter="url(#ambientBlur)"/>
+  <ellipse cx="310" cy="388" rx="212" ry="10" fill="#1c1e24" opacity="0.34" filter="url(#contactBlur)"/>
 
-  <!-- Content area with grid -->
-  <rect x="60" y="60" width="80" height="60" rx="4" class="laptop-accent" opacity="0.7" />
-  <rect x="160" y="60" width="80" height="60" rx="4" fill="#ef4444" opacity="0.7" />
-  <rect x="260" y="60" width="80" height="60" rx="4" fill="#10b981" opacity="0.7" />
-  <rect x="360" y="60" width="80" height="60" rx="4" fill="#f59e0b" opacity="0.7" />
+  <!-- ===== Lid ===== -->
+  <rect x="116" y="42" width="388" height="248" rx="10" fill="url(#lid)"/>
+  <rect x="122" y="48" width="376" height="236" rx="7" fill="#0b0d11"/>
 
-  <rect x="60" y="140" width="80" height="60" rx="4" fill="#8b5cf6" opacity="0.7" />
-  <rect x="160" y="140" width="80" height="60" rx="4" fill="#ec4899" opacity="0.7" />
-  <rect x="260" y="140" width="80" height="60" rx="4" fill="#06b6d4" opacity="0.7" />
-  <rect x="360" y="140" width="80" height="60" rx="4" fill="#6366f1" opacity="0.7" />
+  <g clip-path="url(#screenClip)">
+    <rect x="126" y="52" width="368" height="228" fill="url(#wallpaper)"/>
+    <rect x="126" y="52" width="368" height="228" fill="url(#bloom)"/>
 
-  <!-- Laptop base -->
-  <path d="M 30 260 L 50 280 L 462 280 L 482 260 Z" class="laptop-body" />
+    <!-- menu bar -->
+    <rect x="126" y="52" width="368" height="15" fill="#ffffff" opacity="0.10"/>
+    <circle cx="137" cy="59.5" r="2.6" fill="#ffffff" opacity="0.6"/>
+    <rect x="146" y="56" width="26" height="6" rx="1.5" fill="#ffffff" opacity="0.45"/>
+    <rect x="180" y="56" width="18" height="6" rx="1.5" fill="#ffffff" opacity="0.3"/>
+    <rect x="452" y="56" width="12" height="6" rx="1.5" fill="#ffffff" opacity="0.35"/>
+    <rect x="470" y="56" width="16" height="6" rx="1.5" fill="#ffffff" opacity="0.35"/>
 
-  <!-- Keyboard simulation -->
-  <rect x="60" y="270" width="392" height="15" fill="#1a202c" />
+    <!-- a window, offset, with a sidebar: reads as "a computer doing work" -->
+    <rect x="168" y="92" width="284" height="152" rx="7" fill="#0d1626" opacity="0.92"/>
+    <rect x="168" y="92" width="284" height="20" rx="7" fill="#ffffff" opacity="0.07"/>
+    <circle cx="180" cy="102" r="3" fill="#ff5f57"/><circle cx="191" cy="102" r="3" fill="#febc2e"/><circle cx="202" cy="102" r="3" fill="#28c840"/>
+    <rect x="168" y="112" width="72" height="132" fill="#ffffff" opacity="0.05"/>
+    <rect x="180" y="126" width="48" height="5" rx="2.5" fill="#ffffff" opacity="0.28"/>
+    <rect x="180" y="140" width="40" height="5" rx="2.5" fill="#ffffff" opacity="0.20"/>
+    <rect x="180" y="154" width="44" height="5" rx="2.5" fill="#ffffff" opacity="0.20"/>
+    <rect x="180" y="168" width="36" height="5" rx="2.5" fill="#ffffff" opacity="0.16"/>
+    <rect x="256" y="126" width="176" height="7" rx="3.5" fill="#ffffff" opacity="0.26"/>
+    <rect x="256" y="144" width="150" height="5" rx="2.5" fill="#ffffff" opacity="0.16"/>
+    <rect x="256" y="158" width="164" height="5" rx="2.5" fill="#ffffff" opacity="0.16"/>
+    <rect x="256" y="172" width="120" height="5" rx="2.5" fill="#ffffff" opacity="0.14"/>
+    <rect x="256" y="196" width="84" height="22" rx="5" fill="#3b82f6" opacity="0.85"/>
 
-  <!-- Keyboard keys -->
-  <rect x="70" y="273" width="8" height="8" class="keyboard-key" />
-  <rect x="82" y="273" width="8" height="8" class="keyboard-key" />
-  <rect x="94" y="273" width="8" height="8" class="keyboard-key" />
-  <rect x="106" y="273" width="8" height="8" class="keyboard-key" />
+    <rect x="126" y="52" width="368" height="228" fill="url(#specular)"/>
+  </g>
 
-  <!-- Touchpad -->
-  <rect x="380" y="267" width="60" height="20" rx="2" fill="#2d3748" stroke="#374151" stroke-width="1" />
+  <!-- webcam -->
+  <circle cx="310" cy="45.5" r="2.2" fill="#0a0d14"/>
+  <circle cx="310" cy="45.5" r="1.2" fill="#1b2434"/>
 
-  <!-- Hinge -->
-  <line x1="40" y1="260" x2="472" y2="260" stroke="#374151" stroke-width="2" />
+  <!-- lid top edge catching the key light -->
+  <path d="M 120 52 Q 120 44 130 43 L 310 43" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+
+  <!-- ===== Deck (keyboard half), drawn as a shallow trapezoid for perspective ===== -->
+  <path d="M 116 290 L 504 290 L 546 356 L 74 356 Z" fill="url(#deck)"/>
+  <!-- front lip -->
+  <path d="M 74 356 L 546 356 L 544 366 Q 310 372 76 366 Z" fill="url(#deckFront)"/>
+
+  <!-- hinge shadow under the lid -->
+  <path d="M 116 290 L 504 290 L 508 296 L 112 296 Z" fill="#000000" opacity="0.35"/>
+
+  <!-- keyboard well -->
+  <path d="M 146 302 L 474 302 L 502 342 L 118 342 Z" fill="#2f333a"/>
+
+  <!-- key rows: pitch widens toward the front to follow the perspective -->
+  <g fill="#43484f">
+    <g>
+      <rect x="152" y="305" width="18" height="7" rx="1.6"/><rect x="173" y="305" width="18" height="7" rx="1.6"/>
+      <rect x="194" y="305" width="18" height="7" rx="1.6"/><rect x="215" y="305" width="18" height="7" rx="1.6"/>
+      <rect x="236" y="305" width="18" height="7" rx="1.6"/><rect x="257" y="305" width="18" height="7" rx="1.6"/>
+      <rect x="278" y="305" width="18" height="7" rx="1.6"/><rect x="299" y="305" width="18" height="7" rx="1.6"/>
+      <rect x="320" y="305" width="18" height="7" rx="1.6"/><rect x="341" y="305" width="18" height="7" rx="1.6"/>
+      <rect x="362" y="305" width="18" height="7" rx="1.6"/><rect x="383" y="305" width="18" height="7" rx="1.6"/>
+      <rect x="404" y="305" width="18" height="7" rx="1.6"/><rect x="425" y="305" width="18" height="7" rx="1.6"/>
+      <rect x="446" y="305" width="18" height="7" rx="1.6"/>
+    </g>
+    <g>
+      <rect x="148" y="315" width="20" height="8" rx="1.7"/><rect x="171" y="315" width="20" height="8" rx="1.7"/>
+      <rect x="194" y="315" width="20" height="8" rx="1.7"/><rect x="217" y="315" width="20" height="8" rx="1.7"/>
+      <rect x="240" y="315" width="20" height="8" rx="1.7"/><rect x="263" y="315" width="20" height="8" rx="1.7"/>
+      <rect x="286" y="315" width="20" height="8" rx="1.7"/><rect x="309" y="315" width="20" height="8" rx="1.7"/>
+      <rect x="332" y="315" width="20" height="8" rx="1.7"/><rect x="355" y="315" width="20" height="8" rx="1.7"/>
+      <rect x="378" y="315" width="20" height="8" rx="1.7"/><rect x="401" y="315" width="20" height="8" rx="1.7"/>
+      <rect x="424" y="315" width="20" height="8" rx="1.7"/><rect x="447" y="315" width="22" height="8" rx="1.7"/>
+    </g>
+    <g>
+      <rect x="143" y="326" width="22" height="9" rx="1.8"/><rect x="168" y="326" width="22" height="9" rx="1.8"/>
+      <rect x="193" y="326" width="22" height="9" rx="1.8"/><rect x="218" y="326" width="22" height="9" rx="1.8"/>
+      <rect x="243" y="326" width="22" height="9" rx="1.8"/><rect x="268" y="326" width="22" height="9" rx="1.8"/>
+      <rect x="293" y="326" width="22" height="9" rx="1.8"/><rect x="318" y="326" width="22" height="9" rx="1.8"/>
+      <rect x="343" y="326" width="22" height="9" rx="1.8"/><rect x="368" y="326" width="22" height="9" rx="1.8"/>
+      <rect x="393" y="326" width="22" height="9" rx="1.8"/><rect x="418" y="326" width="22" height="9" rx="1.8"/>
+      <rect x="443" y="326" width="28" height="9" rx="1.8"/>
+    </g>
+  </g>
+  <!-- key tops catching light -->
+  <g fill="#5b616a" opacity="0.55">
+    <rect x="152" y="305" width="18" height="2" rx="1"/><rect x="215" y="305" width="18" height="2" rx="1"/>
+    <rect x="320" y="305" width="18" height="2" rx="1"/><rect x="425" y="305" width="18" height="2" rx="1"/>
+    <rect x="171" y="315" width="20" height="2" rx="1"/><rect x="309" y="315" width="20" height="2" rx="1"/>
+    <rect x="193" y="326" width="22" height="2.2" rx="1"/><rect x="343" y="326" width="22" height="2.2" rx="1"/>
+  </g>
+
+  <!-- trackpad -->
+  <path d="M 258 345 L 372 345 L 380 354 L 250 354 Z" fill="#3a3f46"/>
+  <path d="M 258 345 L 372 345 L 372 346.6 L 258 346.6 Z" fill="#6e747c" opacity="0.5"/>
+
+  <!-- deck front-edge highlight -->
+  <path d="M 74 356 L 546 356" stroke="#a3a9b1" stroke-width="1.2" opacity="0.5"/>
+  <!-- notch for opening the lid -->
+  <path d="M 292 356 Q 310 362 328 356" fill="#2b2f35" opacity="0.7"/>
 </svg>

@@ -1,43 +1,90 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 600" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <style>
-      .tablet-body { fill: #2d3748; stroke: #1a202c; stroke-width: 2; }
-      .tablet-screen { fill: #0f172a; stroke: #374151; stroke-width: 1; }
-    </style>
-  </defs>
-
-  <!-- Tablet body -->
-  <rect x="20" y="15" width="344" height="482" rx="16" class="tablet-body" />
-
-  <!-- Screen -->
-  <rect x="35" y="35" width="314" height="442" rx="14" class="tablet-screen" />
-
-  <!-- Status bar -->
-  <rect x="45" y="45" width="294" height="20" fill="#1e293b" opacity="0.8" />
-  <text x="50" y="58" font-size="9" fill="#64748b">9:41</text>
-
-  <!-- Content area with app grid -->
-  <defs>
-    <linearGradient id="tablet-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    <radialGradient id="backdrop" cx="50%" cy="38%" r="72%">
+      <stop offset="0%" stop-color="#f7f7f8"/><stop offset="60%" stop-color="#ececed"/><stop offset="100%" stop-color="#d8d9dc"/>
+    </radialGradient>
+    <linearGradient id="frame" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5f646c"/><stop offset="4%" stop-color="#b0b5bd"/><stop offset="10%" stop-color="#7d828a"/>
+      <stop offset="50%" stop-color="#585d65"/><stop offset="91%" stop-color="#6f747c"/><stop offset="96%" stop-color="#9aa0a8"/>
+      <stop offset="100%" stop-color="#5a5f67"/>
     </linearGradient>
+    <linearGradient id="wallpaper" x1="15%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%" stop-color="#16305e"/><stop offset="42%" stop-color="#1d2a55"/>
+      <stop offset="100%" stop-color="#0a0f22"/>
+    </linearGradient>
+    <radialGradient id="bloom" cx="30%" cy="24%" r="60%">
+      <stop offset="0%" stop-color="#4d90fa" stop-opacity="0.42"/><stop offset="100%" stop-color="#4d90fa" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bloom2" cx="76%" cy="74%" r="52%">
+      <stop offset="0%" stop-color="#f2857a" stop-opacity="0.28"/><stop offset="100%" stop-color="#f2857a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="specular" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0"/><stop offset="50%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="contactBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="ambientBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="24"/></filter>
+    <clipPath id="screenClip"><rect x="66" y="66" width="328" height="446" rx="16"/></clipPath>
   </defs>
-  <rect x="45" y="70" width="294" height="400" fill="url(#tablet-grad)" />
 
-  <!-- Large grid for tablet (4x3 layout) -->
-  <rect x="55" y="85" width="60" height="60" rx="6" fill="#3b82f6" opacity="0.8" />
-  <rect x="125" y="85" width="60" height="60" rx="6" fill="#ef4444" opacity="0.8" />
-  <rect x="195" y="85" width="60" height="60" rx="6" fill="#10b981" opacity="0.8" />
-  <rect x="265" y="85" width="60" height="60" rx="6" fill="#f59e0b" opacity="0.8" />
+  <rect width="460" height="600" fill="url(#backdrop)"/>
+  <ellipse cx="230" cy="552" rx="180" ry="26" fill="#2b2d33" opacity="0.16" filter="url(#ambientBlur)"/>
+  <ellipse cx="230" cy="546" rx="140" ry="12" fill="#1c1e24" opacity="0.32" filter="url(#contactBlur)"/>
 
-  <rect x="55" y="160" width="60" height="60" rx="6" fill="#8b5cf6" opacity="0.8" />
-  <rect x="125" y="160" width="60" height="60" rx="6" fill="#ec4899" opacity="0.8" />
-  <rect x="195" y="160" width="60" height="60" rx="6" fill="#06b6d4" opacity="0.8" />
-  <rect x="265" y="160" width="60" height="60" rx="6" fill="#6366f1" opacity="0.8" />
+  <rect x="54" y="54" width="352" height="470" rx="26" fill="url(#frame)"/>
+  <rect x="62" y="62" width="336" height="454" rx="20" fill="#0c0e12"/>
 
-  <rect x="55" y="235" width="60" height="60" rx="6" fill="#14b8a6" opacity="0.8" />
-  <rect x="125" y="235" width="60" height="60" rx="6" fill="#f97316" opacity="0.8" />
-  <rect x="195" y="235" width="60" height="60" rx="6" fill="#84cc16" opacity="0.8" />
-  <rect x="265" y="235" width="60" height="60" rx="6" fill="#a855f7" opacity="0.8" />
+  <g clip-path="url(#screenClip)">
+    <rect x="66" y="66" width="328" height="446" fill="url(#wallpaper)"/>
+    <rect x="66" y="66" width="328" height="446" fill="url(#bloom)"/>
+    <rect x="66" y="66" width="328" height="446" fill="url(#bloom2)"/>
+
+    <text x="88" y="92" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="11.5" font-weight="600" fill="#ffffff" opacity="0.9">9:41</text>
+    <g fill="#ffffff" opacity="0.85">
+      <rect x="336" y="85" width="2.2" height="4" rx="1"/><rect x="340.5" y="83" width="2.2" height="6" rx="1"/>
+      <rect x="345" y="81" width="2.2" height="8" rx="1"/>
+      <rect x="353" y="81" width="15" height="8.5" rx="2.4" fill="none" stroke="#ffffff" stroke-width="1.1"/>
+      <rect x="354.5" y="82.5" width="10" height="5.5" rx="1.2"/>
+    </g>
+
+    <!-- home-screen app grid, tablet density -->
+    <g>
+      <rect x="96"  y="150" width="48" height="48" rx="11" fill="#3b82f6" opacity="0.92"/>
+      <rect x="164" y="150" width="48" height="48" rx="11" fill="#ef4444" opacity="0.92"/>
+      <rect x="232" y="150" width="48" height="48" rx="11" fill="#10b981" opacity="0.92"/>
+      <rect x="300" y="150" width="48" height="48" rx="11" fill="#f59e0b" opacity="0.92"/>
+      <rect x="96"  y="222" width="48" height="48" rx="11" fill="#8b5cf6" opacity="0.9"/>
+      <rect x="164" y="222" width="48" height="48" rx="11" fill="#ec4899" opacity="0.9"/>
+      <rect x="232" y="222" width="48" height="48" rx="11" fill="#06b6d4" opacity="0.9"/>
+      <rect x="300" y="222" width="48" height="48" rx="11" fill="#6366f1" opacity="0.9"/>
+      <!-- icon gloss -->
+      <ellipse cx="120" cy="162" rx="17" ry="8" fill="#ffffff" opacity="0.16"/>
+      <ellipse cx="188" cy="162" rx="17" ry="8" fill="#ffffff" opacity="0.14"/>
+      <ellipse cx="256" cy="162" rx="17" ry="8" fill="#ffffff" opacity="0.14"/>
+      <ellipse cx="324" cy="162" rx="17" ry="8" fill="#ffffff" opacity="0.14"/>
+    </g>
+
+    <!-- dock -->
+    <rect x="120" y="420" width="220" height="60" rx="18" fill="#ffffff" opacity="0.10"/>
+    <rect x="140" y="434" width="32" height="32" rx="8" fill="#38bdf8" opacity="0.9"/>
+    <rect x="186" y="434" width="32" height="32" rx="8" fill="#a78bfa" opacity="0.9"/>
+    <rect x="232" y="434" width="32" height="32" rx="8" fill="#34d399" opacity="0.9"/>
+    <rect x="278" y="434" width="32" height="32" rx="8" fill="#fbbf24" opacity="0.9"/>
+
+    <rect x="66" y="66" width="328" height="446" fill="url(#specular)"/>
+  </g>
+
+  <!-- front camera on the long edge -->
+  <circle cx="230" cy="59.5" r="3.4" fill="#0a0d14"/>
+  <circle cx="230" cy="59.5" r="2" fill="#18202f"/>
+
+  <path d="M 70 92 Q 70 70 92 68 L 230 68" stroke="#ffffff" stroke-opacity="0.26" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <rect x="54" y="54" width="352" height="24" rx="26" fill="#ffffff" opacity="0.06"/>
+  <rect x="54" y="500" width="352" height="24" rx="26" fill="#000000" opacity="0.20"/>
+
+  <!-- volume pair on the top rail, power on the right: tablet layout -->
+  <rect x="330" y="51.6" width="24" height="2.8" rx="1.4" fill="#7e838b"/>
+  <rect x="330" y="51.6" width="24" height="1.1" rx="0.55" fill="#b6bbc3"/>
+  <rect x="405.6" y="120" width="2.8" height="34" rx="1.4" fill="#585d65"/>
+  <rect x="407.3" y="120" width="1.1" height="34" rx="0.55" fill="#9095a0"/>
 </svg>

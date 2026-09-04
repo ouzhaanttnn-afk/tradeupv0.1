@@ -1,52 +1,114 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <style>
-      .shoe-body { fill: #1f2937; stroke: #111827; stroke-width: 1; }
-      .shoe-sole { fill: #0f172a; stroke: #1a202c; stroke-width: 0.5; }
-      .shoe-accent { fill: #3b82f6; }
-    </style>
+    <radialGradient id="backdrop" cx="50%" cy="36%" r="74%">
+      <stop offset="0%" stop-color="#f7f7f8"/><stop offset="60%" stop-color="#ececed"/><stop offset="100%" stop-color="#d8d9dc"/>
+    </radialGradient>
+    <!-- Seen from above: the light rakes across from upper-left, so the left
+         side of the last is bright and the right side rolls into shadow -->
+    <linearGradient id="upper" x1="0%" y1="10%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#ffffff"/><stop offset="38%" stop-color="#f0f2f5"/>
+      <stop offset="74%" stop-color="#d8dce2"/><stop offset="100%" stop-color="#bcc1c9"/>
+    </linearGradient>
+    <linearGradient id="suede" x1="0%" y1="0%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#557aa6"/><stop offset="55%" stop-color="#3a5578"/><stop offset="100%" stop-color="#283c58"/>
+    </linearGradient>
+    <linearGradient id="soleRim" x1="0%" y1="0%" x2="100%" y2="60%">
+      <stop offset="0%" stop-color="#ffffff"/><stop offset="60%" stop-color="#e3e6eb"/><stop offset="100%" stop-color="#bfc4cc"/>
+    </linearGradient>
+    <radialGradient id="throat" cx="46%" cy="34%" r="72%">
+      <stop offset="0%" stop-color="#4e565f"/><stop offset="60%" stop-color="#333a42"/><stop offset="100%" stop-color="#1e232a"/>
+    </radialGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="ambientBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="20"/></filter>
+    <clipPath id="lastClip">
+      <path d="M 200 44 Q 262 52 282 118 Q 296 182 288 254 Q 280 332 254 386
+               Q 230 428 200 428 Q 170 428 146 386 Q 120 332 112 254
+               Q 104 182 118 118 Q 138 52 200 44 Z"/>
+    </clipPath>
   </defs>
 
-  <!-- Left shoe -->
-  <!-- Shoe upper -->
-  <path d="M 30 60 Q 30 40 50 35 L 80 35 Q 90 40 90 60 L 90 75 Q 85 80 75 82 L 40 82 Q 30 80 30 75 Z" class="shoe-body" />
+  <rect width="400" height="500" fill="url(#backdrop)"/>
+  <ellipse cx="206" cy="450" rx="128" ry="30" fill="#2b2d33" opacity="0.13" filter="url(#ambientBlur)"/>
+  <ellipse cx="204" cy="438" rx="96" ry="16" fill="#1c1e24" opacity="0.26" filter="url(#softShadow)"/>
 
-  <!-- Toe box left -->
-  <ellipse cx="75" cy="75" rx="18" ry="22" class="shoe-body" />
+  <!-- ===== Sole rim, showing all round the last ===== -->
+  <path d="M 200 36 Q 268 44 290 116 Q 305 182 296 256 Q 288 338 260 394
+           Q 234 438 200 438 Q 166 438 140 394 Q 112 338 104 256
+           Q 95 182 110 116 Q 132 44 200 36 Z" fill="url(#soleRim)"/>
+  <!-- dark outsole peeking beyond the foam on the shadow side -->
+  <path d="M 290 116 Q 305 182 296 256 Q 288 338 260 394 Q 234 438 200 438
+           Q 236 430 258 388 Q 284 332 292 254 Q 300 182 286 118 Z" fill="#9aa1ab" opacity="0.55"/>
 
-  <!-- Sole left -->
-  <ellipse cx="55" cy="85" rx="40" ry="12" class="shoe-sole" />
+  <!-- ===== Upper ===== -->
+  <path d="M 200 44 Q 262 52 282 118 Q 296 182 288 254 Q 280 332 254 386
+           Q 230 428 200 428 Q 170 428 146 386 Q 120 332 112 254
+           Q 104 182 118 118 Q 138 52 200 44 Z" fill="url(#upper)"/>
 
-  <!-- Laces left -->
-  <line x1="55" y1="45" x2="55" y2="70" stroke="#8b5cf6" stroke-width="1.5" opacity="0.7" />
-  <line x1="65" y1="48" x2="65" y2="68" stroke="#8b5cf6" stroke-width="1.5" opacity="0.7" />
-  <line x1="75" y1="45" x2="75" y2="70" stroke="#8b5cf6" stroke-width="1.5" opacity="0.7" />
+  <g clip-path="url(#lastClip)">
+    <!-- toe-cap seam -->
+    <path d="M 122 130 Q 200 110 278 130" fill="none" stroke="#c2c7cf" stroke-width="2.2" opacity="0.9"/>
+    <!-- toe perforations -->
+    <g fill="#adb3bb" opacity="0.75">
+      <circle cx="170" cy="92" r="2.4"/><circle cx="200" cy="86" r="2.4"/><circle cx="230" cy="92" r="2.4"/>
+      <circle cx="184" cy="108" r="2.4"/><circle cx="216" cy="108" r="2.4"/>
+      <circle cx="156" cy="110" r="2.4"/><circle cx="244" cy="110" r="2.4"/>
+    </g>
 
-  <!-- Accent stripe -->
-  <path d="M 45 55 Q 60 50 75 55" stroke="#3b82f6" stroke-width="2" fill="none" opacity="0.6" />
+    <!-- suede quarter panels, one each side, wrapping the midfoot -->
+    <path d="M 112 232 Q 132 210 158 202 L 164 246 Q 138 254 116 274 Z" fill="url(#suede)"/>
+    <path d="M 288 232 Q 268 210 242 202 L 236 246 Q 262 254 284 274 Z" fill="url(#suede)" opacity="0.92"/>
 
-  <!-- Right shoe (offset) -->
-  <!-- Shoe upper -->
-  <path d="M 150 60 Q 150 40 170 35 L 200 35 Q 210 40 210 60 L 210 75 Q 205 80 195 82 L 160 82 Q 150 80 150 75 Z" class="shoe-body" />
+    <!-- heel counter cap -->
+    <path d="M 146 386 Q 170 428 200 428 Q 230 428 254 386 Q 228 404 200 404 Q 172 404 146 386 Z" fill="#3a5578"/>
 
-  <!-- Toe box right -->
-  <ellipse cx="195" cy="75" rx="18" ry="22" class="shoe-body" />
+    <!-- the light rake: bright band down the left of the last -->
+    <ellipse cx="146" cy="180" rx="66" ry="120" fill="#ffffff" opacity="0.16" filter="url(#softShadow)"/>
+    <!-- and the roll into shadow on the right -->
+    <ellipse cx="278" cy="290" rx="54" ry="130" fill="#000000" opacity="0.10" filter="url(#softShadow)"/>
+  </g>
 
-  <!-- Sole right -->
-  <ellipse cx="175" cy="85" rx="40" ry="12" class="shoe-sole" />
+  <!-- ===== Throat opening ===== -->
+  <path d="M 200 176 Q 246 190 250 258 Q 254 330 228 372 Q 214 392 200 392
+           Q 186 392 172 372 Q 146 330 150 258 Q 154 190 200 176 Z" fill="url(#throat)"/>
 
-  <!-- Laces right -->
-  <line x1="175" y1="45" x2="175" y2="70" stroke="#8b5cf6" stroke-width="1.5" opacity="0.7" />
-  <line x1="185" y1="48" x2="185" y2="68" stroke="#8b5cf6" stroke-width="1.5" opacity="0.7" />
-  <line x1="195" y1="45" x2="195" y2="70" stroke="#8b5cf6" stroke-width="1.5" opacity="0.7" />
+  <!-- padded collar around the opening -->
+  <path d="M 200 172 Q 250 187 254 258 Q 258 332 230 376 Q 215 396 200 396
+           Q 185 396 170 376 Q 142 332 146 258 Q 150 187 200 172 Z"
+        fill="none" stroke="url(#upper)" stroke-width="13"/>
+  <path d="M 200 172 Q 250 187 254 258" fill="none" stroke="#ffffff" stroke-width="5" opacity="0.9" stroke-linecap="round"/>
+  <path d="M 200 172 Q 150 187 146 258" fill="none" stroke="#ffffff" stroke-width="5" opacity="0.7" stroke-linecap="round"/>
 
-  <!-- Accent stripe right -->
-  <path d="M 165 55 Q 180 50 195 55" stroke="#3b82f6" stroke-width="2" fill="none" opacity="0.6" />
+  <!-- tongue, filling the front of the opening -->
+  <path d="M 200 182 Q 234 194 238 250 Q 226 262 200 264 Q 174 262 162 250 Q 166 194 200 182 Z" fill="#e9ecf1"/>
+  <path d="M 200 182 Q 234 194 238 250" fill="none" stroke="#c7ccd4" stroke-width="1.6" opacity="0.8"/>
+  <rect x="182" y="206" width="36" height="14" rx="4" fill="#3a5578" opacity="0.9"/>
+  <text x="200" y="217" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif"
+        font-size="9" font-weight="700" letter-spacing="0.6" fill="#dce6f2">RUN</text>
 
-  <!-- Heel detail -->
-  <ellipse cx="50" cy="90" rx="8" ry="6" fill="#2d3748" opacity="0.6" />
-  <ellipse cx="170" cy="90" rx="8" ry="6" fill="#2d3748" opacity="0.6" />
-
-  <!-- Model/Size label -->
-  <text x="120" y="130" font-size="10" fill="#9ca3af" text-anchor="middle" opacity="0.6">SNEAKERS</text>
+  <!-- ===== Lacing: X-crossings between the two eyestays ===== -->
+  <g stroke="#9aa0aa" stroke-width="5" stroke-linecap="round" opacity="0.95">
+    <path d="M 168 214 L 232 232"/>
+    <path d="M 232 214 L 168 232"/>
+    <path d="M 165 248 L 235 266"/>
+    <path d="M 235 248 L 165 266"/>
+    <path d="M 164 282 L 236 300"/>
+    <path d="M 236 282 L 164 300"/>
+  </g>
+  <!-- lace highlight so they read as round cord, not flat lines -->
+  <g stroke="#d7dbe1" stroke-width="1.8" stroke-linecap="round" opacity="0.8">
+    <path d="M 170 213 L 230 231"/><path d="M 230 213 L 170 231"/>
+    <path d="M 167 247 L 233 265"/><path d="M 233 247 L 167 265"/>
+    <path d="M 166 281 L 234 299"/><path d="M 234 281 L 166 299"/>
+  </g>
+  <!-- eyelets down both eyestays -->
+  <g fill="#8f959f">
+    <circle cx="166" cy="213" r="3.4"/><circle cx="234" cy="213" r="3.4"/>
+    <circle cx="164" cy="247" r="3.4"/><circle cx="236" cy="247" r="3.4"/>
+    <circle cx="163" cy="281" r="3.4"/><circle cx="237" cy="281" r="3.4"/>
+    <circle cx="164" cy="315" r="3.4"/><circle cx="236" cy="315" r="3.4"/>
+  </g>
+  <!-- bow at the bottom of the lacing -->
+  <path d="M 200 318 Q 178 326 172 344 Q 190 340 200 326 Q 210 340 228 344 Q 222 326 200 318 Z"
+        fill="#b8bec7"/>
+  <path d="M 200 326 L 190 356 M 200 326 L 212 356" stroke="#b8bec7" stroke-width="4" stroke-linecap="round"/>
 </svg>
