@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Seamless studio backdrop -->
+    <radialGradient id="backdrop" cx="50%" cy="38%" r="72%">
+      <stop offset="0%"   stop-color="#f7f7f8"/>
+      <stop offset="60%"  stop-color="#ececed"/>
+      <stop offset="100%" stop-color="#d8d9dc"/>
+    </radialGradient>
+
+    <!-- Titanium frame: light from upper-left, so left edge is bright, right edge falls off then catches a rim -->
+    <linearGradient id="frame" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#3a3d42"/>
+      <stop offset="4%"   stop-color="#8d9199"/>
+      <stop offset="9%"   stop-color="#5c6067"/>
+      <stop offset="50%"  stop-color="#2b2e33"/>
+      <stop offset="91%"  stop-color="#4a4e55"/>
+      <stop offset="96%"  stop-color="#7e828a"/>
+      <stop offset="100%" stop-color="#33363b"/>
+    </linearGradient>
+
+    <!-- Screen wallpaper: deep abstract gradient, the way real product shots ship -->
+    <linearGradient id="wallpaper" x1="15%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%"   stop-color="#1b2b6b"/>
+      <stop offset="38%"  stop-color="#2d1e63"/>
+      <stop offset="72%"  stop-color="#0f1633"/>
+      <stop offset="100%" stop-color="#070a18"/>
+    </linearGradient>
+
+    <radialGradient id="wallpaperBloom" cx="30%" cy="22%" r="60%">
+      <stop offset="0%"   stop-color="#5b7cfa" stop-opacity="0.55"/>
+      <stop offset="55%"  stop-color="#5b7cfa" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#5b7cfa" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="wallpaperBloom2" cx="78%" cy="76%" r="55%">
+      <stop offset="0%"   stop-color="#c14bd6" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#c14bd6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Specular streak across the glass -->
+    <linearGradient id="specular" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="42%"  stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#ffffff" stop-opacity="0.13"/>
+      <stop offset="58%"  stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Lens glass -->
+    <radialGradient id="lensGlass" cx="34%" cy="30%" r="78%">
+      <stop offset="0%"   stop-color="#4b5b7a"/>
+      <stop offset="30%"  stop-color="#1a2133"/>
+      <stop offset="70%"  stop-color="#070a12"/>
+      <stop offset="100%" stop-color="#12161f"/>
+    </radialGradient>
+
+    <!-- Soft contact shadow -->
+    <filter id="contactBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <filter id="ambientBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+
+    <!-- Screen mask so wallpaper never bleeds past the rounded corners -->
+    <clipPath id="screenClip">
+      <rect x="112" y="72" width="176" height="456" rx="28"/>
+    </clipPath>
+  </defs>
+
+  <!-- Studio backdrop -->
+  <rect width="400" height="600" fill="url(#backdrop)"/>
+
+  <!-- Ambient occlusion pool, then tight contact shadow -->
+  <ellipse cx="200" cy="546" rx="128" ry="26" fill="#2b2d33" opacity="0.16" filter="url(#ambientBlur)"/>
+  <ellipse cx="200" cy="540" rx="86"  ry="12" fill="#1c1e24" opacity="0.34" filter="url(#contactBlur)"/>
+
+  <!-- ===== Device ===== -->
+  <!-- Outer titanium frame -->
+  <rect x="104" y="64" width="192" height="472" rx="36" fill="url(#frame)"/>
+
+  <!-- Inner bezel (thin black ring between frame and glass) -->
+  <rect x="109" y="69" width="182" height="462" rx="32" fill="#0b0c0f"/>
+
+  <!-- Screen -->
+  <g clip-path="url(#screenClip)">
+    <rect x="112" y="72" width="176" height="456" fill="url(#wallpaper)"/>
+    <rect x="112" y="72" width="176" height="456" fill="url(#wallpaperBloom)"/>
+    <rect x="112" y="72" width="176" height="456" fill="url(#wallpaperBloom2)"/>
+
+    <!-- Status bar -->
+    <text x="136" y="103" font-family="system-ui,-apple-system,'Segoe UI',sans-serif"
+          font-size="12.5" font-weight="600" fill="#ffffff" opacity="0.95">9:41</text>
+    <!-- signal / wifi / battery, drawn as simple solid shapes -->
+    <g fill="#ffffff" opacity="0.9">
+      <rect x="228" y="97" width="2.5" height="4"  rx="1"/>
+      <rect x="233" y="95" width="2.5" height="6"  rx="1"/>
+      <rect x="238" y="93" width="2.5" height="8"  rx="1"/>
+      <rect x="243" y="91" width="2.5" height="10" rx="1"/>
+      <rect x="252" y="92" width="16"  height="9"  rx="2.6" fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.85"/>
+      <rect x="253.6" y="93.6" width="11" height="5.8" rx="1.4"/>
+    </g>
+
+    <!-- Lock-screen clock, the way stock hero shots frame it -->
+    <text x="200" y="196" text-anchor="middle"
+          font-family="system-ui,-apple-system,'Segoe UI',sans-serif"
+          font-size="62" font-weight="250" fill="#ffffff" opacity="0.97"
+          letter-spacing="-2">9:41</text>
+    <text x="200" y="222" text-anchor="middle"
+          font-family="system-ui,-apple-system,'Segoe UI',sans-serif"
+          font-size="12.5" font-weight="500" fill="#ffffff" opacity="0.72">Thursday, 4 September</text>
+
+    <!-- Home indicator -->
+    <rect x="168" y="512" width="64" height="4.5" rx="2.25" fill="#ffffff" opacity="0.62"/>
+
+    <!-- Specular streak over everything on-screen -->
+    <rect x="112" y="72" width="176" height="456" fill="url(#specular)"/>
+  </g>
+
+  <!-- Dynamic-island style cutout -->
+  <rect x="169" y="86" width="62" height="21" rx="10.5" fill="#000000"/>
+  <circle cx="220" cy="96.5" r="5.6" fill="#0a0d14"/>
+  <circle cx="220" cy="96.5" r="3.6" fill="#16203a"/>
+  <circle cx="218.6" cy="95" r="1.5" fill="#5f7db8" opacity="0.75"/>
+
+  <!-- Glass edge highlight: catches the key light along the top-left arc -->
+  <path d="M 118 96 Q 118 76 140 74 L 200 74"
+        stroke="#ffffff" stroke-opacity="0.30" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M 282 470 Q 282 522 254 526 L 210 526"
+        stroke="#ffffff" stroke-opacity="0.10" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
+  <!-- Frame top/bottom shading so it doesn't read as a flat sticker -->
+  <rect x="104" y="64" width="192" height="26" rx="36" fill="#ffffff" opacity="0.055"/>
+  <rect x="104" y="508" width="192" height="28" rx="36" fill="#000000" opacity="0.22"/>
+
+  <!-- Side buttons: milled into the rail, so they share the frame's light direction -->
+  <g>
+    <!-- volume up / down, left rail (key light side: bright outer face) -->
+    <rect x="101.6" y="182" width="2.8" height="24" rx="1.4" fill="#6f747c"/>
+    <rect x="101.6" y="182" width="1.1" height="24" rx="0.55" fill="#a7adb6"/>
+    <rect x="101.6" y="212" width="2.8" height="24" rx="1.4" fill="#6f747c"/>
+    <rect x="101.6" y="212" width="1.1" height="24" rx="0.55" fill="#a7adb6"/>
+    <!-- side button, right rail (shadow side: darker, thin rim catch) -->
+    <rect x="295.6" y="196" width="2.8" height="42" rx="1.4" fill="#3c4046"/>
+    <rect x="297.3" y="196" width="1.1" height="42" rx="0.55" fill="#767b84"/>
+  </g>
+
+  <!-- ===== Rear camera module, shown as a subtle silhouette bleeding around the left edge ===== -->
+  <!-- (omitted intentionally: this is the front-facing hero angle) -->
+
+  <!-- Speaker slot -->
+  <rect x="186" y="529" width="28" height="2.4" rx="1.2" fill="#000000" opacity="0.55"/>
+
+  <!-- Final overall glass sheen, very low opacity, unifies the panel -->
+  <rect x="109" y="69" width="182" height="462" rx="32" fill="url(#specular)" opacity="0.55"/>
+</svg>
