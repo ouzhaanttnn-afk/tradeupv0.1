@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .icon-stroke { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-fill { fill: currentColor; }
+    </style>
+  </defs>
+
+  <!-- Home/house icon -->
+  <g transform="translate(128, 128)">
+    <!-- Roof -->
+    <path d="M -60 10 L 0 -50 L 60 10" class="icon-stroke" />
+
+    <!-- House body -->
+    <rect x="-60" y="10" width="120" height="55" rx="4" class="icon-stroke" />
+
+    <!-- Door -->
+    <rect x="-15" y="10" width="30" height="40" rx="2" class="icon-stroke" />
+    <circle cx="10" cy="30" r="2.5" class="icon-fill" />
+
+    <!-- Door handle line -->
+    <line x1="12" y1="30" x2="18" y2="30" class="icon-stroke" stroke-width="1" opacity="0.5" />
+
+    <!-- Windows -->
+    <rect x="-45" y="20" width="18" height="18" rx="2" class="icon-stroke" />
+    <line x1="-36" y1="20" x2="-36" y2="38" class="icon-stroke" opacity="0.4" />
+    <line x1="-45" y1="29" x2="-27" y2="29" class="icon-stroke" opacity="0.4" />
+
+    <rect x="27" y="20" width="18" height="18" rx="2" class="icon-stroke" />
+    <line x1="36" y1="20" x2="36" y2="38" class="icon-stroke" opacity="0.4" />
+    <line x1="27" y1="29" x2="45" y2="29" class="icon-stroke" opacity="0.4" />
+
+    <!-- Chimney -->
+    <rect x="48" y="-20" width="8" height="35" rx="1" class="icon-stroke" opacity="0.6" />
+  </g>
+</svg>

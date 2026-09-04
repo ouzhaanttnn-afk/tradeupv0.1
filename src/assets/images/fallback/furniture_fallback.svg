@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .category-bg { fill: #fef3c7; }
+      .category-accent { fill: #fde68a; }
+      .category-icon { fill: #d97706; }
+      .category-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #7c2d12; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" class="category-bg" />
+  <circle cx="256" cy="256" r="180" class="category-accent" opacity="0.5" />
+
+  <!-- Furniture icon: couch -->
+  <g transform="translate(256, 200)">
+    <!-- Main couch body -->
+    <rect x="-70" y="0" width="140" height="80" rx="8" fill="none" stroke="#d97706" stroke-width="3" />
+
+    <!-- Backrest -->
+    <rect x="-70" y="-40" width="140" height="50" rx="8" fill="none" stroke="#d97706" stroke-width="3" />
+
+    <!-- Armrests -->
+    <circle cx="-70" cy="20" r="16" fill="none" stroke="#d97706" stroke-width="3" />
+    <circle cx="70" cy="20" r="16" fill="none" stroke="#d97706" stroke-width="3" />
+
+    <!-- Legs -->
+    <rect x="-55" y="80" width="12" height="25" fill="#d97706" rx="3" />
+    <rect x="-25" y="80" width="12" height="25" fill="#d97706" rx="3" />
+    <rect x="13" y="80" width="12" height="25" fill="#d97706" rx="3" />
+    <rect x="43" y="80" width="12" height="25" fill="#d97706" rx="3" />
+  </g>
+
+  <!-- Category label -->
+  <text x="256" y="420" font-size="20" font-weight="600" text-anchor="middle" class="category-text">Furniture</text>
+  <text x="256" y="450" font-size="13" text-anchor="middle" class="category-text" opacity="0.7">Loading product image</text>
+</svg>

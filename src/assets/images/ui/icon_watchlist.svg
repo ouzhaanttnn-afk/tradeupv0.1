@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .icon-stroke { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-fill { fill: currentColor; }
+    </style>
+  </defs>
+
+  <!-- Star/watchlist icon -->
+  <g transform="translate(128, 128)">
+    <!-- Large star -->
+    <path d="M 0 -50 L 12 -15 L 48 -15 L 20 10 L 32 45 L 0 20 L -32 45 L -20 10 L -48 -15 L -12 -15 Z" class="icon-fill" />
+
+    <!-- Accent circle -->
+    <circle cx="0" cy="0" r="60" class="icon-stroke" opacity="0.5" />
+  </g>
+</svg>

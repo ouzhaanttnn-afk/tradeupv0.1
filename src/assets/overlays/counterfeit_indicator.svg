@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .fake-bg { fill: #7c2d12; opacity: 0.85; }
+      .fake-x { stroke: #fca5a5; stroke-width: 3; stroke-linecap: round; }
+      .fake-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 12px; font-weight: 800; fill: #fca5a5; text-anchor: middle; letter-spacing: 1px; }
+    </style>
+  </defs>
+
+  <!-- Dark red-brown overlay -->
+  <rect width="100" height="100" class="fake-bg" />
+
+  <!-- Large X mark -->
+  <line x1="25" y1="25" x2="75" y2="75" class="fake-x" />
+  <line x1="75" y1="25" x2="25" y2="75" class="fake-x" />
+
+  <!-- Circle around X -->
+  <circle cx="50" cy="50" r="35" fill="none" stroke="#fca5a5" stroke-width="2" opacity="0.6" />
+
+  <!-- Bold text label -->
+  <text x="50" y="90" class="fake-text">COUNTERFEIT</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .rust-bg { fill: #92400e; opacity: 0.75; }
+      .rust-spot { fill: #b45309; }
+      .rust-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 9px; font-weight: 700; fill: #fef3c7; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Brown overlay -->
+  <rect width="100" height="100" class="rust-bg" />
+
+  <!-- Rust spots (irregular circles) -->
+  <circle cx="25" cy="25" r="6" class="rust-spot" />
+  <ellipse cx="35" cy="40" rx="7" ry="5" class="rust-spot" />
+  <circle cx="20" cy="55" r="5" class="rust-spot" />
+  <ellipse cx="70" cy="30" rx="6" ry="8" class="rust-spot" />
+  <circle cx="75" cy="60" r="7" class="rust-spot" />
+  <ellipse cx="55" cy="50" rx="5" ry="6" class="rust-spot" />
+
+  <!-- Rust texture details -->
+  <circle cx="30" cy="65" r="4" class="rust-spot" opacity="0.7" />
+  <circle cx="60" cy="75" r="3" class="rust-spot" opacity="0.6" />
+
+  <!-- Label -->
+  <text x="50" y="92" class="rust-text">Rust Detected</text>
+</svg>

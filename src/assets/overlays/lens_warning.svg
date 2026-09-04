@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .lens-bg { fill: #44403c; opacity: 0.80; }
+      .lens-icon { fill: #d6d3d1; }
+      .lens-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 8px; font-weight: 700; fill: #f5f5f4; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Dark gray overlay -->
+  <rect width="100" height="100" class="lens-bg" />
+
+  <!-- Lens representation -->
+  <circle cx="50" cy="40" r="18" fill="none" stroke="#d6d3d1" stroke-width="2" />
+  <circle cx="50" cy="40" r="14" fill="none" stroke="#d6d3d1" stroke-width="1" opacity="0.6" />
+  <circle cx="50" cy="40" r="10" class="lens-icon" opacity="0.5" />
+
+  <!-- Fungus spots -->
+  <path d="M 40 30 Q 38 32 40 35 Q 42 33 40 30" class="lens-icon" opacity="0.7" />
+  <path d="M 60 32 Q 58 34 60 37 Q 62 35 60 32" class="lens-icon" opacity="0.6" />
+  <path d="M 45 50 Q 43 52 45 54 Q 47 52 45 50" class="lens-icon" opacity="0.5" />
+  <circle cx="55" cy="48" r="1.5" class="lens-icon" opacity="0.6" />
+
+  <!-- Hazard symbol -->
+  <circle cx="30" cy="70" r="6" fill="none" stroke="#d6d3d1" stroke-width="1" />
+  <text x="30" y="73" font-size="7" font-weight="bold" text-anchor="middle" fill="#d6d3d1">⚠</text>
+
+  <!-- Label -->
+  <text x="50" y="92" class="lens-text">Fungus Found</text>
+</svg>

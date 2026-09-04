@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .category-bg { fill: #fce7f3; }
+      .category-accent { fill: #fbcfe8; }
+      .category-icon { fill: #ec4899; }
+      .category-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #9d174d; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" class="category-bg" />
+  <circle cx="256" cy="256" r="180" class="category-accent" opacity="0.5" />
+
+  <!-- Fashion icon: clothing hanger with shirt -->
+  <g transform="translate(256, 200)">
+    <!-- Hanger -->
+    <path d="M -50 -60 L 0 -80 L 50 -60" fill="none" stroke="#ec4899" stroke-width="4" stroke-linecap="round" />
+    <rect x="-2" y="-60" width="4" height="100" fill="#ec4899" />
+
+    <!-- Shirt body -->
+    <path d="M -40 -50 L -40 40 Q -40 60 -20 60 L 20 60 Q 40 60 40 40 L 40 -50" fill="none" stroke="#ec4899" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Sleeves -->
+    <path d="M -40 -20 L -70 0" fill="none" stroke="#ec4899" stroke-width="3" stroke-linecap="round" />
+    <path d="M 40 -20 L 70 0" fill="none" stroke="#ec4899" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- Category label -->
+  <text x="256" y="420" font-size="20" font-weight="600" text-anchor="middle" class="category-text">Fashion</text>
+  <text x="256" y="450" font-size="13" text-anchor="middle" class="category-text" opacity="0.7">Loading product image</text>
+</svg>

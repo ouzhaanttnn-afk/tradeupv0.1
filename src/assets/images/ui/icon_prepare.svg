@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .icon-stroke { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-fill { fill: currentColor; }
+    </style>
+  </defs>
+
+  <!-- Wrench/tools/prepare icon -->
+  <g transform="translate(128, 128)">
+    <!-- Main wrench -->
+    <path d="M -40 -30 L -40 10 Q -40 30 -20 30 L 20 30 Q 40 30 40 10 L 40 -10" class="icon-stroke" />
+
+    <!-- Wrench head (adjustable part) -->
+    <circle cx="40" cy="-10" r="15" class="icon-stroke" />
+
+    <!-- Wrench handle grip lines -->
+    <line x1="-40" y1="-20" x2="-40" y2="0" class="icon-stroke" opacity="0.5" />
+    <line x1="-35" y1="-20" x2="-35" y2="0" class="icon-stroke" opacity="0.5" />
+    <line x1="-30" y1="-20" x2="-30" y2="0" class="icon-stroke" opacity="0.5" />
+
+    <!-- Adjustment screw -->
+    <circle cx="50" cy="-10" r="3" class="icon-fill" />
+    <line x1="48" y1="-12" x2="52" y2="-8" class="icon-stroke" stroke-width="1.5" />
+  </g>
+</svg>

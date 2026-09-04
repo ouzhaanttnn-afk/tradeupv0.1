@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .placeholder-bg { fill: #f3f4f6; }
+      .placeholder-accent { fill: #e5e7eb; }
+      .placeholder-icon { fill: #9ca3af; }
+      .placeholder-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #6b7280; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" class="placeholder-bg" />
+
+  <!-- Decorative grid pattern -->
+  <g class="placeholder-accent" opacity="0.5">
+    <line x1="100" y1="0" x2="100" y2="512" stroke-width="1" />
+    <line x1="200" y1="0" x2="200" y2="512" stroke-width="1" />
+    <line x1="300" y1="0" x2="300" y2="512" stroke-width="1" />
+    <line x1="400" y1="0" x2="400" y2="512" stroke-width="1" />
+    <line x1="0" y1="100" x2="512" y2="100" stroke-width="1" />
+    <line x1="0" y1="200" x2="512" y2="200" stroke-width="1" />
+    <line x1="0" y1="300" x2="512" y2="300" stroke-width="1" />
+    <line x1="0" y1="400" x2="512" y2="400" stroke-width="1" />
+  </g>
+
+  <!-- Central box icon -->
+  <g transform="translate(256, 256)">
+    <!-- Box outline -->
+    <rect x="-80" y="-80" width="160" height="160" rx="8" fill="none" stroke="#d1d5db" stroke-width="3" />
+
+    <!-- Box flap -->
+    <polygon points="-80,-80 0,-120 80,-80" fill="none" stroke="#d1d5db" stroke-width="3" />
+
+    <!-- Flap tape -->
+    <line x1="-30" y1="-110" x2="30" y2="-110" stroke="#d1d5db" stroke-width="2" opacity="0.6" />
+  </g>
+
+  <!-- Question mark for unknown item -->
+  <g transform="translate(256, 340)">
+    <text font-size="48" font-weight="300" text-anchor="middle" class="placeholder-icon">?</text>
+  </g>
+
+  <!-- Label text -->
+  <text x="256" y="420" font-size="20" font-weight="500" text-anchor="middle" class="placeholder-text">Image Not Available</text>
+  <text x="256" y="450" font-size="14" text-anchor="middle" class="placeholder-text" opacity="0.7">Product image will load when available</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .battery-icon { fill: #ea580c; opacity: 0.85; }
+      .battery-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 10px; font-weight: 600; fill: white; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Rounded rectangle background -->
+  <rect x="10" y="60" width="80" height="35" rx="6" ry="6" class="battery-icon" />
+
+  <!-- Battery icon -->
+  <g transform="translate(30, 68)">
+    <rect x="0" y="2" width="14" height="8" rx="1" fill="none" stroke="white" stroke-width="1" />
+    <rect x="15" y="4" width="1" height="4" fill="white" />
+    <rect x="1" y="3" width="12" height="6" fill="white" opacity="0.6" />
+  </g>
+
+  <!-- Warning triangle -->
+  <g transform="translate(50, 68)">
+    <polygon points="0,-6 7,6 -7,6" fill="white" />
+    <text x="0" y="2" font-size="8" font-weight="bold" text-anchor="middle" fill="#ea580c">!</text>
+  </g>
+
+  <!-- Text label -->
+  <text x="50" y="94" class="battery-text">Low Battery</text>
+</svg>

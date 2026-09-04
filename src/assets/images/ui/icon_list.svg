@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .icon-stroke { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-fill { fill: currentColor; }
+    </style>
+  </defs>
+
+  <!-- List/document icon -->
+  <g transform="translate(128, 128)">
+    <!-- Document shape -->
+    <rect x="-40" y="-50" width="80" height="100" rx="4" class="icon-stroke" />
+
+    <!-- Fold corner -->
+    <path d="M 40 -50 L 40 -30 L 60 -30" class="icon-stroke" opacity="0.5" />
+
+    <!-- List items -->
+    <line x1="-30" y1="-35" x2="30" y2="-35" class="icon-stroke" />
+    <circle cx="-35" cy="-35" r="3" class="icon-fill" />
+
+    <line x1="-30" y1="-15" x2="30" y2="-15" class="icon-stroke" />
+    <circle cx="-35" cy="-15" r="3" class="icon-fill" />
+
+    <line x1="-30" y1="5" x2="30" y2="5" class="icon-stroke" />
+    <circle cx="-35" cy="5" r="3" class="icon-fill" />
+
+    <line x1="-30" y1="25" x2="30" y2="25" class="icon-stroke" />
+    <circle cx="-35" cy="25" r="3" class="icon-fill" />
+
+    <line x1="-30" y1="45" x2="15" y2="45" class="icon-stroke" />
+    <circle cx="-35" cy="45" r="3" class="icon-fill" />
+  </g>
+</svg>

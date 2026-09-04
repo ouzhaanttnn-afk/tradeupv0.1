@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .vinyl-bg { fill: #6b21a8; opacity: 0.75; }
+      .vinyl-icon { stroke: #e9d5ff; stroke-width: 1.5; fill: none; }
+      .vinyl-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 8px; font-weight: 700; fill: #fce7f3; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Purple vinyl overlay -->
+  <rect width="100" height="100" class="vinyl-bg" />
+
+  <!-- Vinyl record scratches -->
+  <g transform="translate(50, 40)">
+    <circle cx="0" cy="0" r="12" fill="none" stroke="#e9d5ff" stroke-width="1.5" opacity="0.8" />
+    <circle cx="0" cy="0" r="8" fill="none" stroke="#e9d5ff" stroke-width="1" opacity="0.6" />
+    <circle cx="0" cy="0" r="4" fill="none" stroke="#e9d5ff" stroke-width="0.8" opacity="0.4" />
+
+    <!-- Scratch marks -->
+    <line x1="-10" y1="-2" x2="10" y2="-2" stroke="#fce7f3" stroke-width="1" opacity="0.9" />
+    <line x1="-9" y1="1" x2="11" y2="1" stroke="#fce7f3" stroke-width="0.8" opacity="0.7" />
+    <line x1="-8" y1="4" x2="8" y2="4" stroke="#fce7f3" stroke-width="0.8" opacity="0.6" />
+    <line x1="-10" y1="-6" x2="10" y2="-6" stroke="#fce7f3" stroke-width="0.8" opacity="0.5" />
+  </g>
+
+  <!-- Alert symbol -->
+  <circle cx="75" cy="25" r="7" fill="#e9d5ff" opacity="0.3" />
+  <text x="75" y="28" font-size="10" font-weight="bold" text-anchor="middle" fill="#fce7f3">!</text>
+
+  <!-- Label -->
+  <text x="50" y="92" class="vinyl-text">Scratched</text>
+</svg>

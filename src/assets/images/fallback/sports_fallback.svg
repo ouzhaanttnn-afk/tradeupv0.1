@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .category-bg { fill: #fecaca; }
+      .category-accent { fill: #fca5a5; }
+      .category-icon { fill: #dc2626; }
+      .category-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #7f1d1d; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" class="category-bg" />
+  <circle cx="256" cy="256" r="180" class="category-accent" opacity="0.5" />
+
+  <!-- Sports icon: football -->
+  <g transform="translate(256, 200)">
+    <!-- Main football shape -->
+    <ellipse cx="0" cy="0" rx="70" ry="45" fill="none" stroke="#dc2626" stroke-width="3" />
+
+    <!-- Center lace line -->
+    <path d="M -70 0 Q -50 -10 0 -15 Q 50 -10 70 0" fill="none" stroke="#dc2626" stroke-width="2" />
+    <path d="M -70 0 Q -50 10 0 15 Q 50 10 70 0" fill="none" stroke="#dc2626" stroke-width="2" />
+
+    <!-- Lacing marks -->
+    <line x1="-40" y1="-8" x2="-40" y2="8" stroke="#dc2626" stroke-width="1.5" />
+    <line x1="-20" y1="-12" x2="-20" y2="12" stroke="#dc2626" stroke-width="1.5" />
+    <line x1="0" y1="-15" x2="0" y2="15" stroke="#dc2626" stroke-width="1.5" />
+    <line x1="20" y1="-12" x2="20" y2="12" stroke="#dc2626" stroke-width="1.5" />
+    <line x1="40" y1="-8" x2="40" y2="8" stroke="#dc2626" stroke-width="1.5" />
+  </g>
+
+  <!-- Category label -->
+  <text x="256" y="420" font-size="20" font-weight="600" text-anchor="middle" class="category-text">Sports</text>
+  <text x="256" y="450" font-size="13" text-anchor="middle" class="category-text" opacity="0.7">Loading product image</text>
+</svg>

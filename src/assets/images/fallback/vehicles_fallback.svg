@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .category-bg { fill: #dcfce7; }
+      .category-accent { fill: #bbf7d0; }
+      .category-icon { fill: #16a34a; }
+      .category-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #15803d; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" class="category-bg" />
+  <circle cx="256" cy="256" r="180" class="category-accent" opacity="0.5" />
+
+  <!-- Vehicles icon: car side view -->
+  <g transform="translate(256, 200)">
+    <!-- Main body -->
+    <rect x="-80" y="-20" width="160" height="60" rx="8" fill="none" stroke="#16a34a" stroke-width="3" />
+
+    <!-- Cabin/roof -->
+    <path d="M -40 -20 L -20 -50 L 20 -50 L 40 -20" fill="none" stroke="#16a34a" stroke-width="3" stroke-linejoin="round" />
+
+    <!-- Windows -->
+    <rect x="-35" y="-40" width="20" height="20" fill="none" stroke="#16a34a" stroke-width="1.5" opacity="0.6" />
+    <rect x="15" y="-40" width="20" height="20" fill="none" stroke="#16a34a" stroke-width="1.5" opacity="0.6" />
+
+    <!-- Wheels -->
+    <circle cx="-50" cy="50" r="18" fill="none" stroke="#16a34a" stroke-width="3" />
+    <circle cx="-50" cy="50" r="10" fill="none" stroke="#16a34a" stroke-width="1.5" opacity="0.5" />
+
+    <circle cx="50" cy="50" r="18" fill="none" stroke="#16a34a" stroke-width="3" />
+    <circle cx="50" cy="50" r="10" fill="none" stroke="#16a34a" stroke-width="1.5" opacity="0.5" />
+
+    <!-- Bumpers -->
+    <line x1="-80" y1="20" x2="-80" y2="40" stroke="#16a34a" stroke-width="2" />
+    <line x1="80" y1="20" x2="80" y2="40" stroke="#16a34a" stroke-width="2" />
+  </g>
+
+  <!-- Category label -->
+  <text x="256" y="420" font-size="20" font-weight="600" text-anchor="middle" class="category-text">Vehicles</text>
+  <text x="256" y="450" font-size="13" text-anchor="middle" class="category-text" opacity="0.7">Loading product image</text>
+</svg>

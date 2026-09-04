@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .category-bg { fill: #f3e8ff; }
+      .category-accent { fill: #ede9fe; }
+      .category-icon { fill: #7c3aed; }
+      .category-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #5b21b6; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" class="category-bg" />
+  <circle cx="256" cy="256" r="180" class="category-accent" opacity="0.5" />
+
+  <!-- Media icon: vinyl record -->
+  <g transform="translate(256, 200)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#7c3aed" stroke-width="3" />
+
+    <!-- Concentric rings -->
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#7c3aed" stroke-width="1" opacity="0.6" />
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#7c3aed" stroke-width="1" opacity="0.4" />
+
+    <!-- Center label -->
+    <circle cx="0" cy="0" r="15" fill="#7c3aed" opacity="0.3" />
+    <circle cx="0" cy="0" r="8" fill="#7c3aed" />
+  </g>
+
+  <!-- Category label -->
+  <text x="256" y="420" font-size="20" font-weight="600" text-anchor="middle" class="category-text">Media</text>
+  <text x="256" y="450" font-size="13" text-anchor="middle" class="category-text" opacity="0.7">Loading product image</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .icon-stroke { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-fill { fill: currentColor; }
+    </style>
+  </defs>
+
+  <!-- Handshake/negotiate icon -->
+  <g transform="translate(128, 128)">
+    <!-- Left hand -->
+    <path d="M -50 -20 L -40 -10 L -35 5 L -30 10 L -20 10 L -20 0 L -25 -15" class="icon-stroke" />
+    <circle cx="-50" cy="-20" r="6" class="icon-fill" />
+
+    <!-- Right hand -->
+    <path d="M 50 -20 L 40 -10 L 35 5 L 30 10 L 20 10 L 20 0 L 25 -15" class="icon-stroke" />
+    <circle cx="50" cy="-20" r="6" class="icon-fill" />
+
+    <!-- Hands meeting -->
+    <path d="M -20 5 L 20 5" class="icon-stroke" stroke-width="3" />
+
+    <!-- Arm lines -->
+    <line x1="-25" y1="-15" x2="-50" y2="-30" class="icon-stroke" />
+    <line x1="25" y1="-15" x2="50" y2="-30" class="icon-stroke" />
+
+    <!-- Agreement mark -->
+    <circle cx="0" cy="30" r="5" class="icon-stroke" opacity="0.5" />
+    <polyline points="-2,28 0,31 3,27" class="icon-stroke" opacity="0.5" />
+  </g>
+</svg>

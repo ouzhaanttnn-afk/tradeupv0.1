@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .icon-stroke { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-fill { fill: currentColor; }
+    </style>
+  </defs>
+
+  <!-- Briefcase/portfolio icon -->
+  <g transform="translate(128, 128)">
+    <!-- Main briefcase body -->
+    <rect x="-55" y="-35" width="110" height="70" rx="4" class="icon-stroke" />
+
+    <!-- Handle -->
+    <path d="M -40 -35 Q -40 -60 0 -60 Q 40 -60 40 -35" class="icon-stroke" />
+
+    <!-- Divider line -->
+    <line x1="-55" y1="-10" x2="55" y2="-10" class="icon-stroke" />
+
+    <!-- Lock icon in center -->
+    <circle cx="0" cy="-5" r="8" class="icon-stroke" />
+    <rect x="-2" y="5" width="4" height="8" class="icon-stroke" />
+
+    <!-- Pockets/compartments -->
+    <line x1="-55" y1="20" x2="55" y2="20" class="icon-stroke" />
+    <line x1="0" y1="35" x2="0" y2="35" class="icon-fill" opacity="0.5" />
+  </g>
+</svg>

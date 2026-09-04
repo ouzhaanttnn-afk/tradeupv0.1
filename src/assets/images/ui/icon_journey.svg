@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .icon-stroke { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-fill { fill: currentColor; }
+    </style>
+  </defs>
+
+  <!-- Journey/path icon -->
+  <g transform="translate(128, 128)">
+    <!-- Winding path/road -->
+    <path d="M -40 40 Q -40 20 -20 10 Q 0 0 20 10 Q 40 20 40 -20 Q 40 -40 20 -50 Q 0 -60 -20 -50" class="icon-stroke" />
+
+    <!-- Path markers (dots along the path) -->
+    <circle cx="-40" cy="40" r="4" class="icon-fill" />
+    <circle cx="-20" cy="10" r="3" class="icon-fill" />
+    <circle cx="20" cy="10" r="3" class="icon-fill" />
+    <circle cx="40" cy="-20" r="3" class="icon-fill" />
+    <circle cx="20" cy="-50" r="4" class="icon-fill" />
+
+    <!-- Arrow pointing forward -->
+    <path d="M 50 -50 L 60 -45 L 55 -55" class="icon-fill" />
+  </g>
+</svg>

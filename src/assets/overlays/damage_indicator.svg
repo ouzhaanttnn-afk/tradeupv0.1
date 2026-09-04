@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .damage-bg { fill: #b91c1c; opacity: 0.70; }
+      .damage-icon { stroke: #fecaca; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .damage-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 9px; font-weight: 700; fill: white; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Red overlay -->
+  <rect width="100" height="100" class="damage-bg" />
+
+  <!-- Damage pattern - torn effect -->
+  <path d="M 20 30 Q 25 35 20 45 Q 22 50 18 55 Q 20 60 25 65" class="damage-icon" />
+  <path d="M 80 25 Q 75 32 80 42 Q 78 48 82 55 Q 80 62 75 70" class="damage-icon" />
+  <path d="M 30 70 L 45 50 L 60 65 L 75 45" class="damage-icon" />
+
+  <!-- Impact zones -->
+  <circle cx="50" cy="40" r="12" fill="none" stroke="#fecaca" stroke-width="1" opacity="0.5" />
+  <circle cx="50" cy="40" r="8" fill="none" stroke="#fecaca" stroke-width="0.8" opacity="0.3" />
+
+  <!-- Label -->
+  <text x="50" y="92" class="damage-text">DAMAGE FOUND</text>
+</svg>
